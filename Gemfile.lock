@@ -34,6 +34,7 @@ GEM
     hamster (2.0.0)
       concurrent-ruby (~> 0.8)
     hashie (3.4.3)
+    htmlcompressor (0.2.0)
     i18n (0.7.0)
     json (1.8.3)
     kramdown (1.9.0)
@@ -77,6 +78,9 @@ GEM
       middleman-core (>= 3.2)
       net-sftp
       ptools
+    middleman-minify-html (3.4.1)
+      htmlcompressor (~> 0.2.0)
+      middleman-core (>= 3.2)
     mime-types (3.0)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2015.1120)
@@ -121,6 +125,7 @@ DEPENDENCIES
   middleman (~> 4.0.0)
   middleman-blog
   middleman-deploy (~> 2.0.0.pre.alpha)
+  middleman-minify-html
   redcarpet (~> 3.3, >= 3.3.3)
 
 BUNDLED WITH

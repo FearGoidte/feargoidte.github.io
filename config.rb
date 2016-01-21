@@ -36,6 +36,7 @@ set :markdown_engine, :redcarpet
 
 # Build-specific configuration
 configure :build do
+  activate :minify_html, remove_quotes: false
   # activate :minify_css
 end
 
