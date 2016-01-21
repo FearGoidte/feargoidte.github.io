@@ -81,6 +81,9 @@ GEM
     middleman-minify-html (3.4.1)
       htmlcompressor (~> 0.2.0)
       middleman-core (>= 3.2)
+    middleman-syntax (2.1.0)
+      middleman-core (>= 3.2)
+      rouge (~> 1.0)
     mime-types (3.0)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2015.1120)
@@ -105,6 +108,7 @@ GEM
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     redcarpet (3.3.4)
+    rouge (1.10.1)
     sass (3.4.21)
     thor (0.19.1)
     thread_safe (0.3.5)
@@ -126,6 +130,7 @@ DEPENDENCIES
   middleman-blog
   middleman-deploy (~> 2.0.0.pre.alpha)
   middleman-minify-html
+  middleman-syntax
   redcarpet (~> 3.3, >= 3.3.3)
 
 BUNDLED WITH

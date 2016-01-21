@@ -31,8 +31,11 @@ activate :directory_indexes
 set :index_file, 'index.xhtml'
 
 # Markdown settings
-set :markdown, :xhtml => true
+set :markdown, :gh_blockcode => true, :fenced_code_blocks => true, :with_toc_data => true, :xhtml => true
 set :markdown_engine, :redcarpet
+
+# Syntax highlighting support
+activate :syntax, css_class: 'code_quote'
 
 # Build-specific configuration
 configure :build do
