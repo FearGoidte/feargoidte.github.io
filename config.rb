@@ -4,6 +4,9 @@ Time.zone = 'London'
 # Page options, layouts, aliases and proxies
 ###
 
+# Set the default layout
+set :layout, 'layout'
+
 # Per-page layout changes:
 page "/*.xhtml", layout: 'layout'
 
