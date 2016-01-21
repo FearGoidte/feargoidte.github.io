@@ -2,7 +2,7 @@
 title: Example Article
 date: 2012-01-01
 tags: example
-published:false
+published: false
 
 ---
 
