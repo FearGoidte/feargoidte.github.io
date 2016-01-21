@@ -17,7 +17,7 @@ page "/*.xhtml", layout: 'layout'
 # Blog
 activate :blog do |blog|
   blog.permalink = '{year}/{month}/{day}/{title}.xhtml'
-  blog.sources = '{year}-{month}-{day}-{title}.xhtml'
+  blog.sources = 'articles/{year}-{month}-{day}-{title}.xhtml'
   blog.taglink = 'tags/{tag}.xhtml'
   blog.layout = 'layout'
   blog.year_link = '{year}.xhtml'
