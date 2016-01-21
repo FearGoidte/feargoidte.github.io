@@ -1,3 +1,5 @@
+Time.zone = 'London'
+
 ###
 # Page options, layouts, aliases and proxies
 ###
