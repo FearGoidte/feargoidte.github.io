@@ -32,6 +32,10 @@ end
 activate :directory_indexes
 set :index_file, 'index.xhtml'
 
+# Relative links
+set :relative_links, true
+activate :relative_assets, sources: '.css, .htm, .html, .xhtml'
+
 # Markdown settings
 set :markdown, :gh_blockcode => true, :fenced_code_blocks => true, :with_toc_data => true, :xhtml => true
 set :markdown_engine, :redcarpet
