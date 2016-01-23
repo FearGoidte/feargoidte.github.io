@@ -29,6 +29,7 @@ activate :blog do |blog|
   # blog.paginate = true
   # blog.per_page = 10
   # blog.page_link = "page/{num}"
+  blog.new_article_template = 'blank-article'
 end
 
 # Activate directory indices and remove file extensions from urls
