@@ -14,7 +14,7 @@
 			<h2>Recent Articles</h2>
 			<ol>
 				<% blog.articles[0...10].each do |article| %>
-				<li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
+				<li><%= link_to article.title, article %>—<time datetime="<%= article.date.strftime("%F") %>"><%= article.date.strftime("%A ") + ordinal(article.date.strftime("%e")) + article.date.strftime("&#160;%B,&#160;%Y") %></time></li>
         <% end %>
 			</ol>
 			<h2>Tags</h2>
@@ -30,5 +30,6 @@
         		<% end %>
 			</ol>
 		</aside>
+		<footer>This document was last modified on <time datetime="<%= File.mtime(current_page.source_file).iso8601 %>"><%= File.mtime(current_page.source_file).strftime("%A ") + ordinal(File.mtime(current_page.source_file).strftime("%e")) + File.mtime(current_page.source_file).strftime("&#160;%B,&#160;%Y") %> at <%= File.mtime(current_page.source_file).strftime("%H:%M") + " (" + Time.zone.name + ")" %></time></footer>
 	</body>
 </html>
