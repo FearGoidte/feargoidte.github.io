@@ -1,0 +1,15 @@
+---
+title: Archives
+---
+<h2>Articles by <em>tag</em></h2>
+	<ol>
+		<% blog.tags.each do |tag, articles| %>
+		<li><%= link_to "#{tag}", tag_path(tag) %> (<%= spell_out(articles.size) %>)</li>
+		<% end %>
+	</ol>
+	<h2>Articles by <em>year</em></h2>
+	<ol>
+		<% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+		<li><%= link_to "#{year}", blog_year_path(year) %> (<%= spell_out(articles.size) %>)</li>
+		<% end %>
+	</ol>
