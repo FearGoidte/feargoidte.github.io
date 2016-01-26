@@ -1,15 +1,17 @@
 ---
 pageable: true
 ---
-<h1>Archive for
-  <em><% case page_type
-     when 'day' %>
-    <%= Date.new(year, month, day).strftime('%b %e %Y') %>
-  <% when 'month' %>
-    <%= Date.new(year, month, 1).strftime('%b %Y') %>
-  <% when 'year' %>
-    <%= year %>
-  <% end %></em></h1>
+<% case page_type
+     when 'day'
+    date = Date.new(year, month, day).strftime('%b %e %Y')
+     when 'month'
+    date = Date.new(year, month, 1).strftime('%b %Y')
+     when 'year'
+    date = year
+    date = date.to_s
+ end %>
+<% @title = 'Archive for ‘' + date + '’—' %>
+<h1>Archive for <em><%= date %></em></h1>
 <% if paginate && num_pages > 1 %>
 <p>Page <%= page_number %> of <%= num_pages %></p>
   <% if prev_page %>
