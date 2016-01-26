@@ -2,14 +2,14 @@
 pageable: true
 ---
 <h1>Archive for
-  <% case page_type
+  <em><% case page_type
      when 'day' %>
     <%= Date.new(year, month, day).strftime('%b %e %Y') %>
   <% when 'month' %>
     <%= Date.new(year, month, 1).strftime('%b %Y') %>
   <% when 'year' %>
     <%= year %>
-  <% end %></h1>
+  <% end %></em></h1>
 <% if paginate && num_pages > 1 %>
 <p>Page <%= page_number %> of <%= num_pages %></p>
   <% if prev_page %>
