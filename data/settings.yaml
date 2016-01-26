@@ -1,0 +1,14 @@
+site:
+  base_url: https://isfeargoidte.me.uk
+  encoding: utf-8
+  language: en-gb-oxendict
+  name: Fear Goidte
+  description: >
+   The splendid online isolation of me, James Ó Nuanáin, wherein I gather together any loose cleverness that I manage to accumulate.
+author:
+  name: James Ó Nuanáin
+  twitter: feargoidte
+  github: FearGoidte
+CClicence:
+  url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  name: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licence
