@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<%= data.settings.site.language %>">
   <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Blog Title<%= ' - ' + current_article.title unless current_article.nil? %></title>
+	<title><%= current_resource.data.title + "—" unless current_resource.data.title.nil? %><%= @title %><%= data.settings.site.name %></title>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/atom.xml", title: "Atom Feed" %>
 	</head>
 	<body>
