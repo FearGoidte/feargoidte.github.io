@@ -27,7 +27,7 @@ activate :blog do |blog|
   blog.tag_template = 'tag.xhtml'
   blog.calendar_template = 'calendar.xhtml'
   # Enable pagination
-  # blog.paginate = true
+  blog.paginate = false
   # blog.per_page = 10
   # blog.page_link = "page/{num}"
   blog.new_article_template = 'blank-article'
