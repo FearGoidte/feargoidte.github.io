@@ -9,6 +9,7 @@ set :layout, 'layout'
 
 # Per-page layout changes:
 page "/*.xhtml", layout: 'layout'
+page "/articles/*.xhtml", layout: 'article' # It appears that the above setting overides the article setting in the blog helper
 
 ###
 # Helpers
@@ -19,7 +20,7 @@ activate :blog do |blog|
   blog.permalink = '{year}/{month}/{day}/{title}.xhtml'
   blog.sources = 'articles/{year}-{month}-{day}-{title}.xhtml'
   blog.taglink = 'tags/{tag}.xhtml'
-  blog.layout = 'layout'
+# blog.layout = 'article'
   blog.year_link = '{year}.xhtml'
   blog.month_link = '{year}/{month}.xhtml'
   blog.day_link = '{year}/{month}/{day}.xhtml'
