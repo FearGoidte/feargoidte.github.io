@@ -42,8 +42,12 @@ set :relative_links, true
 activate :relative_assets, sources: '.css, .htm, .html, .xhtml'
 
 # Markdown settings
-set :markdown, :gh_blockcode => true, :fenced_code_blocks => true, :with_toc_data => true, :xhtml => true
 set :markdown_engine, :redcarpet
+set :markdown, input: "GFM"
+set :markdown, :layout_engine => :erb,
+               :fenced_code_blocks => true,
+			   :with_toc_data => true,
+               :xhtml => true
 
 # Syntax highlighting support
 activate :syntax, css_class: 'code_quote'
