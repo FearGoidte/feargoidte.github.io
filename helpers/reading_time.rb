@@ -12,6 +12,6 @@ def reading_time(input) # Based upon http://torspark.com/how-to-calculate-articl
     return ['zero', 'one', 'two', 'three', 'four', 'five', 'six',
 	  'seven', 'eight', 'nine'][minutes] + ' minutes'
   else
-    return minutes + ' minutes'
+    " #{minutes} minutes"
   end
 end
