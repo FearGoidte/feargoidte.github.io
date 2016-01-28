@@ -2,6 +2,7 @@
 pageable: true
 per_page: 12
 ---
-<% @title = 'Articles tagged with ‘' + tagname +'’—' %>
+<% @title = 'Articles tagged with ‘' + tagname +'’' %>
 <h1>Articles tagged with <em><%= tagname %></em></h1>
+<p>A listing of the summaries of all articles tagged <em><%= tagname %></em>.</p>
 <%= partial 'layouts/partials/article-summaries' %>

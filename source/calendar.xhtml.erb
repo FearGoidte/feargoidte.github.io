@@ -10,6 +10,7 @@ pageable: true
     date = year
     date = date.to_s
  end %>
-<% @title = 'Archive for ‘' + date + '’—' %>
+<% @title = 'Archive for ‘' + date + '’' %>
 <h1>Archive for <em><%= date %></em></h1>
+<p>A listing of the summaries of all articles dated to <em><%= date %></em>.</p>
 <%= partial 'layouts/partials/article-summaries' %>
