@@ -42,7 +42,6 @@ activate :relative_assets, sources: '.css, .htm, .html, .xhtml'
 
 # Markdown settings
 set :markdown_engine, :redcarpet
-set :markdown, input: "GFM"
 set :markdown,	:fenced_code_blocks => true,
 				:input => 'GFM',
 			   	:layout_engine => :erb,
