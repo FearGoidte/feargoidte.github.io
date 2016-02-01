@@ -1,0 +1,42 @@
+<% wrap_layout :layout do %>
+<main>
+	<header>
+		<p><time property="dc:created" datetime="<%= current_article.date.strftime("%F") %>"><%= current_article.date.strftime("%A ") + ordinal(current_article.date.strftime("%e")) + current_article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
+		<h1 property="dc:title"><%= current_article.title %></h1>
+		<p>Estimated reading time: <%= reading_time(current_article.body) %></p>
+		<dl>
+		<dt>Tagged with</dt>
+		<% current_article.tags.sort{ |a,b| a.to_s.downcase   <=> b.to_s.downcase   }.each do |tag, articles| %>
+		  <% if current_page.url == tag_path(tag) %>
+		<dd><%= tag %></dd>
+		   <% else %>
+		<dd><%= link_to tag, tag_path(tag) %></dd>
+			<% end %>
+		  <% end %>
+		<% if current_article.tags %>
+	</dl>
+			  <% end %>
+	</header>
+	<%= table_of_contents(current_page) %>
+	<% if current_article.data.summary %>
+	<p property="dc:description"><%= current_article.data.summary %></p>
+	<% end %>
+	<%= yield %>
+	<%= partial 'layouts/partials/footer' %>
+</main>
+<% if current_article.previous_article || current_article.next_article %>
+<ol class="post-navigation">
+<% end %>
+	<% prev_article = current_article.previous_article %>
+	  <% if prev_article %>
+	<li class="prev">Previous post: <a href="<%= prev_article.url %>" rel="prev" accesskey="p" title="Previous article: <%= prev_article.title %>"><%= prev_article.title %></a></li>
+	  <% end %>
+	<li><a href="<%= url_for "/archives.xhtml" %>">All articles</a></li>
+	<% next_article = current_article.next_article %>
+	  <% if next_article %>
+			<li class="next">Next post: <a href="<%= next_article.url %>" rel="next" accesskey="n" title="Next article: <%= next_article.title %>"><%= next_article.title %></a></li>
+	  <% end %>
+<% if current_article.previous_article || current_article.next_article %>
+</ol><!--End post navigation-->
+	<% end %>
+<% end %>
