@@ -1,6 +1,7 @@
 ---
-pageable: true
+layout: page
 ---
+
 <% case page_type
      when 'day'
     date = Date.new(year, month, day).strftime('%b %e %Y')
@@ -10,7 +11,7 @@ pageable: true
     date = year
     date = date.to_s
  end %>
-<% @title = 'Archive for ‘' + date + '’' %>
-<h1>Archive for <em><%= date %></em></h1>
-<p>A list of the summaries of all articles dated to <em><%= date %></em>.</p>
-<%= partial 'layouts/partials/article-summaries' %>
+<% @title = 'Archive for ‘' + date + '’—' %>
+<h1 property="dc:title">Archive for <em><%= date %></em></h1>
+<p property="dc:description">Summaries of all articles dated <em><%= date %></em> from newest to oldest:</p>
+<%= partial 'layouts/partials/article-lists' %>
