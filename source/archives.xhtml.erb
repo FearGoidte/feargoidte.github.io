@@ -1,15 +1,21 @@
 ---
+
 title: Archives
+layout: page
 ---
-<h2>Articles by <em>tag</em></h2>
-	<ol>
-		<% blog.tags.each do |tag, articles| %>
-		<li><%= link_to "#{tag}", tag_path(tag) %> (<%= spell_out(articles.size) %>)</li>
-		<% end %>
-	</ol>
-	<h2>Articles by <em>year</em></h2>
-	<ol>
-		<% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-		<li><%= link_to "#{year}", blog_year_path(year) %> (<%= spell_out(articles.size) %>)</li>
-		<% end %>
-	</ol>
+<h1 property="dc:title">Archives</h1>
+<p property="dc:description">This page contains all the articles on this site. They are first listed by category, and then by year.</p>
+<h2>By <em>tag</em></h2>
+<p>All <em>tags</em> used on this site, followed by the number of posts tagged with each of them.</p>
+<ol>
+<% blog.tags.sort{ |a,b| a.to_s.downcase   <=> b.to_s.downcase   }.each do |tag, articles| %>
+	<li><%= link_to "#{tag}", tag_path(tag) %> (<%= articles.size %>)</li>
+<% end %>
+</ol>
+<h2>By <em>year</em> first published</h2>
+<p>Each year of the archive followed by the number of posts in that year.</p>
+<ol>
+<% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+	<li><%= link_to "#{year}", blog_year_path(year) %> (<%= articles.size %>)</li>
+<% end %>
+</ol>
