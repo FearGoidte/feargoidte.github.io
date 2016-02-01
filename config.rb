@@ -11,6 +11,9 @@ set :layout, 'layout'
 page "/*.xhtml", layout: 'layout'
 page "/articles/*.xhtml", layout: 'article' # It appears that the above setting overides the article setting in the blog helper
 
+# Ignore Icons used for folders
+ignore "*Icon*"
+
 ###
 # Helpers
 ###
@@ -26,10 +29,6 @@ activate :blog do |blog|
   blog.day_link = '{year}/{month}/{day}.xhtml'
   blog.tag_template = 'tag.xhtml'
   blog.calendar_template = 'calendar.xhtml'
-  # Enable pagination
-  blog.paginate = false
-  # blog.per_page = 10
-  # blog.page_link = "page/{num}"
   blog.new_article_template = 'blank-article'
 end
 
@@ -44,10 +43,11 @@ activate :relative_assets, sources: '.css, .htm, .html, .xhtml'
 # Markdown settings
 set :markdown_engine, :redcarpet
 set :markdown, input: "GFM"
-set :markdown, :layout_engine => :erb,
-               :fenced_code_blocks => true,
-			   :with_toc_data => true,
-               :xhtml => true
+set :markdown,	:fenced_code_blocks => true,
+				:input => 'GFM',
+			   	:layout_engine => :erb,
+			   	:with_toc_data => true,
+               	:xhtml => true
 
 # Syntax highlighting support
 activate :syntax, css_class: 'code_quote'
@@ -57,6 +57,14 @@ configure :build do
   activate :gzip, exts: '.css, .htm, .html, .js, .svg, .xhtml, .xml'
   activate :minify_html, remove_quotes: false
   # activate :minify_css
+end
+
+# Copy files to build folder after build
+after_build do |builder|
+  print "After_build fixes... "
+  system("cp \README.markdown #{config[:build_dir]+'/README.markdown'}")
+  system("cp \licence.txt #{config[:build_dir]+'/licence.txt'}")
+  puts "done."
 end
 
 # Deploy to GitHub
