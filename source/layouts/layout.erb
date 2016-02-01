@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<%= data.settings.site.language %>">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb-oxendict">
   <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title><%= current_resource.data.title + "—" unless current_resource.data.title.nil? %><%= @title + '—' unless @title.nil? %><%= data.settings.site.name %></title>
-    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/atom.xml", title: "Atom Feed" %>
-	</head>
-	<body>
-		<a href="#main">Skip to main content</a>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%= current_resource.data.title + "—" unless current_resource.data.title.nil? %><%= @title + '—' unless @title.nil? %><%= data.settings.site.name %></title>
+    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+  </head>
+  <body>
+  		<a href="#main">Skip to main content</a>
 		<div role="banner">
 			<dl>
 		<% if current_page.path == 'index.xhtml' %>
-				<dt><%= data.settings.site.name %></dt>
+				<dt property="dc:title"><%= data.settings.site.name %></dt>
 		<% else %>
 				<dt><a href="<%= url_for '/index.xhtml' %>"><%= data.settings.site.name %></a></dt>
 		<% end %>
+				<dd
+			<% if current_page.path == 'index.xhtml' %>
+				 property="dc:description"
+			<% end %>
+				><%= data.settings.site.description %></dd>
 			</dl>
 			<div role="navigation">
 				<ol>
@@ -39,32 +44,8 @@
 				</ol>
 			</div><!--End of ‘navigation’ role-->
 		</div><!-- end of ‘banner’ role -->
-		<main id="main">
+    <main id="main">
       <%= yield %>
-		</main>
-		<aside>
-			<h2>Recent Articles</h2>
-			<ol>
-				<% blog.articles[0...10].each do |article| %>
-				<li><%= link_to article.title, article %>—<time datetime="<%= article.date.strftime("%F") %>"><%= article.date.strftime("%A ") + ordinal(article.date.strftime("%e")) + article.date.strftime("&#160;%B,&#160;%Y") %></time></li>
-        <% end %>
-			</ol>
-			<h2>Tags</h2>
-			<ol>
-				<% blog.tags.each do |tag, articles| %>
-				<li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
-				<% end %>
-			</ol>
-      		<h2>By Year</h2>
-      		<ol>
-				<% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-				<li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
-        		<% end %>
-			</ol>
-		</aside>
-		<footer>
-			<p>This document was last modified on <time datetime="<%= File.mtime(current_page.source_file).iso8601 %>"><%= File.mtime(current_page.source_file).strftime("%A ") + ordinal(File.mtime(current_page.source_file).strftime("%e")) + File.mtime(current_page.source_file).strftime("&#160;%B,&#160;%Y") %> at <%= File.mtime(current_page.source_file).strftime("%H:%M") + " (" + Time.zone.name + ")" %></time></p>
-			<%= partial 'layouts/partials/accesskeys' %>
-		</footer>
-	</body>
+    </main>
+  </body>
 </html>
