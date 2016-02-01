@@ -1,0 +1,24 @@
+<article>
+	<header>
+		<p><time datetime="<%= article.date.strftime("%F") %>"><%= article.date.strftime("%A ") + ordinal(article.date.strftime("%e")) + article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
+		<h2><%= article.title %></h2>
+	</header>
+	<% if article.data.summary %>
+	<p><%= article.data.summary %></p>
+	<% end %>
+	<p>Continue reading <a href="<%= article.url %>#main"><cite><%= article.title %></cite></a> (could take <%= reading_time(article.body) %>).</p>
+	<% if article.tags %>
+	<footer>
+	<dl>
+		<dt>Tagged with</dt>
+		<% article.tags.sort{ |a,b| a.to_s.downcase   <=> b.to_s.downcase   }.each do |tag, articles| %>
+		  <% if current_page.url == tag_path(tag) %>
+		<dd><%= tag %></dd>
+		   <% else %>
+		<dd><%= link_to tag, tag_path(tag) %></dd>
+			<% end %>
+		  <% end %>
+	</dl>
+	</footer>
+	<% end %>
+</article>
