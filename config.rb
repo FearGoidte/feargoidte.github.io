@@ -61,8 +61,8 @@ end
 # Copy files to build folder after build
 after_build do
   print 'After_build fixes … '
-  system("cp \README.markdown #{config[:build_dir] + '/README.markdown'}")
   system("cp \licence.txt #{config[:build_dir] + '/licence.txt'}")
+  system("cp \README.markdown #{config[:build_dir] + '/README.markdown'}")
   puts 'done.'
 end
 
