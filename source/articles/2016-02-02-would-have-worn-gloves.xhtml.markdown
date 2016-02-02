@@ -174,7 +174,7 @@ end
 
 ### Problems with Jekyll
 
-GitHub has integrated support for Jekyll which could cause problems with your site.
+GitHub has integrated support for another built in static website generator, [Jekyll](http://jekyllrb.com), this could cause problems with your site.
 
 Create the following empty file:
 
