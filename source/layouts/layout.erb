@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb-oxendict">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title><%= current_resource.data.title + "—" unless current_resource.data.title.nil? %><%= @title + '—' unless @title.nil? %><%= data.settings.site.name %></title>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title><%= current_resource.data.title + "—" unless current_resource.data.title.nil? %><%= @title + '—' unless @title.nil? %><%= data.settings.site.name %></title>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/atom.xml", title: "Atom Feed" %>
-  </head>
-  <body>
+	</head>
+	<body>
   		<a href="#main">Skip to main content</a>
 		<div role="banner">
 			<dl>
@@ -44,8 +44,6 @@
 				</ol>
 			</div><!--End of ‘navigation’ role-->
 		</div><!-- end of ‘banner’ role -->
-    <main id="main">
       <%= yield %>
-    </main>
-  </body>
+	</body>
 </html>

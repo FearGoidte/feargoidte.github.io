@@ -1,5 +1,5 @@
 <% wrap_layout :layout do %>
-<main>
+<main id="main">
 	<header>
 		<p><time property="dc:created" datetime="<%= current_article.date.strftime("%F") %>"><%= current_article.date.strftime("%A ") + ordinal(current_article.date.strftime("%e")) + current_article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
 		<h1 property="dc:title"><%= current_article.title %></h1>
