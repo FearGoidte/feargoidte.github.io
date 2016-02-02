@@ -69,7 +69,8 @@ end
 # Deploy to GitHub
 activate :deploy do |deploy|
   deploy.build_before = true
-  deploy.deploy_method = :git
   deploy.branch = 'master'
+  deploy.clean = true
   deploy.commit_message = 'Published from build of source branch'
+  deploy.deploy_method = :git
 end
