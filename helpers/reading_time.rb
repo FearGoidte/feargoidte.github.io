@@ -8,8 +8,8 @@ def reading_time(input)
     'less than one minute'
   elsif minutes > 0 && minutes < 2
     'about one minute'
-  elsif minutes >= 2 && minutes < 10
-    %w(zero one two three four five six seven eight nine)[minutes] + ' minutes'
+  elsif minutes >= 2 && minutes < 11
+    %w(zero one two three four five six seven eight nine ten)[minutes] + ' minutes'
   else
     " #{minutes} minutes"
   end
