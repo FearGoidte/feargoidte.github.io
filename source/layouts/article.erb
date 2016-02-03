@@ -2,6 +2,9 @@
 <main id="main">
 	<header>
 		<p><time property="dc:created" datetime="<%= current_article.date.strftime("%F") %>"><%= current_article.date.strftime("%A ") + ordinal(current_article.date.strftime("%e")) + current_article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
+		<% if File.mtime(current_page.source_file).strftime("%F") > current_article.date.strftime("%F") %>
+		<p>Article last updated: <time datetime="<%= File.mtime(current_page.source_file).iso8601 %>"><%= File.mtime(current_page.source_file).strftime("%A ") + ordinal(File.mtime(current_page.source_file).strftime("%e")) + File.mtime(current_page.source_file).strftime("&#160;%B,&#160;%Y") %> at <%= File.mtime(current_page.source_file).strftime("%H:%M") + " (" + Time.zone.name + ")" %></time></p>
+		<% end %>
 		<h1 property="dc:title"><%= current_article.title %></h1>
 		<p>Estimated reading time: <%= reading_time(current_article.body) %></p>
 		<dl>
