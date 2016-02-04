@@ -11,7 +11,7 @@
 	<footer>
 	<dl>
 		<dt>Tagged with</dt>
-		<% article.tags.sort{ |a,b| a.to_s.downcase   <=> b.to_s.downcase   }.each do |tag, articles| %>
+		<% article.tags.sort{ |a,b| a.to_s.downcase <=> b.to_s.downcase }.each do |tag, articles| %>
 			<% if data['tags'][tag.to_sym] %>
 				<% if current_page.url == tag_path(tag) %>
 			<dd><%= data['tags'][tag.to_sym][:name] %></dd>
