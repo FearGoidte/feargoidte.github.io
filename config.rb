@@ -55,7 +55,7 @@ activate :syntax, css_class: 'code_quote'
 configure :build do
   activate :gzip, exts: '.css, .htm, .html, .js, .svg, .xhtml, .xml'
   activate :minify_html, remove_quotes: false
-  # activate :minify_css
+  activate :minify_css
 end
 
 # Copy files to build folder after build
