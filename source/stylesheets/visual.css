@@ -1,0 +1,18 @@
+html {
+	font : normal normal normal 125%/1.4 Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif
+
+}
+header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th {
+	font-family : "gill sans","gill sans mt","gill sans mt pro","century gothic",corbel,sans-serif;
+	font-weight : normal
+}
+header * {
+	margin : 0
+}

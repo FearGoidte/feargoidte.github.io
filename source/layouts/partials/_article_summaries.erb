@@ -6,7 +6,7 @@
 	<% if article.data.summary %>
 	<p><%= article.data.summary %></p>
 	<% end %>
-	<p>Continue reading <a href="<%= article.url %>#main"><cite><%= article.title %></cite></a> (could take <%= reading_time(article.body) %>).</p>
+	<p>Continue reading <a href="<%= article.url %>#nav_main"><cite><%= article.title %></cite></a> (could take <%= reading_time(article.body) %>).</p>
 	<% if article.tags %>
 	<footer>
 	<dl>

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="<%= url_for "/stylesheets/visual.css" %>" media="print,screen" title="<%= data.settings.site.name %> visual"?>
+<?xml-stylesheet href="<%= url_for "/stylesheets/print.css" %>" media="print" title="<%= data.settings.site.name %> print"?>
+<?xml-stylesheet href="<%= url_for "/stylesheets/screen.css" %>" media="screen" title="<%= data.settings.site.name %> screen"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb-oxendict">
 	<head>
@@ -7,7 +10,7 @@
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/atom.xml", title: "Atom Feed" %>
 	</head>
 	<body>
-  		<a href="#main">Skip to main content</a>
+  		<a href="#nav_main">Skip to main content</a>
 		<div role="banner">
 			<dl>
 		<% if current_page.path == 'index.xhtml' %>
@@ -33,8 +36,8 @@
 				<% else %>
 					<li><a href="<%= url_for '/archives.xhtml' %>">Archives</a></li>
 				<% end %><!--End of archive link-->
-					<li><a href="#copyright" accesskey="6">Copyright</a></li>
-					<li><a href="#accesskeys" accesskey="k">Access keys</a></li>
+					<li><a href="#nav_copyright" accesskey="6">Copyright</a></li>
+					<li><a href="#nav_accesskeys" accesskey="k">Access keys</a></li>
 					<li><a href="<%= blog.options.prefix.to_s %>/atom.xml" rel="alternate" accesskey="f">Web feed</a></li>
 					<% if current_page.path == "colophon.xhtml" %>
 					<li>Colophon</li>

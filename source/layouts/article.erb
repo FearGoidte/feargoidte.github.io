@@ -1,5 +1,5 @@
 <% wrap_layout :layout do %>
-<main id="main">
+<main id="nav_main">
 	<header>
 		<p><time property="dc:created" datetime="<%= current_article.date.strftime("%F") %>"><%= current_article.date.strftime("%A ") + ordinal(current_article.date.strftime("%e")) + current_article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
 		<% if File.mtime(current_page.source_file).strftime("%F") > current_article.date.strftime("%F") %>
