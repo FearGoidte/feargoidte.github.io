@@ -6,3 +6,7 @@ XHTML:
   name: <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr>
   description: >
     Extensible Hypertext Markup Language is part of the family of <abbr title="eXtensible Markup Language" class="initialism">X.M.L.</abbr> markup languages. It mirrors or extends versions of  Hypertext Markup Language (<dfn class="initialism">H.T.M.L.</dfn>).
+application/xhtml+xml:
+  name: <code>application/xhtml+xml</code>
+  description: >
+    The <dfn>application/xhtml+xml</dfn> media type (<a href="http://www.rfc-editor.org/rfc/rfc3236.txt">RFC3236</a>) is the primary media type for <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr> Family documents.
