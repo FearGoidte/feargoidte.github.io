@@ -7,18 +7,20 @@
 		<% end %>
 		<h1 property="dc:title"><%= current_article.title %></h1>
 		<p>Estimated reading time: <%= reading_time(current_article.body) %></p>
-		<dl>
+	<% if current_article.tags %>
+	<dl>
 		<dt>Tagged with</dt>
 		<% current_article.tags.sort{ |a,b| a.to_s.downcase   <=> b.to_s.downcase   }.each do |tag, articles| %>
-		  <% if current_page.url == tag_path(tag) %>
-		<dd><%= tag %></dd>
-		   <% else %>
-		<dd><%= link_to tag, tag_path(tag) %></dd>
+			<% if data['tags'][tag.to_sym] %>
+				<% if current_page.url == tag_path(tag) %>
+			<dd><%= data['tags'][tag.to_sym][:name] %></dd>
+			   <% else %>
+			<dd><a href="<%= url_for tag_path(tag) %>"><%= data['tags'][tag.to_sym][:name] %></a></dd>
+				<% end %>
 			<% end %>
-		  <% end %>
-		<% if current_article.tags %>
+	<% end %>
 	</dl>
-			  <% end %>
+	<% end %>
 	</header>
 	<%= table_of_contents(current_page) %>
 	<% if current_article.data.summary %>

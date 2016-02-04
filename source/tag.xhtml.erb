@@ -3,6 +3,13 @@ layout: page
 ---
 
 <% @title = 'Articles tagged with ‘' + tagname +'’' %>
+<% if data['tags'][tagname.to_sym] %>
+<h1 property="dc:title">Articles tagged <em><%= data['tags'][tagname.to_sym][:name] %></em></h1>
+<p>
+<%= data['tags'][tagname.to_sym][:description] %>
+</p>
+<% else %>
 <h1 property="dc:title">Articles tagged <em><%= tagname %></em></h1>
+<% end %>
 <p property="dc:description">Summaries of all articles tagged <em><%= tagname %></em> from newest to oldest:</p>
 <%= partial 'layouts/partials/article_lists' %>

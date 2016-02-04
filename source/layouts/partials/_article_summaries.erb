@@ -12,12 +12,20 @@
 	<dl>
 		<dt>Tagged with</dt>
 		<% article.tags.sort{ |a,b| a.to_s.downcase   <=> b.to_s.downcase   }.each do |tag, articles| %>
-		  <% if current_page.url == tag_path(tag) %>
-		<dd><%= tag %></dd>
-		   <% else %>
-		<dd><%= link_to tag, tag_path(tag) %></dd>
+			<% if data['tags'][tag.to_sym] %>
+				<% if current_page.url == tag_path(tag) %>
+			<dd><%= data['tags'][tag.to_sym][:name] %></dd>
+			   <% else %>
+			<dd><a href="<%= url_for tag_path(tag) %>"><%= data['tags'][tag.to_sym][:name] %></a></dd>
+				<% end %>
+			<% else %>
+				<% if current_page.url == tag_path(tag) %>
+			<dd><%= tag %></dd>
+			   <% else %>
+			<dd><%= link_to tag, tag_path(tag) %></dd>
+				<% end %>
 			<% end %>
-		  <% end %>
+	<% end %>
 	</dl>
 	</footer>
 	<% end %>
