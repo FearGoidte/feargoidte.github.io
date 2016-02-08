@@ -1,0 +1,9 @@
+footer table {/* Stop caption from wrapping */
+	width : 100%
+}
+#nav_accesskeys thead {/* Hide heading */
+	display : none
+}
+footer tr {/* Compact display of rows */
+	display : inline-block
+}

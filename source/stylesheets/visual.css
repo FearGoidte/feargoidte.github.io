@@ -1,18 +1,21 @@
-html {
-	font : normal normal normal 125%/1.4 Perpetua,Baskerville,"Big Caslon","Palatino Linotype",Palatino,"URW Palladio L","Nimbus Roman No9 L",serif
-
+blockquote,
+figure {
+  display : table /* Shrink element to the size of it’s contents and enable the table caption display options */
 }
-header,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-th {
-	font-family : "gill sans","gill sans mt","gill sans mt pro","century gothic",corbel,sans-serif;
-	font-weight : normal
+figcaption,
+blockquote>footer {
+  display : table-caption; /* Confine caption to parent */
+  caption-side : bottom /* Move the caption to the bottoms of the content */
 }
-header * {
-	margin : 0
+object {
+	display : block
+}
+h1 ~ ol > li {
+	display : block /* Remove numbering from article summary list */
+}
+:matches(footer, header) :matches(dt, dd, li) {
+display : inline
+}
+[role=navigation] li {
+	display : inline-block /* “inline-block” rather than “inline” so that the navigation links don’t break over lines */
 }

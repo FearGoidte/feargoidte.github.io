@@ -1,3 +1,9 @@
-[role=navigation] {
+address,
+form,
+nav,
+[role=navigation],
+a [href="#nav_main"],
+#nav_accesskeys,
+#nav_accesskeys + p {
 	display : none
 }
