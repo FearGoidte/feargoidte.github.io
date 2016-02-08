@@ -1,8 +1,8 @@
 address,
 form,
 nav,
+body>a,
 [role=navigation],
-a [href="#nav_main"],
 #nav_accesskeys,
 #nav_accesskeys + p {
 	display : none
