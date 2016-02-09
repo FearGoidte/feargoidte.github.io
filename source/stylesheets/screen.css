@@ -1,9 +1,15 @@
-footer table {/* Stop caption from wrapping */
+/*
+Display
+*/
+#nav_accesskeys table {/* Stop caption from wrapping */
 	width : 100%
 }
 #nav_accesskeys thead {/* Hide heading */
 	display : none
 }
-footer tr {/* Compact display of rows */
+#nav_accesskeys tr {/* Compact display of rows */
 	display : inline-block
 }
+/*
+Margins and padding
+*/
