@@ -13,9 +13,9 @@
 		<div role="banner">
 			<dl>
 		<% if current_page.path == 'index.xhtml' %>
-				<dt property="dc:title"><%= data.settings.site.name %></dt>
+				<dt property="dc:title" lang="ga"><%= data.settings.site.name %></dt>
 		<% else %>
-				<dt><a href="<%= url_for '/index.xhtml' %>"><%= data.settings.site.name %></a></dt>
+				<dt lang="ga"><a href="<%= url_for '/index.xhtml' %>"><%= data.settings.site.name %></a></dt>
 		<% end %>
 				<dd
 			<% if current_page.path == 'index.xhtml' %>
