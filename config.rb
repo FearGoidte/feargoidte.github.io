@@ -7,10 +7,6 @@ Time.zone = 'London'
 # Set the default layout
 set :layout, 'layout'
 
-# Per-page layout changes:
-page '/*.xhtml', layout: 'layout'
-page '/articles/*.xhtml', layout: 'article'
-
 # Ignore Icons used for folders
 ignore '*Icon*'
 
@@ -23,7 +19,7 @@ activate :blog do |blog|
   blog.permalink = '{year}/{month}/{day}/{title}.xhtml'
   blog.sources = 'articles/{year}-{month}-{day}-{title}.xhtml'
   blog.taglink = 'tags/{tag}.xhtml'
-  # blog.layout = 'article'
+  blog.layout = 'article'
   blog.year_link = '{year}.xhtml'
   blog.month_link = '{year}/{month}.xhtml'
   blog.day_link = '{year}/{month}/{day}.xhtml'
@@ -38,7 +34,7 @@ set :index_file, 'index.xhtml'
 
 # Relative links
 set :relative_links, true
-activate :relative_assets, sources: '.css, .htm, .html, .xhtml'
+activate :relative_assets
 
 # Markdown settings
 set :markdown_engine, :redcarpet
@@ -53,7 +49,7 @@ activate :syntax, css_class: 'code_quote'
 
 # Build-specific configuration
 configure :build do
-  activate :gzip, exts: '.css, .htm, .html, .js, .svg, .xhtml, .xml'
+  activate :gzip
   activate :minify_html, remove_quotes: false
   activate :minify_css
 end
