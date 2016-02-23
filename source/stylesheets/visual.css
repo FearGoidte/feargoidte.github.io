@@ -3,7 +3,7 @@ Display
 */
 blockquote,
 figure {
-	display : table /* Shrink element to the size of it’s contents and enable the table caption display options */
+	display : table /* Shrink element to the size of its contents and enable the table caption display options */
 }
 figcaption,
 blockquote > footer {
