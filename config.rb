@@ -45,7 +45,7 @@ set :markdown, fenced_code_blocks: true,
                xhtml: true
 
 # Syntax highlighting support
-activate :syntax, css_class: 'code_quote'
+activate :syntax, css_class: 'code-quote'
 
 # Build-specific configuration
 configure :build do
