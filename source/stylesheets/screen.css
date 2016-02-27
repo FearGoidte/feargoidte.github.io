@@ -1,15 +1,41 @@
 /*
 Display
 */
-#nav_accesskeys table {/* Stop caption from wrapping */
-	width : 100%
+
+table#nav_accesskeys {
+	width : 100% /* Stop caption from wrapping */
 }
+
 #nav_accesskeys thead {/* Hide heading */
 	display : none
 }
+
 #nav_accesskeys tr {/* Compact display of rows */
 	display : inline-block
 }
+
 /*
 Margins and padding
 */
+
+form,
+nav { /* Only set for screen as “display : none” on print */
+	margin : 1.4rem 0
+}
+
+/*
+Text
+*/
+
+html {
+	font-size : 125%
+}
+
+/*
+Colours
+*/
+
+body {
+	background : rgb(250, 250, 250) /* linear-gradient(rgb(217, 234, 243), rgb(254, 254, 254) 8%);/* Light blue to off-white */
+/*	background-size : 100% 1.4em; */
+}
