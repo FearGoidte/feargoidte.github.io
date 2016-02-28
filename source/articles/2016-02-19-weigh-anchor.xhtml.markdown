@@ -160,4 +160,4 @@ The convention is that links are *underlined* and that unvisited links are of a 
 
 It is best not to use icons to highlight the [states](#states) since they can change whilst a user is on the page (`:hover`) and the document will need to reflow to accommodate them.
 
-If you use icons for link types, try to make them small and unobtrusive. If you’re using unicode glyphs or `&font-face` with [Font Awesome](https://fortawesome.github.io/Font-Awesome/), [IcoMoon](https://icomoon.io/) &c. or similar try to ensure that the colour of the icon matches the link state—just to emphasis that the icon refers to that link rather than other adjacent text.
+If you use icons for link types, try to make them small and unobtrusive. If you’re using unicode glyphs or `&font-face` with [Font Awesome](https://fortawesome.github.io/Font-Awesome/), [IcoMoon](https://icomoon.io/) <abbr lang="la" title="et cetera">&amp;c.</abbr> or similar try to ensure that the colour of the icon matches the link state—just to emphasis that the icon refers to that link rather than other adjacent text.
