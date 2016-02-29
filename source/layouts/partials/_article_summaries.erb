@@ -1,7 +1,8 @@
 <article>
 	<header>
-		<p><time datetime="<%= article.date.strftime("%F") %>"><%= article.date.strftime("%A ") + ordinal(article.date.strftime("%e")) + article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
+		<p class="published-date icon"><time datetime="<%= article.date.strftime("%F") %>"><%= article.date.strftime("%A ") + ordinal(article.date.strftime("%e")) + article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
 		<h2><%= article.title %></h2>
+		<p class="author icon"><%= data.settings.author.name %></p>
 	</header>
 	<% if article.data.summary %>
 	<p><%= article.data.summary %></p>

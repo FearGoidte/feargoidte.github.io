@@ -1,11 +1,12 @@
 <% wrap_layout :layout do %>
 <main id="nav_main">
 	<header>
-		<p><time property="dc:created" datetime="<%= current_article.date.strftime("%F") %>"><%= current_article.date.strftime("%A ") + ordinal(current_article.date.strftime("%e")) + current_article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
+		<p class="published-date icon"><time property="dc:created" datetime="<%= current_article.date.strftime("%F") %>"><%= current_article.date.strftime("%A ") + ordinal(current_article.date.strftime("%e")) + current_article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
 		<% if File.mtime(current_page.source_file).strftime("%F") > current_article.date.strftime("%F") %>
 		<% end %>
 		<h1 property="dc:title"><%= current_article.title %></h1>
-		<p>Estimated reading time: <%= reading_time(current_article.body) %></p>
+		<p class="author icon"><%= data.settings.author.name %></p>
+		<p class="reading-time icon">Estimated reading time: <%= reading_time(current_article.body) %></p>
 		<% if current_article.tags %>
 		<dl>
 			<dt>Tagged with</dt>
