@@ -7,6 +7,8 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title><%= current_resource.data.title + "—" unless current_resource.data.title.nil? %><%= @title + '—' unless @title.nil? %><%= data.settings.site.name %></title>
+		<link rel="bookmark canonical" href="<%= data.settings.site.base_url %><%= current_page.path %>" />
+		<link property="rdfa:copy" href="#ccpattern" />
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/atom.xml", title: "Atom Feed" %>
 	</head>
 	<body>
