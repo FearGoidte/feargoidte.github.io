@@ -46,7 +46,7 @@ application/xhtml+xml:
     The <dfn>application/xhtml+xml</dfn> media type (<a href="http://www.rfc-editor.org/rfc/rfc3236.txt">RFC3236</a>) is the primary media type for <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr> Family documents.
 ```
 
-Where the first line “`XHTML:`” matches the tag as referenced in your article’s front matter and “`name: <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr>“ matches the name of the tag as you would like it displayed within the body of your documents (links and titles).
+Where the first line “`XHTML:`” matches the tag as referenced in your article’s front matter and “`name: <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr>`” matches the name of the tag as you would like it displayed within the body of your documents (links and titles).
 
 ### Article headers
 
@@ -67,7 +67,7 @@ Code for listing the tags in the article header:
 <% end %>
 ```
 
-For the article headers, the tag links have `rel="tag”` attributes. Read more about this attribute at [4.8.4.12 Link type “tag”—<cite><abbr title="Hypertext Mark-up Language" class="initialism">H.T.M.L.</abbr>5
+For the article headers, the tag links have `rel="tag"` attributes. Read more about this attribute at [4.8.4.12 Link type “tag”—<cite><abbr title="Hypertext Mark-up Language" class="initialism">H.T.M.L.</abbr>5
 A vocabulary and associated <abbr title="application programming interface" class="initialism">A.P.I.</abbr>s for <abbr title="Hypertext Mark-up Language" class="initialism">H.T.M.L.</abbr> and <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr></cite>](https://www.w3.org/TR/html5/links.html#link-type-tag).
 
 ### Article summaries
