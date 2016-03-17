@@ -26,26 +26,26 @@
 		<% unless current_page.path == 'index.xhtml' %>
 			<tr>
 				<th>Home</th>
-				<td><code>1</code></td>
+				<td><kbd>1</kbd></td>
 			</tr>
 		<% end %>
 			<tr>
 				<th>Licence</th>
-				<td><code>5</code></td>
+				<td><kbd>5</kbd></td>
 			</tr>
 			<tr>
 				<th>Copyright</th>
-				<td><code>6</code></td>
+				<td><kbd>6</kbd></td>
 			</tr>
 			<tr>
 				<th>Access Keys</th>
-				<td><code>k</code></td>
+				<td><kbd>k</kbd></td>
 			</tr>
 		<% if current_article %>
 			<% if current_article.previous_article %>
 			<tr>
 				<th>Previous article</th>
-				<td><code>p</code></td>
+				<td><kbd>p</kbd></td>
 			</tr>
 			<% end %>
 		<% end %>
@@ -53,7 +53,7 @@
 			<% if current_article.next_article %>
 			<tr>
 				<th>Next article</th>
-				<td><code>n</code></td>
+				<td><kbd>n</kbd></td>
 			</tr>
 			<% end %>
 		<% end %>
