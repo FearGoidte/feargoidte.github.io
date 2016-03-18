@@ -121,16 +121,12 @@ Icons
     content : url('/images/icons/user.svg')
 }
 
-.icon-share::after {
-    content : '/images/icons/new-tab.svg'
-}
-
 .twotter::before { /* Not Twitter due to my own icon-busting user styles aimed at more bandwidth hungry versions */
-    content : '/images/icons/twotter.svg'
+    content : url('/images/icons/twotter.svg')
 }
 
 .github::before {
-    content : '/images/icons/github.svg'
+    content : url('/images/icons/github.svg')
 }
 
 /* Logo */
