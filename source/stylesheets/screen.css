@@ -112,17 +112,17 @@ a[href^="#"]::after { /* This selector should match all links internal to the do
 }
 
 a[href^="http"]/* This selector should match all external links */,
-a[href*="twitter.com"],
-a[href*="github.com"] {
+a[href*="github.com"],
+a[href*="twitter.com"] {
 	background-position : right;
 	background-repeat : no-repeat;
-	background-size : .9em;
 	padding-right : 1em;
 	text-indent : initial
 }
 
 a[href^="http"] {/* This selector should match all external links */
-	background-image : url(/images/icons/new-tab.svg)
+	background-image : url(/images/icons/new-tab.svg);
+	background-size : .7em;
 }
 
 a[href$="isfeargoidte.me.uk/"] {/* This is the only instance of a page linking to itself that I use, therefore the stylings for links are toned down to mitigate confusion */
@@ -131,16 +131,22 @@ a[href$="isfeargoidte.me.uk/"] {/* This is the only instance of a page linking t
 	padding-right : 0
 }
 
+a[href*="github.com"],
+a[href*="twitter.com"],
 a[href*="validator.nu"] {
-	background-image : url(/images/icons/clipboard.svg)
+	background-size : .9em;
+}
+
+a[href*="github.com"] {
+	background-image : url(/images/icons/github.svg)
 }
 
 a[href*="twitter.com"] {
 	background-image : url(/images/icons/twotter.svg)
 }
 
-a[href*="github.com"] {
-	background-image : url(/images/icons/github.svg)
+a[href*="validator.nu"] {
+	background-image : url(/images/icons/clipboard.svg)
 }
 
 /*
@@ -151,10 +157,6 @@ Intra-post navigation
 	position : relative
 }
 
-.post-navigation li::before {
-	content : ""
-}
-
 .post-navigation li {
 	left : 33%;
 	padding-bottom : 1.4rem;/* The ‘absolute’ positioning causes the elements to abut the document window */
@@ -162,6 +164,10 @@ Intra-post navigation
 	text-align : center;/* This setting will be overriden for ‘.next’ and ‘.prev’ */
 	top : 0;
 	width : 33%
+}
+
+.post-navigation li::before {
+	content : ""
 }
 
 .post-navigation li.next {
