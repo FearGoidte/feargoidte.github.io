@@ -25,7 +25,12 @@ h1 ~ ol > li {
 	display : block /* Remove numbering from article summary list */
 }
 
-:matches(footer, header) :matches(dt, dd, li) {
+footer dd,
+footer dt,
+footer li,
+header dd,
+header dt,
+header li {
 	display : inline
 }
 
