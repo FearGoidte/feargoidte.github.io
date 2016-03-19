@@ -7,7 +7,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title><%= current_resource.data.title + "—" unless current_resource.data.title.nil? %><%= @title + '—' unless @title.nil? %><%= data.settings.site.name %></title>
-		<link rel="canonical" href="<%= data.settings.site.base_url %><%= current_page.path %>" />
+		<link rel="canonical" href="<%= data.settings.site.base_url %><%= current_page.url %>" />
 		<link property="rdfa:copy" href="#ccpattern" />
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/atom.xml", title: "Atom Feed" %>
 		<link rel="apple-touch-icon" sizes="57x57" href="/images/icons/favicons/apple-touch-icon-57x57.png"/>
