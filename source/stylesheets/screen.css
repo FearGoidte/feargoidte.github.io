@@ -26,7 +26,7 @@ table#nav_accesskeys {
 	box-shadow : rgb(232, 232, 232) 0 0 1.25em 0 inset, rgb(195, 195, 195) 0 .1em 0 0, rgb(201, 201, 201) 0 .1em 0 0, rgb(51, 51, 51) 0 .1em .15em 0;
 	color : rgb(150, 150, 150);
 	font-size : .9em;
-	padding : .5em;
+	padding : .25em .5em;
 	text-align : center;
 	text-shadow : rgb(245, 245, 245) 0 .1em 0
 }
