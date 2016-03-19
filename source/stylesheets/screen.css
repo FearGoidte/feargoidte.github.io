@@ -205,9 +205,13 @@ Intra-post navigation
 	.post-navigation li {
 		left : 0;
 		margin-bottom : 0;
-		text-align : left;
 		position : static;
+		text-align : left;
 		width : 100%
+	}
+
+	.next::after {
+		position : relative
 	}
 }
 
@@ -217,10 +221,11 @@ Intra-post navigation
 		border-radius : .5em;
 		color : inherit;
 		float : right;
-		padding : 0 0 1.4rem 1.4rem;
 		margin : 0 0 1.4rem 1.4rem;
-		max-width : 15rem
+		max-width : 15rem;
+		padding : 0 0 1.4rem 1.4rem
 	}
+
 	nav h2 {
 		margin-top : 0
 	}
