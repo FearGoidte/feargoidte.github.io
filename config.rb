@@ -16,7 +16,7 @@ ignore '*Icon*'
 
 # Blog
 activate :blog do |blog|
-  blog.permalink = '{year}/{month}/{day}/{title}'
+  blog.permalink = '{year}/{month}/{day}/{title}.xhtml'
   blog.sources = 'articles/{year}-{month}-{day}-{title}.xhtml'
   blog.taglink = 'tags/{tag}.xhtml'
   blog.layout = 'article'
