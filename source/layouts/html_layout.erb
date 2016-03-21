@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-gb-oxendict">
 	<head>
-		<link type="text/css" rel="stylesheet" href="/stylesheets/visual.css" media="print, screen">
-		<link type="text/css" rel="stylesheet" href="/stylesheets/print.css" media="print">
-		<link type="text/css" rel="stylesheet" href="/stylesheets/screen.css" media="screen">
+		<link type="text/css" rel="stylesheet" href="<%= url_for "/stylesheets/visual.css" %>" media="print, screen">
+		<link type="text/css" rel="stylesheet" href="<%= url_for "/stylesheets/print.css" %>" media="print">
+		<link type="text/css" rel="stylesheet" href="<%= url_for "/stylesheets/screen.css" %>" media="screen">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title><%= current_resource.data.title + "—" unless current_resource.data.title.nil? %><%= @title + '—' unless @title.nil? %><%= data.settings.site.name %></title>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/atom.xml", title: "Atom Feed" %>
