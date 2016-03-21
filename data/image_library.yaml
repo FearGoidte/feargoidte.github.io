@@ -1,0 +1,12 @@
+abstract-q-c-640-480-8.jpeg:
+  name: Some abstract art
+  height: 640
+  width: 480
+nature-q-c-850-480-2.jpeg:
+  name: An island at sunset
+  height: 480
+  width: 850
+nightlife-q-c-800-600-1.jpeg:
+  name: Portrait of me, James
+  height: 600
+  width: 800
