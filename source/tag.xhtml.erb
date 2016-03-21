@@ -5,7 +5,7 @@ layout: page
 <% @title = 'Articles tagged with ‘' + tagname +'’' %>
 <% if data['tags'][tagname.to_sym] %>
 <h1 property="dc:title">Articles tagged <em><%= data['tags'][tagname.to_sym][:name] %></em></h1>
-<p>
+<p property="dc:description">
 <%= data['tags'][tagname.to_sym][:description] %>
 </p>
 <% else %>

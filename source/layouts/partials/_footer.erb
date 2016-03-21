@@ -1,7 +1,19 @@
 <footer>
-	<p id="nav_copyright">Copyright © <time>1994</time>–<time><%= Date.today.strftime('%Y') %></time> <a href="https://github.com/<%= data.settings.author.github %>" property="cc:attributionURL" rel="author"><span property="cc:attributionName dc:creator"><%= data.settings.author.name %></span></a>. Unless otherwise indicated, this document (and all of its contents) is licensed under a <a href="<%= data.settings.CClicence.url %>" rel="license" property="cc:license dc:license schema:license" accesskey="5"><%= data.settings.CClicence.name %></a>.</p>
-	<p>This document was last modified on <time property="dc:modified" datetime="<%= File.mtime(current_page.source_file).iso8601 %>"><%= File.mtime(current_page.source_file).strftime("%A ") + ordinal(File.mtime(current_page.source_file).strftime("%e")) + File.mtime(current_page.source_file).strftime("&#160;%B,&#160;%Y") %> at <%= File.mtime(current_page.source_file).strftime("%H:%M") + " (" + Time.zone.name + ")" %></time></p>
-	<address><a href="https://twitter.com/<%= data.settings.author.twitter %>">Follow me on <em>Twitter</em></a>. <a href="https://github.com/<%= data.settings.author.github %>">Find me on <em>Github</em></a>.</address>
+	<p>This document was last modified on <time property="dc:modified  schema:dateModified" datetime="<%= File.mtime(current_page.source_file).iso8601 %>"><%= File.mtime(current_page.source_file).strftime("%A ") + ordinal(File.mtime(current_page.source_file).strftime("%e")) + File.mtime(current_page.source_file).strftime("&#160;%B,&#160;%Y") %> at <%= File.mtime(current_page.source_file).strftime("%H:%M") + " (" + Time.zone.name + ")" %></time>.</p>
+	<p id="nav_copyright" resource="#ccpattern" typeof="rdfa:Pattern">Copyright © <time property="schema:copyrightYear">1994</time>–<time><%= Date.today.strftime('%Y') %></time> <span property="cc:attributionName dc:creator schema:creator schema:publisher" resource="#me"><a href="<%= data.settings.site.base_url %>" property="cc:attributionURL" rel="author"><%= data.settings.author.name %></a></span>. Except where otherwise indicated, this document (and all of its contents) is licensed under a <a accesskey="5" href="<%= data.settings.CClicence.url %>" property="cc:license dc:license schema:license" rel="license"><%= data.settings.CClicence.name %></a>.</p>
+	<address resource="#me" typeof="foaf:Person schema:Person">
+		<span property="foaf:name schema:Name">James Ó Nuanáin</span> has this website (<a property="foaf:weblog schema:url" href="https://isfeargoidte.me.uk/"><span xml:lang="ga">Fear Goidte</span></a>).
+	  His inane witterings are also available on
+		<span property="foaf:holdsAccount" typeof="foaf:OnlineAccount">
+			<a href="https://twitter.com/" property="foaf:accountServiceHomepage">Twitter</a>
+			where his user name is ‘<span property="foaf:accountName"><a href="https://twitter.com/<%= data.settings.author.twitter %>">@<%= data.settings.author.twitter %></a></span>’.
+				</span>
+	  His feeble attempts at coding are available on
+		<span property="foaf:holdsAccount" typeof="foaf:OnlineAccount">
+			<a property="foaf:accountServiceHomepage" href="https://github.com/">Github</a>
+			where his user name is similarly ‘<span property="foaf:accountName"><a href="https://github.com/<%= data.settings.author.github %>"><%= data.settings.author.github %></a></span>’.
+		</span>
+	</address>
 	<table id="nav_accesskeys">
 		<caption>This page makes use of the following <code>accesskey</code> shortcuts:</caption>
 		<thead>
@@ -14,26 +26,26 @@
 		<% unless current_page.path == 'index.xhtml' %>
 			<tr>
 				<th>Home</th>
-				<td><code>1</code></td>
+				<td><kbd>1</kbd></td>
 			</tr>
 		<% end %>
 			<tr>
 				<th>Licence</th>
-				<td><code>5</code></td>
+				<td><kbd>5</kbd></td>
 			</tr>
 			<tr>
 				<th>Copyright</th>
-				<td><code>6</code></td>
+				<td><kbd>6</kbd></td>
 			</tr>
 			<tr>
 				<th>Access Keys</th>
-				<td><code>k</code></td>
+				<td><kbd>k</kbd></td>
 			</tr>
 		<% if current_article %>
 			<% if current_article.previous_article %>
 			<tr>
 				<th>Previous article</th>
-				<td><code>p</code></td>
+				<td><kbd>p</kbd></td>
 			</tr>
 			<% end %>
 		<% end %>
@@ -41,11 +53,11 @@
 			<% if current_article.next_article %>
 			<tr>
 				<th>Next article</th>
-				<td><code>n</code></td>
+				<td><kbd>n</kbd></td>
 			</tr>
 			<% end %>
 		<% end %>
 		</tbody>
 	</table>
-	<p>This page is authored in, <em>hopefully</em>, <a href="https://validator.nu/?doc=<%= CGI.escape(data.settings.site.base_url + current_page.url) %>&amp;showsource=yes&amp;showoutline=yes" accesskey="v" >well-formed <abbr title="eXtensible Hypertext Mark-up Langauge" class="initialism">X.H.T.M.L.</abbr></a> (the validator link is so that I can occasionally check on the mark-up).</p>
+	<p>This page is authored in, <em>hopefully</em>, <a accesskey="v" href="https://validator.nu/?doc=<%= CGI.escape(data.settings.site.base_url + current_page.url) %>&amp;showsource=yes&amp;showoutline=yes" rel="nofollow">well-formed <abbr title="eXtensible Hypertext Mark-up Langauge" class="initialism">X.H.T.M.L.</abbr></a> (the validator link is so that I can occasionally check on the mark-up).</p>
 </footer>

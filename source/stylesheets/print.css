@@ -1,15 +1,43 @@
+@charset "utf-8";
+
 /*
 Display
 */
+
 address,
 form,
 nav,
-body>a,
+body > a,
 [role=navigation],
 #nav_accesskeys,
 #nav_accesskeys + p {
 	display : none
 }
+
 /*
-Margins and padding
+Print only
 */
+
+footer,
+header,
+h1 ~ article,
+h1 ~ ol > li {
+	break-inside : avoid
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	page-break-after : avoid
+}
+
+/*
+Text
+*/
+
+html {
+	font-size : 12px
+}

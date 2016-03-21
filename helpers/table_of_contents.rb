@@ -2,7 +2,6 @@ def table_of_contents(page)
   if config.markdown_engine == :redcarpet && config.markdown[:with_toc_data]
     renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML_TOC,
                                        fenced_code_blocks: true,
-                                       nesting_level: 2,
                                        xhtml: true)
     file = ::File.read(page.source_file)
     tocpre = '<nav><h2>Table of contents</h2>'

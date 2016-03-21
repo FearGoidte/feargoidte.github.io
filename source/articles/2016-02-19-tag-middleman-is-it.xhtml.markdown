@@ -1,9 +1,10 @@
 ---
 title: “Tag!”, Middleman is it
-date: 2016-02-04 16:00
+date: 2016-02-19 10:30
 tags: Middleman, eRuby, YAML, XHTML, blogging, rel
+published: true
 summary: >
-  Doing more with the <a href="https://middlemanapp.com/basics/blogging/">middleman-blog</a> extension’s tags. Adding descriptions, names with inline mark-up, and the tag <code>rel</code> attribute. This is assuming that you have setup a blank blog as per <dfn><a href="http://isfeargoidte.me.uk/2016/02/02/would-have-worn-gloves/#nav_main">If I’d known there’d be so much typing, I would have worn gloves</a></dfn>.
+  Doing more with the <a href="https://middlemanapp.com/basics/blogging/">middleman-blog</a> extension’s tags. Adding descriptions, names with inline mark-up, and the tag <code>rel</code> attribute. This is assuming that you have setup a blank blog as per <dfn><a href="/2016/02/02/would-have-worn-gloves.xhtml#nav_main">If I’d known there’d be so much typing, I would have worn gloves</a></dfn>.
 
 ---
 
@@ -23,7 +24,7 @@ To re-order them alphabetically:
 <% blog.tags.sort{ |a, b| a.to_s.downcase <=> b.to_s.downcase }.each do |tag, articles| %>
 ```
 
-The `to_s.downcase` changes the tags to lowercase for sorting purposes, otherwise they are ordered by uppercase, and then by lowercase as two separate but adjacent lists.
+The `to_s.downcase` changes the tags to lowercase for sorting purposes, otherwise they are ordered by uppercase, and then by lowercase as two separate but adjacent logical lists.
 
 ## Descriptions and names with inline mark-up
 
@@ -45,7 +46,7 @@ application/xhtml+xml:
     The <dfn>application/xhtml+xml</dfn> media type (<a href="http://www.rfc-editor.org/rfc/rfc3236.txt">RFC3236</a>) is the primary media type for <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr> Family documents.
 ```
 
-Where the first line “`XHTML:`” matches the tag as referenced in your article’s front matter and “`name: <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr>“ matches the name of the tag as you would like it displayed within the body of your documents (links and titles).
+Where the first line “`XHTML:`” matches the tag as referenced in your article’s front matter and “`name: <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr>`” matches the name of the tag as you would like it displayed within the body of your documents (links and titles).
 
 ### Article headers
 
@@ -66,7 +67,7 @@ Code for listing the tags in the article header:
 <% end %>
 ```
 
-For the article headers, the tag links have `rel="tag”` attributes. Read more about this attribute at [4.8.4.12 Link type “tag”—<cite><abbr title="Hypertext Mark-up Language" class="initialism">H.T.M.L.</abbr>5
+For the article headers, the tag links have `rel="tag"` attributes. Read more about this attribute at [4.8.4.12 Link type “tag”—<cite><abbr title="Hypertext Mark-up Language" class="initialism">H.T.M.L.</abbr>5
 A vocabulary and associated <abbr title="application programming interface" class="initialism">A.P.I.</abbr>s for <abbr title="Hypertext Mark-up Language" class="initialism">H.T.M.L.</abbr> and <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr></cite>](https://www.w3.org/TR/html5/links.html#link-type-tag).
 
 ### Article summaries
@@ -129,7 +130,7 @@ end
 
 ### Tag archives
 
-This code is for the generated individual tag archives:
+This code is for the generated individual tag archives (`source\tag.xhtml.erb`):
 
 ``` eruby
 <% if data['tags'][tagname.to_sym] %>

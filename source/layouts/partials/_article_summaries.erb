@@ -1,10 +1,12 @@
-<article>
+<article typeof="DCMIType:text schema:Article" resource="<%= data.settings.site.base_url %><%= article.url %>">
 	<header>
-		<p><time datetime="<%= article.date.strftime("%F") %>"><%= article.date.strftime("%A ") + ordinal(article.date.strftime("%e")) + article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
-		<h2><%= article.title %></h2>
+		<p class="published-date icon"><time datetime="<%= article.date.strftime("%F") %>" property="dc:created schema:dateCreated schema:datePublished" ><%= article.date.strftime("%A ") + ordinal(article.date.strftime("%e")) + article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
+		<h2 property="dc:title schema:Headline"><%= article.title %></h2>
+		<p class="author icon"><%= data.settings.author.name %></p>
+		<link property="rdfa:copy" href="#ccpattern" />
 	</header>
 	<% if article.data.summary %>
-	<p><%= article.data.summary %></p>
+	<p property="dc:description schema:description"><%= article.data.summary %></p>
 	<% end %>
 	<p>Continue reading <a href="<%= article.url %>#nav_main"><cite><%= article.title %></cite></a> (could take <%= reading_time(article.body) %>).</p>
 	<% if article.tags %>

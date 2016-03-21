@@ -1,15 +1,232 @@
+@charset "utf-8";
+
 /*
 Display
 */
-#nav_accesskeys table {/* Stop caption from wrapping */
-	width : 100%
+
+table#nav_accesskeys {
+	width : 100% /* Stop caption from wrapping */
 }
+
 #nav_accesskeys thead {/* Hide heading */
 	display : none
 }
+
 #nav_accesskeys tr {/* Compact display of rows */
 	display : inline-block
 }
+
+#nav_accesskeys td kbd {
+	background-color : rgb(239, 240, 242);
+	border-radius : .0625em;
+	border-top-color : rgb(245, 245, 245);
+	border-top-style : solid;
+	border-top-width : thin;
+	box-sizing : border-box;
+	box-shadow : rgb(232, 232, 232) 0 0 1.25em 0 inset, rgb(195, 195, 195) 0 .1em 0 0, rgb(201, 201, 201) 0 .1em 0 0, rgb(51, 51, 51) 0 .1em .15em 0;
+	color : rgb(150, 150, 150);
+	font-size : .9em;
+	padding : .25em .5em;
+	text-align : center;
+	text-shadow : rgb(245, 245, 245) 0 .1em 0
+}
+
 /*
 Margins and padding
 */
+
+form,
+nav { /* Only set for screen as “display : none” on print */
+	margin : 1.4rem 0
+}
+
+/*
+Text
+*/
+
+html {
+	font-size : 125%
+}
+
+/*
+Colours
+*/
+
+body,
+footer > dl > dd::after,
+footer > dl > dd::before,
+header > dl > dd::after,
+header > dl > dd::before {
+	background : rgb(250, 250, 250); /* linear-gradient(rgb(217, 234, 243), rgb(254, 254, 254) 8%);/* Light blue to off-white */
+/*	background-size : 100% 1.4em; */
+	color : inherit
+}
+
+/* Site-wide navigation */
+[role=banner] [role=navigation] li::before {
+	content : "" /* Turn off custom markers */
+}
+
+[role=banner] [role="navigation"] li {
+	margin : 1.4rem .2em 0 .2em;
+	height : 1.4rem;
+	text-align : center;
+	width : 6em
+}
+
+[role=banner] [role="navigation"] li {
+	background-color : #888;
+	color : rgb(250,250,250) /* Same as background */
+}
+
+[role=banner] [role=navigation] li a {
+	color : inherit;
+	display : block;
+	text-decoration : none;
+	background-color : #bbb;
+	transition : background-color .25s ease
+}
+
+[role=banner] [role=navigation] li,
+[role=banner] [role=navigation] li a {
+	border-radius : .3em
+}
+
+[role=banner] [role=navigation] li a:hover,
+[role=banner] [role=navigation] li a:focus {
+	background-color : #999;
+	color : inherit
+}
+
+[role=banner] [role=navigation] li a:active {
+	background-color : inherit;
+	color : inherit
+}
+
+/*
+Link icons
+*/
+
+a[href^="#"]::after { /* This selector should match all links internal to the document */
+	content : "\202F§" /* A ‘narrow no-break space’ followed by the section sign */
+}
+
+a[href^="http"]/* This selector should match all external links */,
+a[href*="github.com"],
+a[href*="twitter.com"] {
+	background-position : right;
+	background-repeat : no-repeat;
+	padding-right : 1em;
+	text-indent : initial
+}
+
+a[href^="http"] {/* This selector should match all external links */
+	background-image : url(/images/icons/new-tab.svg);
+	background-size : .7em;
+}
+
+a[href$="isfeargoidte.me.uk/"] {/* This is the only instance of a page linking to itself that I use, therefore the stylings for links are toned down to mitigate confusion */
+	background-image : none;
+	border : none;
+	padding-right : 0
+}
+
+a[href*="github.com"],
+a[href*="twitter.com"],
+a[href*="validator.nu"] {
+	background-size : .9em;
+}
+
+a[href*="github.com"] {
+	background-image : url('/images/icons/github.svg')
+}
+
+a[href*="twitter.com"] {
+	background-image : url('/images/icons/twotter.svg')
+}
+
+a[href*="validator.nu"] {
+	background-image : url('/images/icons/clipboard.svg')
+}
+
+/*
+Intra-post navigation
+*/
+.post-navigation {
+	margin-bottom : 1.4rem;
+	position : relative
+}
+
+.post-navigation li {
+	left : 33%;
+	padding-bottom : 1.4rem;/* The ‘absolute’ positioning causes the elements to abut the document window */
+	position : absolute;
+	text-align : center;/* This setting will be overriden for ‘.next’ and ‘.prev’ */
+	top : 0;
+	width : 33%
+}
+
+.post-navigation li::before {
+	content : ""
+}
+
+.post-navigation li.next {
+	left : 66%;
+	text-align : right
+}
+
+.post-navigation li.prev {
+	left : 0;
+	text-align : left
+}
+
+.next a,
+.prev a {
+	font-style : italic
+}
+
+.next::after,
+.prev::before {
+	position : absolute;
+	top : 0
+}
+
+.next::after {
+	content : "\202F☞"
+}
+
+.post-navigation li.prev::before {
+	content : "☜\202F"
+}
+
+@media (max-width : 30em) { /* Reposition links on narrow screens */
+	.post-navigation li.next,
+	.post-navigation li.prev,
+	.post-navigation li {
+		left : 0;
+		margin-bottom : 0;
+		position : static;
+		text-align : left;
+		width : 100%
+	}
+
+	.next::after {
+		position : relative
+	}
+}
+
+@media (min-width : 60em) {
+	nav {
+		background-color : rgba(0, 0, 238, .1);/* Link colour with low opacity */
+		border-radius : .5em;
+		color : inherit;
+		float : right;
+		margin : 0 0 1.4rem 1.4rem;
+		max-width : 15rem;
+		padding : 0 0 1.4rem 1.4rem
+	}
+
+	nav h2 {
+		margin-top : 0
+	}
+}

@@ -1,5 +1,8 @@
 <% wrap_layout :layout do %>
 <main id="nav_main">
+	<% if current_page.data.title %>
+	<h1 property="dc:title"><%= current_page.data.title %></h1>
+	<% end %>
 	<%= yield %>
 	<%= partial 'layouts/partials/footer' %>
 </main>
