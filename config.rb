@@ -32,7 +32,7 @@ end
 activate :directory_indexes
 set :index_file, 'index.xhtml'
 # On GitHub pages, 404 page must be "404.html" or "404.md"
-page '/404.html', :directory_index => false
+page '/404.html', directory_index: false
 
 # Relative links
 set :relative_links, true
