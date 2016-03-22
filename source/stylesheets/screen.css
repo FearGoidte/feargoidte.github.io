@@ -125,7 +125,7 @@ a[href*="twitter.com"] {
 	background-size : .7em;
 }
 
-a[href*="isfeargoidte.me.uk"] {/* This is the only instance of a page linking to itself that I use, therefore the stylings for links are toned down to mitigate confusion */
+a[href^="https://isfeargoidte.me.uk"] {/* This is the only instance of a page linking to itself that I use, therefore the stylings for links are toned down to mitigate confusion */
 	background-image : none;
 	border : none;
 	padding-right : 0
