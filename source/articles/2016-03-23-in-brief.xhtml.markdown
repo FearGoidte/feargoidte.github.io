@@ -4,7 +4,7 @@ title: Abbreviations
 date: 2016-03-23 12:00
 published: false
 tags: abbr, acronym, contraction, initialism
-excerpt: >
+description: >
   How to use and abuse these linguist amputees.
 
 ---

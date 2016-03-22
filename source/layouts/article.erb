@@ -22,8 +22,8 @@
 		<link property="rdfa:copy" href="#ccpattern" />
 	</header>
 	<%= table_of_contents(current_page) %>
-	<% if current_article.data.summary %>
-	<p property="dc:description schema:description"><%= current_article.data.summary %></p>
+	<% if current_article.data.description %>
+	<p property="dc:description schema:description"><%= current_article.data.description %></p>
 	<% end %>
 	<%= yield %>
 	<%= partial 'layouts/partials/footer' %>
