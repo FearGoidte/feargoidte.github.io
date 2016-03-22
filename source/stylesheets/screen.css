@@ -120,12 +120,12 @@ a[href*="twitter.com"] {
 	text-indent : initial
 }
 
-a[href^="http"] {/* This selector should match all external links */
+[href^=http] {/* This selector should match all external links */
 	background-image : url(/images/icons/new-tab.svg);
 	background-size : .7em;
 }
 
-a[href$="isfeargoidte.me.uk/"] {/* This is the only instance of a page linking to itself that I use, therefore the stylings for links are toned down to mitigate confusion */
+a[href*="isfeargoidte.me.uk"] {/* This is the only instance of a page linking to itself that I use, therefore the stylings for links are toned down to mitigate confusion */
 	background-image : none;
 	border : none;
 	padding-right : 0

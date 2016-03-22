@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-gb-oxendict">
 	<head>
-		<link type="text/css" rel="stylesheet" href="<%= data.settings.site.base_url %><%= url_for "/stylesheets/visual.css" %>" media="print, screen">
-		<link type="text/css" rel="stylesheet" href="<%= data.settings.site.base_url %><%= url_for "/stylesheets/print.css" %>" media="print">
-		<link type="text/css" rel="stylesheet" href="<%= data.settings.site.base_url %><%= url_for "/stylesheets/screen.css" %>" media="screen">
+		<link type="text/css" rel="stylesheet" href="<%= data.settings.site.base_url %>/stylesheets/visual.css" media="print, screen">
+		<link type="text/css" rel="stylesheet" href="<%= data.settings.site.base_url %>/stylesheets/print.css" media="print">
+		<link type="text/css" rel="stylesheet" href="<%= data.settings.site.base_url %>/stylesheets/screen.css" media="screen">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title><%= current_resource.data.title + "—" unless current_resource.data.title.nil? %><%= @title + '—' unless @title.nil? %><%= data.settings.site.name %></title>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/atom.xml", title: "Atom Feed" %>
@@ -35,7 +35,7 @@
 		<% if current_page.path == 'index.xhtml' %>
 				<dt property="dc:title" lang="ga"><%= data.settings.site.name %></dt>
 		<% else %>
-				<dt lang="ga"><a href="<%= data.settings.site.base_url %><%= url_for '/index.xhtml' %>"><%= data.settings.site.name %></a></dt>
+				<dt lang="ga"><a href="<%= data.settings.site.base_url %>"><%= data.settings.site.name %></a></dt>
 		<% end %>
 				<dd
 			<% if current_page.path == 'index.xhtml' %>
@@ -45,24 +45,12 @@
 			</dl>
 			<div role="navigation">
 				<ol>
-				<% if current_page.path == 'index.xhtml' %>
-					<li>Home</li>
-				<% else %>
-					<li><a href="<%= data.settings.site.base_url %><%= url_for '/index.xhtml' %>" accesskey="1">Home</a></li>
-				<% end %><!--End of home link-->
-				<% if current_page.path == 'archives.xhtml' %>
-					<li>Archives</li>
-				<% else %>
-					<li><a href="<%= data.settings.site.base_url %><%= url_for '/archives.xhtml' %>">Archives</a></li>
-				<% end %><!--End of archive link-->
+					<li><a href="<%= data.settings.site.base_url %>/" accesskey="1">Home</a></li>
+					<li><a href="<%= data.settings.site.base_url %>/archives">Archives</a></li>
 					<li><a href="#nav_copyright" accesskey="6">Copyright</a></li>
 					<li><a href="#nav_accesskeys" accesskey="k">Access keys</a></li>
 					<li><a href="<%= data.settings.site.base_url %><%= blog.options.prefix.to_s %>/atom.xml" rel="alternate" accesskey="f">Web feed</a></li>
-					<% if current_page.path == "colophon.xhtml" %>
-					<li>Colophon</li>
-				<% else %>
-					<li><a href="<%= data.settings.site.base_url %><%= url_for "/colophon.xhtml" %>">Colophon</a></li>
-				<% end %><!--End of archive link-->
+					<li><a href="<%= data.settings.site.base_url %>/colophon">Colophon</a></li>
 				</ol>
 			</div><!--End of ‘navigation’ role-->
 		</div><!-- end of ‘banner’ role -->
