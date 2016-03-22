@@ -1,4 +1,5 @@
 ---
+
 title: If I’d known there’d be so much typing, I would have worn gloves
 date: 2016-02-02 13:30
 tags: Middleman, Ruby, rbenv, GitHub Pages, OSX
