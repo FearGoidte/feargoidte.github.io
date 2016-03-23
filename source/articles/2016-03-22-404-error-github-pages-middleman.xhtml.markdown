@@ -30,7 +30,7 @@ GitHub does not support using a file called `404.xhtml` (though they are looking
 
 ## Relative links
 
-Because <cite>GitHub pages</cite> is not using a server redirect for your custom page, you can‘t use relative links as they will only work when you access the page directly: `example.com/404.html`.
+Because <cite>GitHub pages</cite> is not using a server redirect for your custom page, you can’t use relative links as they will only work when you access the page directly: `example.com/404.html`.
 
 Instead, the template and the layout file must use absolute links to assets (images, style-sheets <abbr lang="la" title="et cetera">&amp;c.</abbr>) as well as to other pages on your site.
 
@@ -38,10 +38,10 @@ Instead, the template and the layout file must use absolute links to assets (ima
 
 I haven’t bothered with the content of the 404 document itself, since that is dependent on the existing navigational elements of your site.
 
-I think you should include both a reference to ”file not found“ and ”404“ in the title, since those terms should be familiar to many users.
+I think you should include both a reference to “file not found” and “404” in the title, since those terms should be familiar to many users.
 
 An ability to search the site and possibly a replication of any archive page are also good ideas for content.
 
-Avoid being too adamant that it’s the user‘s fault or being too passive aggressive—surprisingly, those are quite common for the content of 404 pages.
+Avoid being too adamant that it’s the user’s fault or being too passive aggressive—surprisingly, those are quite common for the content of 404 pages.
 
 My own is inexcusably terse: [Fear Goidte’s 404](https://isfeargoidte.me.uk/404.html) but I have an archive link on my site-wide navigation menu and not enough content to warrant an ability to search the site from within the site.
