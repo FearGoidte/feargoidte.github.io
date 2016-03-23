@@ -19,8 +19,9 @@ This is a usage and styling guide for abbreviations, acronyms, contractions, cli
 
 Since my adoption of the Gregorian Calendar, I’ve blogged on this subject twice before. Nine years ago I referenced the following quote:
 
-<blockquote>Semantic markup is silly. I see the same terms commonly defined and that by logical extension is foolish. If you don’t know what <abbr title="Really Simply Syndiation" class="initialism">R.S.S.</abbr> means, for instance, having it explained to you as Really Simply Syndiation means *nothing*. If you already have an <abbr title="Really Simply Syndiation" class="initialism">R.S.S.</abbr> reader, meaning you actually care about <abbr title="Really Simply Syndiation" class="initialism">R.S.S.</abbr>, then you don’t need it explained.
+<blockquote>
 <footer>‘Roger’ commenting on <cite><a href="http://web.archive.org/web/20060326005449/http://www.huddledmasses.org/2004/10/27/sick-of-semantics/">Sick of Semantics</a></cite> on Huddledmasses.org (<a href="https://archive.org">archive.org</a> link)</footer>
+Semantic markup is silly. I see the same terms commonly defined and that by logical extension is foolish. If you don’t know what <abbr title="Really Simply Syndiation" class="initialism">R.S.S.</abbr> means, for instance, having it explained to you as Really Simply Syndiation means *nothing*. If you already have an <abbr title="Really Simply Syndiation" class="initialism">R.S.S.</abbr> reader, meaning you actually care about <abbr title="Really Simply Syndiation" class="initialism">R.S.S.</abbr>, then you don’t need it explained.
 </blockquote>
 
 This raises a number of a issues:
