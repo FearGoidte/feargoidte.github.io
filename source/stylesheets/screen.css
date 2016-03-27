@@ -164,11 +164,14 @@ Intra-post navigation
 
 .post-navigation li {
 	left : 33%;
-	padding-bottom : 1.4rem;/* The ‘absolute’ positioning causes the elements to abut the document window */
 	position : absolute;
 	text-align : center;/* This setting will be overriden for ‘.next’ and ‘.prev’ */
 	top : 0;
 	width : 33%
+}
+
+.post-navigation li::last-child {
+	padding-bottom : 1.4rem/* The ‘absolute’ positioning causes the elements to abut the document window */
 }
 
 .post-navigation li::before {
