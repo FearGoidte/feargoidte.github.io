@@ -50,6 +50,11 @@ set :markdown, fenced_code_blocks: true,
 # Syntax highlighting support
 activate :syntax, css_class: 'code-quote'
 
+# Development-specific configuration
+configure :development do
+  set :https, true
+end
+
 # Build-specific configuration
 configure :build do
   activate :gzip
