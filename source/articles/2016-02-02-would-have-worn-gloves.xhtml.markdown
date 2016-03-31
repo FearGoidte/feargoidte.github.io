@@ -10,7 +10,7 @@ description: >
 
 You should never *ever* enter into the Terminal commands you find in comments, on forums, or on personal websites like this one unless you understand what they are doing and not just what someone like me is claiming that they do. The terminal can do *bad* things to your computer. That said, these are the steps I took to install Middleman and they are a whole bunch of terminal commands.
 
-Directories and folders are the same thing. However, to both follow convention and increase confusion, I am using <dfn>directory</dfn> when referring to the command line and Terminal application and <dfn>folder</dfn> when accessing the same thing using Finder.
+Directories and folders are the same thing. However, to both follow convention and increase confusion, I am using <dfn>directory</dfn> when referring to the command line and the Terminal application and <dfn>folder</dfn> when accessing the same thing using Finder.
 
 Ruby uses software packages called <dfn>gems</dfn> which each contain an application or library.
 
