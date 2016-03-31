@@ -21,14 +21,14 @@ Since my adoption of the Gregorian Calendar, I’ve blogged on this subject twic
 
 <blockquote>
 <footer>‘Roger’ commenting on <cite><a href="http://web.archive.org/web/20060326005449/http://www.huddledmasses.org/2004/10/27/sick-of-semantics/">Sick of Semantics</a></cite> on Huddledmasses.org (<a href="https://archive.org">archive.org</a> link)</footer>
-Semantic markup is silly. I see the same terms commonly defined and that by logical extension is foolish. If you don’t know what <abbr title="Really Simply Syndiation" class="initialism">R.S.S.</abbr> means, for instance, having it explained to you as Really Simply Syndiation means *nothing*. If you already have an <abbr title="Really Simply Syndiation" class="initialism">R.S.S.</abbr> reader, meaning you actually care about <abbr title="Really Simply Syndiation" class="initialism">R.S.S.</abbr>, then you don’t need it explained.
+Semantic markup is silly. I see the same terms commonly defined and that by logical extension is foolish. If you don’t know what <abbr title="Really Simply Syndiation" class="initialism">R.S.S.</abbr> means, for instance, having it explained to you as Really Simply Syndiation means <em>nothing</em>. If you already have an <abbr title="Really Simply Syndiation" class="initialism">R.S.S.</abbr> reader, meaning you actually care about <abbr title="Really Simply Syndiation" class="initialism">R.S.S.</abbr>, then you don’t need it explained.
 </blockquote>
 
 This raises a number of a issues:
 
 * Visual browsers are not the only devices for which mark-up is designed, it is also used by speech and braille readers as well as web crawlers for search engines. `abbr` is not just a hook to attach an explanative `title` attribute to but also to make it clear that what it contains is not a pronounceable word;
 * Recognition; the abbreviation may be common currency at the moment but obscure at a later date. It may be familiar in the United Kingdom but unusual in Australia. Abbreviations are not the exclusive preserve of technical terms;
-* The same collection of capital letters could stand for one thing in one context and something else in another: A.A. for Alcoholics Anonymous, or for Automobile Association;
+* The same collection of capital letters could stand for one thing in one context and something else in another: <dfn>A.A.</dfn> for Alcoholics Anonymous, or for Automobile Association;
 * Whilst you might make your abbreviations clear at the beginning of a document or a series of documents, that data could be reused through syndication excerpts, or just cut and pasting, and the abbreviations stripped of their context, meaning, and intended pronunciation; and
 * The title attribute of `abbr` is also potentially useful for search engines and other robotic user agents where the individual words that comprise an initialism or acronym might be of interest on their own to collect references
 
@@ -52,7 +52,7 @@ This convention has fallen into abeyance (elsewhere) on the dubious grounds that
 
 Loathe as I am to use uppercase for formatting, I do not want to totally rule it out. Properly peppering initialism and acronyms with full stops makes it clear and unambiguous what they are to all user agents without them having to have prior knowledge of them.
 
-The first instance of an acronym or initialism should follow it being written out in full: Irish Republican Army (I.R.A.) this instance should not be wrapped in an `abbr` but all subsequent ones should be and *with* the `title` attribute.
+The first instance of an acronym or initialism should follow it being written out in full: Irish Republican Army (<dfn>I.R.A.</dfn>). Any instance with an adjacent definition should be contained within a `dfn` element but should not be wrapped in an `abbr`; all other instances should be contained *within* the `abbr` element with the appropriate `title` attribute.
 
 ### Latinate
 
