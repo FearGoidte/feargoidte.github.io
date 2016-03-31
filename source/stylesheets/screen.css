@@ -118,7 +118,8 @@ a[href^="#"]::after { /* This selector should match all links internal to the do
 
 a[href^="http"]/* This selector should match all external links */,
 a[href*="github.com"],
-a[href*="twitter.com"] {
+a[href*="twitter.com"],
+a[href*="wikipedia.org"] {
 	background-position : right;
 	background-repeat : no-repeat;
 	padding-right : 1em;
@@ -138,7 +139,8 @@ a[href^="https://isfeargoidte.me.uk"] {/* This is the only instance of a page li
 
 a[href*="github.com"],
 a[href*="twitter.com"],
-a[href*="validator.nu"] {
+a[href*="validator.nu"],
+a[href*="wikipedia.org"] {
 	background-size : .9em;
 }
 
@@ -152,6 +154,10 @@ a[href*="twitter.com"] {
 
 a[href*="validator.nu"] {
 	background-image : url('/images/icons/clipboard.svg')
+}
+
+a[href*="wikipedia.org"] {
+	background-image : url('/images/icons/wikipedia.svg')
 }
 
 /*
