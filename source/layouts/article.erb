@@ -29,7 +29,7 @@
 	<%= partial 'layouts/partials/footer' %>
 </main>
 <% if current_article.previous_article || current_article.next_article %>
-<ol class="post-navigation">
+<ol class="post-navigation" role="navigation">
 <% end %>
 	<% prev_article = current_article.previous_article %>
 	  <% if prev_article %>
