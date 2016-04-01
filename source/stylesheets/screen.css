@@ -164,20 +164,18 @@ a[href*="wikipedia.org"] {
 Intra-post navigation
 */
 .post-navigation {
-	margin-bottom : 1.4rem;
+	margin : 0;
+	padding-bottom : 1.4rem;
 	position : relative
 }
 
 .post-navigation li {
 	left : 33%;
+	padding-bottom : 1.4rem;
 	position : absolute;
 	text-align : center;/* This setting will be overriden for ‘.next’ and ‘.prev’ */
 	top : 0;
 	width : 33%
-}
-
-.post-navigation li::last-child {
-	padding-bottom : 1.4rem/* The ‘absolute’ positioning causes the elements to abut the document window */
 }
 
 .post-navigation li::before {
@@ -210,7 +208,8 @@ Intra-post navigation
 }
 
 .post-navigation li.prev::before {
-	content : "☜\202F"
+	content : "☜\202F";
+	left : -1em
 }
 
 @media (max-width : 30em) { /* Reposition links on narrow screens */
@@ -218,7 +217,7 @@ Intra-post navigation
 	.post-navigation li.prev,
 	.post-navigation li {
 		left : 0;
-		margin-bottom : 0;
+		padding-bottom : 0;
 		position : static;
 		text-align : left;
 		width : 100%
