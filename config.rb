@@ -52,10 +52,11 @@ activate :syntax, css_class: 'code-quote'
 
 # Development-specific configuration
 configure :development do
+  set :show_exceptions, false # Disable Rack::ShowExceptions middleware
   require 'better_errors'
   use BetterErrors::Middleware
   BetterErrors.application_root = __dir__
-  set :https, true
+  set :https, true # Ensures consistency if also deployed over https
 end
 
 # Build-specific configuration
