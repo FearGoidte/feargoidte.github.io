@@ -25,7 +25,7 @@ activate :blog do |blog|
   blog.day_link = '{year}/{month}/{day}.xhtml'
   blog.tag_template = 'tag.xhtml'
   blog.calendar_template = 'calendar.xhtml'
-  blog.new_article_template = 'templates/blank-article'
+  blog.new_article_template = 'blank-article'
 end
 
 # Activate directory indices and remove file extensions from urls
