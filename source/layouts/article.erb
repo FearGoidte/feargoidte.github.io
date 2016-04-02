@@ -36,7 +36,7 @@
 <% end %>
 	<% prev_article = current_article.previous_article %>
 	  <% if prev_article %>
-	<li class="prev">Previous: <a href="<%= prev_article.url %>" rel="prev" accesskey="p" title="Previous article: <%= prev_article.title %>"><%= prev_article.title %></a></li>
+	<li class="icon prev">Previous: <a href="<%= prev_article.url %>" rel="prev" accesskey="p" title="Previous article: <%= prev_article.title %>"><%= prev_article.title %></a></li>
 	  <% end %>
 	<li><a href="<%= url_for "/archives.xhtml" %>">All articles</a></li>
 	<% next_article = current_article.next_article %>
