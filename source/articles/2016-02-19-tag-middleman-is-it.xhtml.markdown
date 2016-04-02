@@ -1,7 +1,7 @@
 ---
 
 title: “Tag!”, Middleman is it
-date: 2016-02-19 10:30
+date: 2016-02-19 10:30 GMT
 tags: Middleman, eRuby, YAML, XHTML, blogging, rel
 published: true
 description: >

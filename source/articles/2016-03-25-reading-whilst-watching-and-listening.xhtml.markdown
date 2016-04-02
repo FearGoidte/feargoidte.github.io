@@ -1,7 +1,7 @@
 ---
 
 title: Reading whilst watching (and listening)
-date: 2016-03-25 21:15
+date: 2016-03-25 21:15 GMT
 tags: utf-8, .srt, subtitles, SubRip
 description: >
   A short note on typography for the <cite>SubRip text file format</cite> for providing subtitles for films.

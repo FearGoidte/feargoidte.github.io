@@ -1,7 +1,7 @@
 ---
 
 title: Abbreviations
-date: 2016-03-23 12:00
+date: 2016-03-23 12:00 GMT
 published: false
 tags: abbr, acronym, contraction, clipping, initialism
 description: >
