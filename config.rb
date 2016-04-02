@@ -52,7 +52,6 @@ activate :syntax, css_class: 'code-quote'
 
 # Development-specific configuration
 configure :development do
-  set :show_exceptions, false # Disable Rack::ShowExceptions middleware
   require 'better_errors'
   use BetterErrors::Middleware
   BetterErrors.application_root = __dir__
