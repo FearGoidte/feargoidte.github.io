@@ -63,6 +63,10 @@ header > dl > dd::before {
 }
 
 /* Site-wide navigation */
+[role=banner] [role=navigation] {
+	clear : both
+}
+
 [role=banner] [role=navigation] li::before {
 	content : "" /* Turn off custom markers */
 }
