@@ -2,6 +2,9 @@
 	<header>
 		<p class="published-date icon"><time datetime="<%= article.date.strftime("%F") %>" property="dc:created schema:dateCreated schema:datePublished" ><%= article.date.strftime("%A ") + ordinal(article.date.strftime("%e")) + article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
 		<h2 property="dc:title schema:Headline"><%= article.title %></h2>
+		<% if article.data.subtitle %>
+		<p class="subtitle"><%= article.data.subtitle %></p>
+		<% end %>
 		<p class="author icon"><%= data.settings.author.name %></p>
 		<link property="rdfa:copy" href="#ccpattern" />
 	</header>

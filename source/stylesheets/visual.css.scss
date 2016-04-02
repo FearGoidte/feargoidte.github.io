@@ -155,7 +155,8 @@ h5,
 h6,
 th,
 li::after,
-li::before {
+li::before,
+.subtitle {
 	color : rgb(132,17,14);
 	background-color : initial
 }

@@ -5,6 +5,9 @@
 		<% if File.mtime(current_page.source_file).strftime("%F") > current_article.date.strftime("%F") %>
 		<% end %>
 		<h1 property="dc:title schema:Headline"><%= current_article.title %></h1>
+		<% if current_article.data.subtitle %>
+		<p class="subtitle"><%= current_article.data.subtitle %></p>
+		<% end %>
 		<p class="author icon"><%= data.settings.author.name %></p>
 		<p class="reading-time icon">Estimated reading time: <%= reading_time(current_article.body) %></p>
 		<% if current_article.tags %>
