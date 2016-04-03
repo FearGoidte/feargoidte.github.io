@@ -5,6 +5,9 @@
 		<% if File.mtime(current_page.source_file).strftime("%F") > current_article.date.strftime("%F") %>
 		<% end %>
 		<h1 property="dc:title schema:Headline"><%= current_article.title %></h1>
+		<% if current_article.data.subtitle %>
+		<p class="subtitle"><%= current_article.data.subtitle %></p>
+		<% end %>
 		<p class="author icon"><%= data.settings.author.name %></p>
 		<p class="reading-time icon">Estimated reading time: <%= reading_time(current_article.body) %></p>
 		<% if current_article.tags %>
@@ -22,23 +25,23 @@
 		<link property="rdfa:copy" href="#ccpattern" />
 	</header>
 	<%= table_of_contents(current_page) %>
-	<% if current_article.data.summary %>
-	<p property="dc:description schema:description"><%= current_article.data.summary %></p>
+	<% if current_article.data.description %>
+	<p property="dc:description schema:description"><%= current_article.data.description %></p>
 	<% end %>
 	<%= yield %>
 	<%= partial 'layouts/partials/footer' %>
 </main>
 <% if current_article.previous_article || current_article.next_article %>
-<ol class="post-navigation">
+<ol class="post-navigation" role="navigation">
 <% end %>
 	<% prev_article = current_article.previous_article %>
 	  <% if prev_article %>
-	<li class="prev">Previous post: <a href="<%= prev_article.url %>" rel="prev" accesskey="p" title="Previous article: <%= prev_article.title %>"><%= prev_article.title %></a></li>
+	<li class="icon prev">Previous: <a href="<%= prev_article.url %>" rel="prev" accesskey="p" title="Previous article: <%= prev_article.title %>"><%= prev_article.title %></a></li>
 	  <% end %>
 	<li><a href="<%= url_for "/archives.xhtml" %>">All articles</a></li>
 	<% next_article = current_article.next_article %>
 	  <% if next_article %>
-			<li class="next">Next post: <a href="<%= next_article.url %>" rel="next" accesskey="n" title="Next article: <%= next_article.title %>"><%= next_article.title %></a></li>
+			<li class="next">Next: <a href="<%= next_article.url %>" rel="next" accesskey="n" title="Next article: <%= next_article.title %>"><%= next_article.title %></a></li>
 	  <% end %>
 <% if current_article.previous_article || current_article.next_article %>
 </ol><!--End post navigation-->

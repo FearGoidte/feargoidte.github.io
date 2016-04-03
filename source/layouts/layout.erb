@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="<%= config.encoding %>"?>
 <?xml-stylesheet href="<%= url_for "/stylesheets/visual.css" %>" media="print,screen"?>
 <?xml-stylesheet href="<%= url_for "/stylesheets/print.css" %>" media="print"?>
 <?xml-stylesheet href="<%= url_for "/stylesheets/screen.css" %>" media="screen"?>
@@ -31,6 +31,12 @@
 		<meta name="msapplication-TileImage" content="/images/icons/favicons/mstile-144x144.png"/>
 		<meta name="msapplication-config" content="/images/icons/favicons/browserconfig.xml"/>
 		<meta name="theme-color" content="#ffffff"/>
+		<meta name="author" content="<%= data.settings.author.name %>" />
+		<% if current_article %>
+		<meta name="description" content="<%= current_article.data.description.gsub( %r{</?[^>]+?>}, '' ) %>" />
+		  <% else %>
+		<meta name="description" content="<%= data.settings.site.description.gsub( %r{</?[^>]+?>}, '' ) %>" />
+		<% end %>
 	</head>
 	<body>
   		<a href="#nav_main">Skip to main content</a>

@@ -17,7 +17,7 @@ xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
       xml.published article.date.to_time.iso8601
       xml.updated File.mtime(article.source_file).iso8601
       xml.author { xml.name data.settings.author.name }
-      xml.summary article.data.summary, "type" => "xhtml"
+      xml.summary article.data.description, "type" => "xhtml"
       xml.content article.body, "type" => "xhtml"
     end
   end

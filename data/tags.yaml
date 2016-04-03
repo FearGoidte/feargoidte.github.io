@@ -1,15 +1,43 @@
-Middleman:
-  name: Middleman
-  description: >
-    <a href="https://middlemanapp.com/">Middleman</a> is a program from generating websites written in Ruby.
-XHTML:
-  name: <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr>
-  description: >
-    Extensible Hypertext Markup Language is part of the family of <abbr title="eXtensible Markup Language" class="initialism">X.M.L.</abbr> markup languages. It mirrors or extends versions of Hypertext Markup Language (<dfn class="initialism">H.T.M.L.</dfn>).
 application/xhtml+xml:
   name: <code>application/xhtml+xml</code>
   description: >
     The <dfn>application/xhtml+xml</dfn> media type (<a href="http://www.rfc-editor.org/rfc/rfc3236.txt"><abbr title="Request for Comments" class="intialism">R.F.C.</abbr>3236</a>) is the primary media type for <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr> documents.
+CSS:
+  name: <abbr title="Cascading Style Sheets" class="initialism">C.S.S.</abbr>
+  description: >
+    <dfn>Cascading Style Sheets</dfn> is language for expressing the presentation of mark-up documents like those written in <abbr title="Hypertext Mark-up Language" class="initialism">H.T.M.L.</abbr> and <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr>
+eRuby:
+  name: eRuby
+  description: >
+    <dfn>eRuby</dfn> is a template language for embedding Ruby into plaintext and mark-up documents.
+GitHub Pages:
+  name: GitHub Pages
+  description: >
+    <a href="https://pages.github.com"><dfn>GitHub Pages</dfn></a> is Github’s website hosting service.
+Markdown:
+  name: Markdown
+  description: >
+    <a href="http://daringfireball.net/projects/markdown/"><dfn>Markdown</dfn> is John Gruber’s lightweight mark-up language</a>.
+Middleman:
+  name: Middleman
+  description: >
+    <a href="https://middlemanapp.com/">Middleman</a> is a program from generating websites written in Ruby.
+rbenv:
+  name: rbenv
+  description: >
+    <a href="https://github.com/rbenv/rbenv"><dfn>rbenv</dfn></a> is a version management tool for dealing with multiple installed versions of Ruby like an older system version and a more recent version to support a current Ruby application.
+Redcarpet:
+  name: Redcarpet
+  description: >
+    <a href="https://github.com/vmg/redcarpet">Redcarpet</a> is Ruby library for processing Markdown into <abbr title="Hypertext Mark-up Language" class="initialism">H.T.M.L.</abbr> or <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr>
+Ruby:
+  name: Ruby
+  description: >
+    <a href="https://www.ruby-lang.org/en/"><dfn>Ruby</dfn></a> is a general purpose programming language.
+XHTML:
+  name: <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr>
+  description: >
+    Extensible Hypertext Markup Language is part of the family of <abbr title="eXtensible Markup Language" class="initialism">X.M.L.</abbr> markup languages. It mirrors or extends versions of Hypertext Markup Language (<dfn class="initialism">H.T.M.L.</dfn>).
 YAML:
   name: <abbr title="YAML Ain’t Markup Language">YAML</abbr>
   description: >

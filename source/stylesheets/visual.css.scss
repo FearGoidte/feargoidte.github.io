@@ -92,6 +92,11 @@ header > dl > dd::after {
 	top: 0
 }
 
+main > footer {
+	opacity : .75
+}
+
+
 /*
 Icons
 */
@@ -149,7 +154,9 @@ h4,
 h5,
 h6,
 th,
-li::before {
+li::after,
+li::before,
+.subtitle {
 	color : rgb(132,17,14);
 	background-color : initial
 }

@@ -1,15 +1,16 @@
 ---
+
 title: If I’d known there’d be so much typing, I would have worn gloves
-date: 2016-02-02 13:30
+date: 2016-02-02 13:30 GMT
 tags: Middleman, Ruby, rbenv, GitHub Pages, OSX
-summary: >
+description: >
   Generating a website on <abbr title="Mac Operating System Ten" class="initialism">O.S.X.</abbr> 11 with <a href="https://middlemanapp.com">Middleman 4.0.0</a> and hosting it with GitHub. This is an idiots guide, the idiot being me. I had a frustrating time setting up this site and wanted to ease future installations with an aide-mémoire. Hopefully someone else might find this useful.
 
 ---
 
 You should never *ever* enter into the Terminal commands you find in comments, on forums, or on personal websites like this one unless you understand what they are doing and not just what someone like me is claiming that they do. The terminal can do *bad* things to your computer. That said, these are the steps I took to install Middleman and they are a whole bunch of terminal commands.
 
-Directories and folders are the same thing. However, to both follow convention and increase confusion, I am using <dfn>directory</dfn> when referring to the command line and Terminal application and <dfn>folder</dfn> when accessing the same thing using Finder.
+Directories and folders are the same thing. However, to both follow convention and increase confusion, I am using <dfn>directory</dfn> when referring to the command line and the Terminal application and <dfn>folder</dfn> when accessing the same thing using Finder.
 
 Ruby uses software packages called <dfn>gems</dfn> which each contain an application or library.
 

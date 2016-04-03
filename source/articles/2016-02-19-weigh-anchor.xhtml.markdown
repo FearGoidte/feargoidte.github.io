@@ -1,9 +1,10 @@
 ---
+
 title: Weigh anchor
-date: 2016-02-19 09:00
+date: 2016-02-19 09:00 GMT
 tags: CSS, links, selectors, rel
 published: true
-summary: >
+description: >
   The web, and Wikipedia is a prime example, is a multitude of documents linked together. It does lots of other things, but mostly it’s links and documents. This is an abrupt note on stylesheet selectors for links and pseudo-conventions for styling them.
 
 ---

@@ -31,6 +31,7 @@ end
 # Activate directory indices and remove file extensions from urls
 activate :directory_indexes
 set :index_file, 'index.xhtml'
+set :trailing_slash, false
 # On GitHub pages, 404 page must be "404.html" or "404.md"
 page '/404.html', directory_index: false
 
@@ -48,6 +49,14 @@ set :markdown, fenced_code_blocks: true,
 
 # Syntax highlighting support
 activate :syntax, css_class: 'code-quote'
+
+# Development-specific configuration
+configure :development do
+  require 'better_errors'
+  use BetterErrors::Middleware
+  BetterErrors.application_root = __dir__
+  set :https, true # Ensures consistency if also deployed over https
+end
 
 # Build-specific configuration
 configure :build do

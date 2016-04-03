@@ -63,6 +63,10 @@ header > dl > dd::before {
 }
 
 /* Site-wide navigation */
+[role=banner] [role=navigation] {
+	clear : both
+}
+
 [role=banner] [role=navigation] li::before {
 	content : "" /* Turn off custom markers */
 }
@@ -108,24 +112,30 @@ Link icons
 */
 
 a[href^="#"]::after { /* This selector should match all links internal to the document */
-	content : "\202F§" /* A ‘narrow no-break space’ followed by the section sign */
+	content : "\202F§"; /* A ‘narrow no-break space’ followed by the section sign */
+	font-size : .75em;
+	line-height : 0; /* Elements that have a ‘vertical-align’ other than baseline or a position value will expand their parent element’s line-height unless their own line-height is set to ‘0’ */
+	position : relative;
+	vertical-align : baseline; /* Nullify common user-agent ‘sub’ and ‘super’ */
+	top : -.1em
 }
 
 a[href^="http"]/* This selector should match all external links */,
 a[href*="github.com"],
-a[href*="twitter.com"] {
+a[href*="twitter.com"],
+a[href*="wikipedia.org"] {
 	background-position : right;
 	background-repeat : no-repeat;
 	padding-right : 1em;
 	text-indent : initial
 }
 
-a[href^="http"] {/* This selector should match all external links */
+[href^=http] {/* This selector should match all external links */
 	background-image : url(/images/icons/new-tab.svg);
 	background-size : .7em;
 }
 
-a[href$="isfeargoidte.me.uk/"] {/* This is the only instance of a page linking to itself that I use, therefore the stylings for links are toned down to mitigate confusion */
+a[href^="https://isfeargoidte.me.uk"] {/* This is the only instance of a page linking to itself that I use, therefore the stylings for links are toned down to mitigate confusion */
 	background-image : none;
 	border : none;
 	padding-right : 0
@@ -133,7 +143,8 @@ a[href$="isfeargoidte.me.uk/"] {/* This is the only instance of a page linking t
 
 a[href*="github.com"],
 a[href*="twitter.com"],
-a[href*="validator.nu"] {
+a[href*="validator.nu"],
+a[href*="wikipedia.org"] {
 	background-size : .9em;
 }
 
@@ -146,20 +157,25 @@ a[href*="twitter.com"] {
 }
 
 a[href*="validator.nu"] {
-	background-image : url('/images/icons/clipboard.svg')
+	background-image : url('/images/icons/xhtml-five.svg')
+}
+
+a[href*="wikipedia.org"] {
+	background-image : url('/images/icons/wikipedia.svg')
 }
 
 /*
 Intra-post navigation
 */
 .post-navigation {
-	margin-bottom : 1.4rem;
+	margin : 0;
+	padding-bottom : 1.4rem;
 	position : relative
 }
 
 .post-navigation li {
 	left : 33%;
-	padding-bottom : 1.4rem;/* The ‘absolute’ positioning causes the elements to abut the document window */
+	padding-bottom : 1.4rem;
 	position : absolute;
 	text-align : center;/* This setting will be overriden for ‘.next’ and ‘.prev’ */
 	top : 0;
@@ -196,7 +212,8 @@ Intra-post navigation
 }
 
 .post-navigation li.prev::before {
-	content : "☜\202F"
+	content : "☜\202F";
+	left : -1em
 }
 
 @media (max-width : 30em) { /* Reposition links on narrow screens */
@@ -204,7 +221,7 @@ Intra-post navigation
 	.post-navigation li.prev,
 	.post-navigation li {
 		left : 0;
-		margin-bottom : 0;
+		padding-bottom : 0;
 		position : static;
 		text-align : left;
 		width : 100%
@@ -223,7 +240,7 @@ Intra-post navigation
 		float : right;
 		margin : 0 0 1.4rem 1.4rem;
 		max-width : 15rem;
-		padding : 0 0 1.4rem 1.4rem
+		padding : 0 1.4rem
 	}
 
 	nav h2 {

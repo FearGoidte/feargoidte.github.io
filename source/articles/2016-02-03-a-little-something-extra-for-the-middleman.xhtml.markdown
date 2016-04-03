@@ -1,8 +1,9 @@
 ---
+
 title: A&#160;little something eXtra for the&#160;Middleman
-date: 2016-02-03 10:00
-tags: Middleman, application/xhtml+xml, markdown, Redcarpet, XHTML, Ruby
-summary: >
+date: 2016-02-03 10:00 GMT
+tags: Middleman, application/xhtml+xml, Markdown, Redcarpet, XHTML, Ruby
+description: >
   A short inexhaustive guide to adapting <a href="https://middlemanapp.com">Middleman 4.0.0</a> to output <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr> rather than <abbr title="Hypertext Mark-up Language" class="initialism">H.T.M.L.</abbr>
 
 ---
