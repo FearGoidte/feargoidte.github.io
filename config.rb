@@ -50,6 +50,17 @@ set :markdown, fenced_code_blocks: true,
 # Syntax highlighting support
 activate :syntax, css_class: 'code-quote'
 
+# Helper experimentation
+# (does not require restarting development server)
+helpers do
+  def image_library(input)
+    input = input.to_sym
+      if data['image_library'][input]
+        return data['image_library'][input][:name]
+      end
+    end
+end
+
 # Development-specific configuration
 configure :development do
   require 'better_errors'
