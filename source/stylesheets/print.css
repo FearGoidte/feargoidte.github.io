@@ -4,13 +4,12 @@
 Display
 */
 
-address,
 form,
 nav,
-body > a,
+body > a, /* Skip link */
 [role=navigation],
 #nav_accesskeys,
-#nav_accesskeys + p {
+#nav_validation {
 	display : none
 }
 
