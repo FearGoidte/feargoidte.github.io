@@ -52,9 +52,6 @@ activate :syntax, css_class: 'code-quote'
 
 # Development-specific configuration
 configure :development do
-  require 'better_errors'
-  use BetterErrors::Middleware
-  BetterErrors.application_root = __dir__
   set :https, true # Ensures consistency if also deployed over https
 end
 
