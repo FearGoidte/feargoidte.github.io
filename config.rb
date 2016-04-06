@@ -10,10 +10,8 @@ set :layout, 'layout'
 # Ignore Icons used for folders
 ignore '*Icon*'
 
-# Ignore Icons used for folders
-ignore 'stylesheets/partials/images/*'
-ignore 'stylesheets/partials/sampler.xhtml'
-ignore 'stylesheets/partials/readme'
+# Ignore directory as contains submodule files
+ignore 'stylesheets/partials/*'
 
 ###
 # Helpers
