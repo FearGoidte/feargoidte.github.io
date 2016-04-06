@@ -64,56 +64,54 @@ header > dl > dd::before {
 }
 
 /* Site-wide navigation */
-[role=banner] [role=navigation] {
-	clear : both
+[role=banner] [role=navigation] a,
+[role=banner] [role=navigation] li {
+	transition : all .45s ease
+}
+
+[role=banner] [role=navigation] li {
+	background-color : rgb(132, 17, 14);
+	border-color: rgb(184, 184, 184);
+	border-radius : .2em;
+	border-style : solid;
+	border-width: thin;
+	box-sizing : border-box /* The thin border has an unknown width so the height and width cannot be calculated, border-box enables the height attribute to change the overal size to the required one by dynamically squashing the line-height */;
+	color : rgb(250, 250, 250);
+	display : inline-block;
+	font-size : .7em /* A notional pixel for this element will be .07em—(20 × .7) ÷ 20 rounded down */;
+	height : 2.6rem;
+	letter-spacing : .1em;
+	line-height : 2.8rem;
+	margin : .1rem;
+	text-align : center;
+	text-transform : uppercase;
+	width : 8.75em /* Width impinge upon the anchor elements */
+	}
+
+[role=banner] [role=navigation] li:hover {
+	background-color : rgb(172, 57, 54)
 }
 
 [role=banner] [role=navigation] li::before {
-	content : "" /* Turn off custom markers */
+	display : none
 }
 
-[role=banner] [role="navigation"] li {
-	margin : 1.4rem .2em 0 .2em;
-	height : 1.4rem;
-	text-align : center;
-	width : 6em
+[role=banner] [role=navigation] a:link,
+[role=banner] [role=navigation] a:visited {
+	background-color : rgb(40, 53, 115);
+	box-shadow : rgb(87, 99, 155) 0 0 1em 0;
+	color : inherit
 }
 
-[role=banner] [role="navigation"] li {
-	background-color : #888;
-	color : rgb(250,250,250) /* Same as background */
-}
-
-[role=banner] [role=navigation] li a {
-	color : inherit;
+[role=banner] [role=navigation] a:link {
+	border : none /* Removes the border applied to other document links */;
 	display : block;
-	text-decoration : none;
-	background-color : #bbb;
-	transition : background-color .25s ease
+	height : 100%
 }
 
-[role=banner] [role=navigation] li,
-[role=banner] [role=navigation] li a {
-	border-radius : .3em
-}
-
-[role=banner] [role=navigation] a {
-	border-width : 0
-}
-
-[role=banner] [role=navigation] li a:hover,
-[role=banner] [role=navigation] li a:focus {
-	background-color : #999;
-	color : inherit
-}
-
-[role=banner] [role=navigation] li a:active {
-	background-color : inherit;
-	color : inherit
-}
-
-[role=navigation] li {
-	display : inline-block /* “inline-block” rather than “inline” so that the navigation links don’t break over lines */
+[role=banner] [role=navigation] a:hover {
+	background-color : rgb(80, 93, 155);
+	box-shadow : rgb(107, 119, 175) 0 0 1em 0
 }
 
 /*
