@@ -34,10 +34,6 @@ header li {
 	display : inline
 }
 
-[role=navigation] li {
-	display : inline-block /* “inline-block” rather than “inline” so that the navigation links don’t break over lines */
-}
-
 /*
 Margins and padding
 */
@@ -95,7 +91,6 @@ header > dl > dd::after {
 main > footer {
 	opacity : .75
 }
-
 
 /*
 Icons

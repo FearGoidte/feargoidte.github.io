@@ -24,8 +24,9 @@ table#nav_accesskeys {
 	border-top-width : thin;
 	box-sizing : border-box;
 	box-shadow : rgb(232, 232, 232) 0 0 1.25em 0 inset, rgb(195, 195, 195) 0 .1em 0 0, rgb(201, 201, 201) 0 .1em 0 0, rgb(51, 51, 51) 0 .1em .15em 0;
-	color : rgb(150, 150, 150);
+	color : rgb(50, 50, 50);
 	font-size : .9em;
+	opacity : initial; /* Already low contrast so reset any footer opacity */
 	padding : .25em .5em;
 	text-align : center;
 	text-shadow : rgb(245, 245, 245) 0 .1em 0
@@ -96,6 +97,10 @@ header > dl > dd::before {
 	border-radius : .3em
 }
 
+[role=banner] [role=navigation] a {
+	border-width : 0
+}
+
 [role=banner] [role=navigation] li a:hover,
 [role=banner] [role=navigation] li a:focus {
 	background-color : #999;
@@ -105,6 +110,10 @@ header > dl > dd::before {
 [role=banner] [role=navigation] li a:active {
 	background-color : inherit;
 	color : inherit
+}
+
+[role=navigation] li {
+	display : inline-block /* “inline-block” rather than “inline” so that the navigation links don’t break over lines */
 }
 
 /*
