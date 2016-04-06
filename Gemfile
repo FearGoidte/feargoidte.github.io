@@ -7,7 +7,6 @@ gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 gem 'middleman-minify-html'
 gem 'middleman-syntax'
 
-gem 'better_errors'
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 
 # For feed.xml.builder

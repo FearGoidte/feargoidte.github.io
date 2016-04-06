@@ -10,6 +10,11 @@ set :layout, 'layout'
 # Ignore Icons used for folders
 ignore '*Icon*'
 
+# Ignore Icons used for folders
+ignore 'stylesheets/partials/images/*'
+ignore 'stylesheets/partials/sampler.xhtml'
+ignore 'stylesheets/partials/readme'
+
 ###
 # Helpers
 ###
@@ -63,9 +68,6 @@ end
 
 # Development-specific configuration
 configure :development do
-  require 'better_errors'
-  use BetterErrors::Middleware
-  BetterErrors.application_root = __dir__
   set :https, true # Ensures consistency if also deployed over https
 end
 

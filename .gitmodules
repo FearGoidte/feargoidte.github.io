@@ -1,0 +1,3 @@
+[submodule "source/stylesheets/partials"]
+	path = source/stylesheets/partials
+	url = https://github.com/FearGoidte/cloch-fiacail.git

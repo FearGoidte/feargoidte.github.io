@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import "partials/ex-nihilo";
+@import "partials/visual";
 
 /*
 Display
@@ -32,10 +32,6 @@ header dd,
 header dt,
 header li {
 	display : inline
-}
-
-[role=navigation] li {
-	display : inline-block /* “inline-block” rather than “inline” so that the navigation links don’t break over lines */
 }
 
 /*
@@ -95,7 +91,6 @@ header > dl > dd::after {
 main > footer {
 	opacity : .75
 }
-
 
 /*
 Icons
