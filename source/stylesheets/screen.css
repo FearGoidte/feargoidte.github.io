@@ -1,11 +1,18 @@
 @charset "utf-8";
 
-/*
-Display
-*/
 
-table#nav_accesskeys {
+/* # =================================================================
+   # Access key table
+   # ================================================================= */
+#nav_accesskeys {
+	margin-bottom : 0;
+	margin-top : 0;
 	width : 100% /* Stop caption from wrapping */
+}
+
+#nav_accesskeys caption,
+#nav_validation {
+	text-indent : 1.4em
 }
 
 #nav_accesskeys thead {/* Hide heading */
@@ -16,20 +23,26 @@ table#nav_accesskeys {
 	display : inline-block
 }
 
-#nav_accesskeys td kbd {
+#nav_accesskeys kbd {
 	background-color : rgb(239, 240, 242);
-	border-radius : .0625em;
 	border-top-color : rgb(245, 245, 245);
+	border-radius : .25rem;
 	border-top-style : solid;
-	border-top-width : thin;
+	border-top-width : .05rem;
+	box-shadow : rgb(232, 232, 232) 0 0 1.25rem 0 inset, rgb(195, 195, 195) 0 .05rem 0 0, rgb(201, 201, 201) 0 .1rem 0 0, rgb(51, 51, 51) 0 .1rem .15rem 0;
 	box-sizing : border-box;
-	box-shadow : rgb(232, 232, 232) 0 0 1.25em 0 inset, rgb(195, 195, 195) 0 .1em 0 0, rgb(201, 201, 201) 0 .1em 0 0, rgb(51, 51, 51) 0 .1em .15em 0;
-	color : rgb(50, 50, 50);
-	font-size : .9em;
-	opacity : initial; /* Already low contrast so reset any footer opacity */
-	padding : .25em .5em;
+	color : rgb(90, 90, 90);
+	cursor : auto;
+	display : block;
+	font-size : .7em;
+	font-style : normal;
+	font-variant-caps : normal;
+	height : 1.4rem /* On the assumption the html element has a line-height of “1.4” */;
+	line-height : 1.4rem /* On the assumption the html element has a line-height of “1.4” */;
+	list-style-type : none;
 	text-align : center;
-	text-shadow : rgb(245, 245, 245) 0 .1em 0
+	text-shadow : rgb(225, 225, 225) 0 .05rem 0;
+	width : 1.4rem
 }
 
 /*
