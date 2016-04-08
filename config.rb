@@ -38,6 +38,7 @@ end
 activate :directory_indexes
 set :index_file, 'index.xhtml'
 set :trailing_slash, false
+
 # On GitHub pages, 404 page must be "404.html" or "404.md"
 page '/404.html', directory_index: false
 page '/google65d5e4337d3800b9.html', directory_index: false
