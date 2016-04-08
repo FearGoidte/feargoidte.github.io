@@ -49,18 +49,8 @@
 }
 
 /*
-Margins and padding
-*/
-
-form,
-nav { /* Only set for screen as “display : none” on print */
-	margin : #{$baseline}rem 0
-}
-
-/*
 Text
 */
-
 html {
 	font-size : 125%
 }
@@ -68,7 +58,6 @@ html {
 /*
 Colours
 */
-
 body,
 footer > dl > dd::after,
 footer > dl > dd::before,
@@ -79,7 +68,9 @@ header > dl > dd::before {
 	color : inherit
 }
 
-/* Site-wide navigation */
+/*
+Site-wide navigation
+*/
 [role=banner] [role=navigation] a,
 [role=banner] [role=navigation] li {
 	transition : all .45s ease
@@ -102,7 +93,7 @@ header > dl > dd::before {
 	text-align : center;
 	text-transform : uppercase;
 	width : 8.75em /* Width impinge upon the anchor elements */
-	}
+}
 
 [role=banner] [role=navigation] li:hover {
 	background-color : rgb(172, 57, 54)
@@ -133,7 +124,6 @@ header > dl > dd::before {
 /*
 Link icons
 */
-
 a[href^="#"]::after /* This selector should match all links internal to the document */ {
 	content : "\202F§" /* A ‘narrow no-break space’ followed by the section sign */;
 	font-size : .75em;
