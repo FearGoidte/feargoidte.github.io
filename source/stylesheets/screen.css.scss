@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import "partials/variables";
+
 @import "partials/screen";
 
 /* # =================================================================
@@ -13,7 +15,7 @@
 
 #nav_accesskeys caption,
 #nav_validation {
-	text-indent : 1.4em
+	text-indent : #{$baseline}em
 }
 
 #nav_accesskeys thead {/* Hide heading */
@@ -38,12 +40,12 @@
 	font-size : .7em;
 	font-style : normal;
 	font-variant-caps : normal;
-	height : 1.4rem /* On the assumption the html element has a line-height of “1.4” */;
-	line-height : 1.4rem /* On the assumption the html element has a line-height of “1.4” */;
+	height : #{$baseline}rem /* On the assumption the html element has a line-height of “1.4” */;
+	line-height : #{$baseline}rem /* On the assumption the html element has a line-height of “1.4” */;
 	list-style-type : none;
 	text-align : center;
 	text-shadow : rgb(225, 225, 225) 0 .05rem 0;
-	width : 1.4rem
+	width : #{$baseline}rem
 }
 
 /*
@@ -52,7 +54,7 @@ Margins and padding
 
 form,
 nav { /* Only set for screen as “display : none” on print */
-	margin : 1.4rem 0
+	margin : #{$baseline}rem 0
 }
 
 /*
@@ -95,7 +97,7 @@ header > dl > dd::before {
 	font-size : .7em /* A notional pixel for this element will be .07em—(20 × .7) ÷ 20 rounded down */;
 	height : 2.6rem;
 	letter-spacing : .1em;
-	line-height : 2.8rem;
+	line-height : #{$baseline*2}rem;
 	margin : .1rem;
 	text-align : center;
 	text-transform : uppercase;
@@ -132,12 +134,12 @@ header > dl > dd::before {
 Link icons
 */
 
-a[href^="#"]::after { /* This selector should match all links internal to the document */
-	content : "\202F§"; /* A ‘narrow no-break space’ followed by the section sign */
+a[href^="#"]::after /* This selector should match all links internal to the document */ {
+	content : "\202F§" /* A ‘narrow no-break space’ followed by the section sign */;
 	font-size : .75em;
-	line-height : 0; /* Elements that have a ‘vertical-align’ other than baseline or a position value will expand their parent element’s line-height unless their own line-height is set to ‘0’ */
+	line-height : 0 /* Elements that have a ‘vertical-align’ other than baseline or a position value will expand their parent element’s line-height unless their own line-height is set to ‘0’ */;
 	position : relative;
-	vertical-align : baseline; /* Nullify common user-agent ‘sub’ and ‘super’ */
+	vertical-align : baseline /* Nullify common user-agent ‘sub’ and ‘super’ */;
 	top : -.1em
 }
 
@@ -151,7 +153,7 @@ a[href*="wikipedia.org"] {
 	text-indent : initial
 }
 
-[href^=http] {/* This selector should match all external links */
+[href^=http] /* This selector should match all external links */ {
 	background-image : url(/images/icons/new-tab.svg);
 	background-size : .7em;
 }
@@ -190,15 +192,15 @@ Intra-post navigation
 */
 .post-navigation {
 	margin : 0;
-	padding-bottom : 1.4rem;
+	padding-bottom : #{$baseline}rem;
 	position : relative
 }
 
 .post-navigation li {
 	left : 33%;
-	padding-bottom : 1.4rem;
+	padding-bottom : #{$baseline}rem;
 	position : absolute;
-	text-align : center;/* This setting will be overriden for ‘.next’ and ‘.prev’ */
+	text-align : center /* This setting will be overriden for ‘.next’ and ‘.prev’ */;
 	top : 0;
 	width : 33%
 }
@@ -255,13 +257,13 @@ Intra-post navigation
 
 @media (min-width : 60em) {
 	nav {
-		background-color : rgba(0, 0, 238, .1);/* Link colour with low opacity */
+		background-color : rgba(0, 0, 238, .1) /* Link colour with low opacity */;
 		border-radius : .5em;
 		color : inherit;
 		float : right;
-		margin : 0 0 1.4rem 1.4rem;
+		margin : 0 0 #{$baseline}rem #{$baseline}rem;
 		max-width : 15rem;
-		padding : 0 1.4rem
+		padding : 0 #{$baseline}rem
 	}
 
 	nav h2 {

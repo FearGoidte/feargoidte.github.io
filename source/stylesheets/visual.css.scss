@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import "partials/variables";
+
 @import "partials/visual";
 
 /*
@@ -36,10 +38,6 @@ header li {
 }
 
 /*
-Margins and padding
-*/
-
-/*
 Tags
 */
 
@@ -49,13 +47,13 @@ footer > dl > dt::after {
 
 footer > dl > dd,
 header > dl > dd {
-	background : rgba(0, 0, 238, .1);/* Link colour with low opacity */;
+	background : rgba(0, 0, 238, .1) /* Link colour with low opacity */;
 	border-radius : .15em 0 0 .15em;
 	color : inherit;
 	display : inline-block;
 	font-size : .8rem;
-	height : 1.4em;
-	line-height : 1.4em;
+	height :  #{$baseline}em;
+	line-height : #{$baseline}em;
 	padding : 0 1em 0 1.15em;
 	position : relative;
 	margin-right : .5em;
@@ -83,7 +81,7 @@ header > dl > dd::before {
 footer > dl > dd::after,
 header > dl > dd::after {
 	border-bottom : .7em solid transparent;
-	border-left : .5em solid rgba(0, 0, 238, .1);/* Link colour with low opacity */;
+	border-left : .5em solid rgba(0, 0, 238, .1) /* Link colour with low opacity */;
 	border-top : .7em solid transparent;
 	right : 0;
 	top: 0
@@ -122,7 +120,7 @@ Icons
     content : url('/images/icons/user.svg')
 }
 
-.twotter::before { /* Not Twitter due to my own icon-busting user styles aimed at more bandwidth hungry versions */
+.twotter::before /* Not Twitter due to my own icon-busting user styles aimed at more bandwidth hungry versions */ {
     content : url('/images/icons/twotter.svg')
 }
 
@@ -130,11 +128,13 @@ Icons
     content : url('/images/icons/github.svg')
 }
 
-/* Logo */
+/*
+Logo
+*/
 [role=banner] dl::before {
 	content : url(/images/logo.svg);
 	float : left;
-	margin-right : .7em;
+	margin-right : #{$baseline/2}em;
 	width : 7em
 }
 
