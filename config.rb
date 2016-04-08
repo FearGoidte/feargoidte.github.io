@@ -10,7 +10,8 @@ set :layout, 'layout'
 # Ignore Icons used for folders
 ignore '*Icon*'
 
-# Ignore Icons used for folders
+# Ignore submodule files (currently not used)
+ignore '*.git'
 ignore 'stylesheets/partials/images/*'
 ignore 'stylesheets/partials/sampler.xhtml'
 ignore 'stylesheets/partials/readme'
