@@ -2,9 +2,20 @@
 
 $baseline : 1.4;
 
+// Fonts
 $body-font-family : Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, "URW Palladio L", "Nimbus Roman No9 L", serif;
 
 $code-font-family : Consolas, "Bitstream Vera Sans Mono", "Andale Mono", Monaco, "DejaVu Sans Mono", "Lucida Console", monospace;
 
 $heading-font-family : Cambria, Georgia, "New Century Schoolbook", "Century Schoolbook L", "Times New Roman", serif;
 
+// Colours
+$background-colour : rgb(250, 250, 250); // Off-white
+
+$base-colour : rgb(51, 51, 51); // Dark grey
+
+$link-colour : rgb(0, 0, 238); // Blue
+
+$link-colour-visited : rgba(85, 26, 139); //Purple
+
+$logo-colour : rgb(132, 17, 14); // Dark red
