@@ -85,7 +85,7 @@ Site-wide navigation
 	border-style : solid;
 	border-width: thin;
 	box-sizing : border-box /* The thin border has an unknown width so the height and width cannot be calculated, border-box enables the height attribute to change the overal size to the required one by dynamically squashing the line-height */;
-	color : rgb(250, 250, 250);
+	color : $background-colour;
 	display : inline-block;
 	font-size : .7em /* A notional pixel for this element will be .07em—(20 × .7) ÷ 20 rounded down */;
 	height : 2.6rem;
