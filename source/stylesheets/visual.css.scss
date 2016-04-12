@@ -31,7 +31,7 @@ footer > dl > dt::after {
 
 footer > dl > dd,
 header > dl > dd {
-	background : rgba(0, 0, 238, .1) /* Link colour with low opacity */;
+	background : lighten($link-colour, 70) /* Link colour with low opacity */;
 	border-radius : .15em 0 0 .15em;
 	color : inherit;
 	display : inline-block;
@@ -65,7 +65,7 @@ header > dl > dd::before {
 footer > dl > dd::after,
 header > dl > dd::after {
 	border-bottom : .7em solid transparent;
-	border-left : .5em solid rgba(0, 0, 238, .1) /* Link colour with low opacity */;
+	border-left : .5em solid lighten($link-colour, 70) /* Link colour with low opacity */;
 	border-top : .7em solid transparent;
 	right : 0;
 	top: 0
@@ -138,6 +138,6 @@ th,
 li::after,
 li::before,
 .subtitle {
-	color : $logo-colour;
+	color : $primary-colour;
 	background-color : initial
 }

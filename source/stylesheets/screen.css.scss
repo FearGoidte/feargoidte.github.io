@@ -65,8 +65,7 @@ footer > dl > dd::after,
 footer > dl > dd::before,
 header > dl > dd::after,
 header > dl > dd::before {
-	background : rgb(250, 250, 250); /* linear-gradient(rgb(217, 234, 243), rgb(254, 254, 254) 8%);/* Light blue to off-white */
-/*	background-size : 100% 1.4em; */
+	background : $background-colour;
 	color : inherit
 }
 
@@ -75,13 +74,13 @@ Site-wide navigation
 */
 [role=banner] [role=navigation] a,
 [role=banner] [role=navigation] li {
+	border-radius : .2em;
 	transition : all .45s ease
 }
 
 [role=banner] [role=navigation] li {
-	background-color : rgb(132, 17, 14);
-	border-color: rgb(184, 184, 184);
-	border-radius : .2em;
+	background-color : $secondary-colour;
+	border-color: lighten($base-colour, 40);
 	border-style : solid;
 	border-width: thin;
 	box-sizing : border-box /* The thin border has an unknown width so the height and width cannot be calculated, border-box enables the height attribute to change the overal size to the required one by dynamically squashing the line-height */;
@@ -98,7 +97,7 @@ Site-wide navigation
 }
 
 [role=banner] [role=navigation] li:hover {
-	background-color : rgb(172, 57, 54)
+	background-color : lighten($secondary-colour, 10)
 }
 
 [role=banner] [role=navigation] li::before {
@@ -107,8 +106,8 @@ Site-wide navigation
 
 [role=banner] [role=navigation] a:link,
 [role=banner] [role=navigation] a:visited {
-	background-color : rgb(40, 53, 115);
-	box-shadow : rgb(87, 99, 155) 0 0 1em 0;
+	background-color : $link-colour;
+	box-shadow : lighten($link-colour, 10) 0 0 1em 0;
 	color : inherit
 }
 
@@ -119,8 +118,8 @@ Site-wide navigation
 }
 
 [role=banner] [role=navigation] a:hover {
-	background-color : rgb(80, 93, 155);
-	box-shadow : rgb(107, 119, 175) 0 0 1em 0
+	background-color : lighten($link-colour, 10);
+	box-shadow : lighten($link-colour, 20) 0 0 1em 0
 }
 
 /*
@@ -222,7 +221,7 @@ Intra-post navigation
 	top : 0
 }
 
-.next::after {
+.post-navigation li.next::after {
 	content : "\202F☞"
 }
 
@@ -249,7 +248,7 @@ Intra-post navigation
 
 @media (min-width : 60em) {
 	nav {
-		background-color : rgba(0, 0, 238, .1) /* Link colour with low opacity */;
+		background-color : lighten($link-colour, 70) /* Link colour with low opacity */;
 		border-radius : .5em;
 		color : inherit;
 		float : right;
