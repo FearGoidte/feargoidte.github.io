@@ -60,7 +60,7 @@ activate :syntax, css_class: 'code-quote'
 
 # Development-specific configuration
 configure :development do
-  set :https, true # Ensures consistency if also deployed over https
+  # set :https, true # Ensures consistency if also deployed over https
 end
 
 # Build-specific configuration
