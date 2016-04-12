@@ -71,6 +71,12 @@ header > dl > dd::after {
 	top: 0
 }
 
+footer > dl > dd code,
+header > dl > dd code,
+nav {
+	background-color : inherit
+}
+
 main > footer {
 	opacity : .75
 }
