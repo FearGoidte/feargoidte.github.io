@@ -45,9 +45,7 @@ I find it easier on the eye, and easier to comprehend, when markers are outside 
 
 ### Margins between lists
 
-I use a standard margin of one line between many elements including `ol` and `ul`. In the case of `line-height : 1.5` on the `body` or `html` elements this would equate to a vertical margin of `1.5rem` on the list elements.
-
-For nested lists I want the lists to vertically abut each other:
+I use a standard margin of one line between many elements including `ol` and `ul`. In the case of `line-height : 1.5` on the `body` or the `html` element this would equate to a standard vertical margin of `1.5rem`. However, for nested lists I want them to abut each other vertically:
 
 ``` css
 ol,
@@ -81,9 +79,9 @@ li::before {
 
 ### Hanging markers on top-level lists
 
-The padding on the `body` element creates the space for the list marker to hang-in. I use `padding` rather than `margin` so that if a background colour is set on `body` the list marker is within the boundaries of the coloured background. The padding is set to an amount that can just about accommodate an ordered list marker up till “999” as well as a small remainder to leave space between the marker and the list text. The greater the padding the less horizontal space is available which is of particular concern for  narrow screens.
+The padding on the `body` element creates the space for the list markers of top-level lists to hang-in. I use `padding` rather than `margin` so that if a background colour is set on `body` the list marker is within the boundaries of the coloured background. The padding is set to an amount that can just about accommodate an ordered list marker up till “999” as well as a small remainder to leave space between the marker and the list text. The greater the padding the less horizontal space is available which is of particular concern for narrow screens.
 
-If the parent element is floated, it will also have to have the same padding to achieve the same effect.
+If the parent element of the `ol` or `ul` is floated, it will have to have the same padding as `body` to create the same space for .
 
 For the top level lists, their markers need to be ‘pulled’ left into the margin of their parent element. The `position : relative` of the `li` element allows the `li::before` pseudo element to be absolutely positioned. I pull the list marker left by the same length quantity as the padding above.
 
@@ -213,15 +211,15 @@ ul > li > ul {
 }
 
 li {
-	display : table; /* Needed to enable “table-cell” display on “li::before” */
+	display : table /* Needed to enable “table-cell” display on “li::before” */;
 	list-style : none /* Remove automatic markers */;
 	position : relative /* This allows the top–nesting-level of lists to have their markers absolutely positioned into the margin of their parent element */
 }
 
 li::before {
-	display : table-cell; /* Means that the marker is placed outside of item text */
-	left : -1.9em; /* For top level only, equal to the horizontal padding on the body element minus the same “.2em” as the padding on nested list items below */
-	width : 1.7em; /* For top level only, creates space for list items up to “999” and enables “text-align : right” */
+	display : table-cell /* Means that the marker is placed outside of item text */;
+	left : -1.4em /* For top level only, equal to the horizontal padding on the body element minus the same “.2em” as the padding on nested list items below */;
+	width : 1.2em /* For top level only, creates space for list items up to “999” and enables “text-align : right” */;
 	position : absolute;
 	text-align : right /* For top level only, my personal preference for the variable width list numbers within the top level of an ordered list */
 }
@@ -243,7 +241,7 @@ ol > li > ol > li::before {
 li > ol > li::before,
 li > ul > li::before {
 	padding-right : .2em;
-	position : static; /* Undo the positioning for top level items */
+	position : static /* Undo the positioning for top level items */;
 	text-align : initial;
 	width : auto
 }
