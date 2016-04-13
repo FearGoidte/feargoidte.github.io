@@ -1,6 +1,7 @@
 ---
 
 title: Reading whilst watching (and listening)
+subtitle: More comprehensible subtitles
 date: 2016-03-25 21:15 GMT
 tags: utf-8, .srt, subtitles, SubRip
 description: >
