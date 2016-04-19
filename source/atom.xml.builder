@@ -1,4 +1,4 @@
-xml.instruct!
+xml.instruct! :xml, :version => "1.0", :encoding => config.encoding
 xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
   site_url = data.settings.site.base_url + "/"
   xml.title data.settings.site.name
@@ -11,14 +11,22 @@ xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
 
   blog.articles[0..5].each do |article|
     xml.entry do
-      xml.title article.title
+      xml.title(:type => "xhtml") {
+        xml.div(:xmlns => "http://www.w3.org/1999/xhtml") { |x| x << article.title }
+        }
       xml.link "rel" => "alternate", "href" => URI.join(site_url, article.url)
       xml.id URI.join(site_url, article.url)
       xml.published article.date.to_time.iso8601
       xml.updated File.mtime(article.source_file).iso8601
-      xml.author { xml.name data.settings.author.name }
-      xml.summary article.data.description, "type" => "xhtml"
-      xml.content article.body, "type" => "xhtml"
+      xml.author {
+        xml.name data.settings.author.name
+        }
+      xml.summary(:type => "xhtml") {
+        xml.div(:xmlns => "http://www.w3.org/1999/xhtml") { |x| x << article.data.description }
+        }
+      xml.content(:type => "xhtml") {
+        xml.div(:xmlns => "http://www.w3.org/1999/xhtml") { |x| x << article.data.description + article.body }
+        }
     end
   end
 end
