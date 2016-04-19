@@ -1,6 +1,7 @@
 ---
 
 title: Abbreviations
+subtitle: The long way of saying something quickly
 date: 2016-03-23 12:00 GMT
 published: false
 tags: abbr, acronym, contraction, clipping, initialism
