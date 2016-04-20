@@ -32,6 +32,6 @@ xml.feed 'xmlns' => 'http://www.w3.org/2005/Atom' do
           x << article.data.description + article.body
         end
       end
-    end if article.published?
+    end
   end
 end
