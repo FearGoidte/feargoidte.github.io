@@ -134,7 +134,7 @@ For a brief, yet more informative discussion of the order of link state selector
 
 #### Internal
 
-Immediately followed by the [section sign](https://en.wikipedia.org/wiki/Section_sign). There is no convention for an internal page link, but if there was (and there should be) it should be the *section sign*. A convention that no one else abides by is no convention, unless … you screw your eyes real tight and wish it so.
+Immediately followed by the [section sign](https://en.wikipedia.org/wiki/Section_sign). There is no convention for an internal page link, but if there was one (and there should be) it should be the *section sign*. A convention that no one else abides by is no convention, unless … you screw your eyes real tight and wish it so.
 
 #### Local
 
@@ -142,7 +142,7 @@ A plain link, no adornment.
 
 #### E-mail
 
-Immediately followed by an envelope icon which is in no way anachronistic to someone like me who insists on “e-mail”.
+Immediately followed by an envelope icon which is in no way anachronistic to someone like me who insists on “*e-mail*”.
 
 #### Downloadable resources
 
@@ -162,4 +162,4 @@ The convention is that links are *underlined* and that unvisited links are of a 
 
 It is best not to use icons to highlight the [states](#states) since they can change whilst a user is on the page (`:hover`) and the document will need to reflow to accommodate them.
 
-If you use icons for link types, try to make them small and unobtrusive. If you’re using unicode glyphs or `&font-face` with [Font Awesome](https://fortawesome.github.io/Font-Awesome/), [IcoMoon](https://icomoon.io/) <abbr lang="la" title="et cetera">&amp;c.</abbr> or similar try to ensure that the colour of the icon matches the link state—just to emphasis that the icon refers to that link rather than other adjacent text.
+If you use icons for link types, try to make them small and unobtrusive. If you’re using unicode glyphs or `&font-face` with [Font Awesome](https://fortawesome.github.io/Font-Awesome/), [IcoMoon](https://icomoon.io/) <abbr lang="la" title="et cetera">&amp;c.</abbr> or similar try to ensure that the colour of the icon matches the link state—just to emphasize that the icon refers to that link rather than other adjacent text.

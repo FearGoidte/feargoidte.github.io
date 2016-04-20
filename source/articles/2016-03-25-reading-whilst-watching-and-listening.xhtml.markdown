@@ -11,7 +11,7 @@ description: >
 
 Subtitles are generally read whilst you’re trying to simultaneously watch a film *and* listen to the voices to gauge the emotion and intention of the character or person speaking. That is a lot to ask of a partially-shaved monkey; and anything that can speed comprehension is a boon. Poor spelling, straight quotation marks, and lazy punctuation are an unnecessary burden.
 
-I have a tendency to frequently rewatch films—though with varying degrees of attention—so for me, the fifteen minutes or half an hour it takes for me to edit the subitles has some quality of investment. By uploading the edited subtitles to a site such as [opensubtitles.org](http://www.opensubtitles.org/en/search), others can benefit from, or be subjected to, your pernicketiness.
+I have a tendency to frequently rewatch films—though with varying degrees of attention—so for me, the fifteen minutes or half an hour it takes for me to edit the subtitles has some quality of investment. By uploading the edited subtitles to a site such as [opensubtitles.org](http://www.opensubtitles.org/en/search), others can benefit from, or be subjected to, your pernicketiness.
 
 ## Specifying encoding
 
