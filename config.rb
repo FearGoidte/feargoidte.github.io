@@ -83,7 +83,16 @@ end
 
 # Build-specific configuration
 configure :build do
-  activate :gzip
+  # Ignore Google owner verification file
+  activate :gzip, exts: ['.css',
+                         '.htm',
+                         '.html',
+                         '.js',
+                         '.svg',
+                         '.xhtml',
+                         '.xml'],
+                ignore: ['google*.html']
+
   activate :minify_html, remove_quotes: false
   activate :minify_css
 end
