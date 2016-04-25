@@ -47,6 +47,24 @@ page '/google65d5e4337d3800b9.html', directory_index: false
 set :relative_links, true
 activate :relative_assets
 
+# Asset hashes so that cache times can be increased
+activate :asset_hash, exts: ['.css',
+                             '.eot',
+                             '.gif',
+                             '.ico',
+                             '.jpg',
+                             '.jpeg',
+                             '.js',
+                             '.otf',
+                             '.png',
+                             '.map',
+                             '.svg',
+                             '.svgz',
+                             '.ttf',
+                             '.webp',
+                             '.woff',
+                             '.woff2']
+
 # Markdown settings
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true,
