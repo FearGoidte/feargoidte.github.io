@@ -291,7 +291,7 @@ Reading whilst watching (and listening)      </div>
     <link rel="alternate" href="https://isfeargoidte.me.uk/2016/03/25/reading-whilst-watching-and-listening"/>
     <id>https://isfeargoidte.me.uk/2016/03/25/reading-whilst-watching-and-listening</id>
     <published>2016-03-25T21:15:00+00:00</published>
-    <updated>2016-04-12T11:41:37+01:00</updated>
+    <updated>2016-04-19T12:59:05+01:00</updated>
     <author>
       <name>James Ó Nuanáin</name>
     </author>
@@ -305,7 +305,7 @@ A short note on typography for the <cite>SubRip text file format</cite> for prov
 A short note on typography for the <cite>SubRip text file format</cite> for providing subtitles for films.
 <p>Subtitles are generally read whilst you’re trying to simultaneously watch a film <em>and</em> listen to the voices to gauge the emotion and intention of the character or person speaking. That is a lot to ask of a partially-shaved monkey; and anything that can speed comprehension is a boon. Poor spelling, straight quotation marks, and lazy punctuation are an unnecessary burden.</p>
 
-<p>I have a tendency to frequently rewatch films—though with varying degrees of attention—so for me, the fifteen minutes or half an hour it takes for me to edit the subitles has some quality of investment. By uploading the edited subtitles to a site such as <a href="http://www.opensubtitles.org/en/search">opensubtitles.org</a>, others can benefit from, or be subjected to, your pernicketiness.</p>
+<p>I have a tendency to frequently rewatch films—though with varying degrees of attention—so for me, the fifteen minutes or half an hour it takes for me to edit the subtitles has some quality of investment. By uploading the edited subtitles to a site such as <a href="http://www.opensubtitles.org/en/search">opensubtitles.org</a>, others can benefit from, or be subjected to, your pernicketiness.</p>
 
 <h2 id="specifying-encoding">Specifying encoding</h2>
 
@@ -554,7 +554,7 @@ Weigh anchor      </div>
     <link rel="alternate" href="https://isfeargoidte.me.uk/2016/02/19/weigh-anchor"/>
     <id>https://isfeargoidte.me.uk/2016/02/19/weigh-anchor</id>
     <published>2016-02-19T09:00:00+00:00</published>
-    <updated>2016-04-12T11:44:14+01:00</updated>
+    <updated>2016-04-19T12:26:47+01:00</updated>
     <author>
       <name>James Ó Nuanáin</name>
     </author>
@@ -679,7 +679,7 @@ The web, and Wikipedia is a prime example, is a multitude of documents linked to
 
 <h4 id="internal">Internal</h4>
 
-<p>Immediately followed by the <a href="https://en.wikipedia.org/wiki/Section_sign">section sign</a>. There is no convention for an internal page link, but if there was (and there should be) it should be the <em>section sign</em>. A convention that no one else abides by is no convention, unless … you screw your eyes real tight and wish it so.</p>
+<p>Immediately followed by the <a href="https://en.wikipedia.org/wiki/Section_sign">section sign</a>. There is no convention for an internal page link, but if there was one (and there should be) it should be the <em>section sign</em>. A convention that no one else abides by is no convention, unless … you screw your eyes real tight and wish it so.</p>
 
 <h4 id="local">Local</h4>
 
@@ -687,7 +687,7 @@ The web, and Wikipedia is a prime example, is a multitude of documents linked to
 
 <h4 id="e-mail">E-mail</h4>
 
-<p>Immediately followed by an envelope icon which is in no way anachronistic to someone like me who insists on “e-mail”.</p>
+<p>Immediately followed by an envelope icon which is in no way anachronistic to someone like me who insists on “<em>e-mail</em>”.</p>
 
 <h4 id="downloadable-resources">Downloadable resources</h4>
 
@@ -707,7 +707,7 @@ The web, and Wikipedia is a prime example, is a multitude of documents linked to
 
 <p>It is best not to use icons to highlight the <a href="#states">states</a> since they can change whilst a user is on the page (<code>:hover</code>) and the document will need to reflow to accommodate them.</p>
 
-<p>If you use icons for link types, try to make them small and unobtrusive. If you’re using unicode glyphs or <code>&amp;font-face</code> with <a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome</a>, <a href="https://icomoon.io/">IcoMoon</a> <abbr lang="la" title="et cetera">&amp;c.</abbr> or similar try to ensure that the colour of the icon matches the link state—just to emphasis that the icon refers to that link rather than other adjacent text.</p>
+<p>If you use icons for link types, try to make them small and unobtrusive. If you’re using unicode glyphs or <code>&amp;font-face</code> with <a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome</a>, <a href="https://icomoon.io/">IcoMoon</a> <abbr lang="la" title="et cetera">&amp;c.</abbr> or similar try to ensure that the colour of the icon matches the link state—just to emphasize that the icon refers to that link rather than other adjacent text.</p>
       </div>
     </content>
   </entry>
