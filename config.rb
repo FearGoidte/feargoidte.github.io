@@ -92,7 +92,6 @@ configure :build do
                          '.xhtml',
                          '.xml'],
                 ignore: ['google*.html']
-
   activate :minify_html, remove_quotes: false
   activate :minify_css
 end
