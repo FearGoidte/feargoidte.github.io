@@ -45,7 +45,7 @@
 		<% if current_page.path == 'index.xhtml' %>
 				<dt property="dc:title" xml:lang="ga"><%= data.settings.site.name %></dt>
 		<% else %>
-				<dt xml:lang="ga"><a href="<%= url_for '/index.xhtml' %>"><%= data.settings.site.name %></a></dt>
+				<dt xml:lang="ga-ie"><a href="<%= url_for '/index.xhtml' %>"><%= data.settings.site.name %></a></dt>
 		<% end %>
 				<dd
 			<% if current_page.path == 'index.xhtml' %>
