@@ -291,7 +291,7 @@ Reading whilst watching (and listening)      </div>
     <link rel="alternate" href="https://isfeargoidte.me.uk/2016/03/25/reading-whilst-watching-and-listening"/>
     <id>https://isfeargoidte.me.uk/2016/03/25/reading-whilst-watching-and-listening</id>
     <published>2016-03-25T21:15:00+00:00</published>
-    <updated>2016-05-10T20:25:12+01:00</updated>
+    <updated>2016-05-13T08:08:39+01:00</updated>
     <author>
       <name>James Ó Nuanáin</name>
     </author>
@@ -339,11 +339,7 @@ A short note on typography for the <cite>SubRip text file format</cite> for prov
 
 <h3 id="i-impersonating-l">“I” impersonating “l”</h3>
 
-<p>Many subtitles contain the capital letter <em>I</em> masquerading as a lowercase <em>L</em>. On some sans-serif fonts the characters are indistinguishable (as is the number <em>1</em>) but using a serif font, they are quite dissimilar. Since this bamboozles my spellchecker, I use the following <a href="https://en.wikipedia.org/wiki/Grep">grep</a> patterns (in <a href="http://www.barebones.com/products/bbedit/">BBEdit</a> my text editor of choice) to identify them.</p>
-
-<p>An uppercase <em>I</em> nestled between two lowercase letters:</p>
-<pre class="code-quote plaintext"><code>[a-z]I[a-z]
-</code></pre>
+<p>Many subtitles contain the capital letter <em>I</em> masquerading as a lowercase <em>L</em>. On some sans-serif fonts the characters are indistinguishable (as is the number <em>1</em>) but using a serif font, they are quite dissimilar. Since this bamboozles my spellchecker, I use the following <a href="https://en.wikipedia.org/wiki/Grep">grep</a> pattern (in <a href="http://www.barebones.com/products/bbedit/">BBEdit</a> my text editor of choice) to identify them.</p>
 
 <p>An uppercase <em>I</em> immediately preceded by a lowercase letter:</p>
 <pre class="code-quote plaintext"><code>[a-z]I
