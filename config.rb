@@ -91,7 +91,7 @@ configure :build do
                          '.svg',
                          '.xhtml',
                          '.xml'],
-                ignore: ['google*.html']
+                  ignore: ['google*.html']
   activate :minify_html, remove_quotes: false
   activate :minify_css
 end
