@@ -45,13 +45,7 @@ My own video players of preference, [Plex](https://plex.tv) and [V.L.C.](https:/
 
 ### “I” impersonating “l”
 
-Many subtitles contain the capital letter *I* masquerading as a lowercase *L*. On some sans-serif fonts the characters are indistinguishable (as is the number *1*) but using a serif font, they are quite dissimilar. Since this bamboozles my spellchecker, I use the following [grep](https://en.wikipedia.org/wiki/Grep) patterns (in [BBEdit](http://www.barebones.com/products/bbedit/) my text editor of choice) to identify them.
-
-An uppercase *I* nestled between two lowercase letters:
-
-``` grep
-[a-z]I[a-z]
-```
+Many subtitles contain the capital letter *I* masquerading as a lowercase *L*. On some sans-serif fonts the characters are indistinguishable (as is the number *1*) but using a serif font, they are quite dissimilar. Since this bamboozles my spellchecker, I use the following [grep](https://en.wikipedia.org/wiki/Grep) pattern (in [BBEdit](http://www.barebones.com/products/bbedit/) my text editor of choice) to identify them.
 
 An uppercase *I* immediately preceded by a lowercase letter:
 
