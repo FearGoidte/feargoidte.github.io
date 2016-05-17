@@ -291,7 +291,7 @@ Reading whilst watching (and listening)      </div>
     <link rel="alternate" href="https://isfeargoidte.me.uk/2016/03/25/reading-whilst-watching-and-listening"/>
     <id>https://isfeargoidte.me.uk/2016/03/25/reading-whilst-watching-and-listening</id>
     <published>2016-03-25T21:15:00+00:00</published>
-    <updated>2016-05-13T08:08:39+01:00</updated>
+    <updated>2016-05-17T09:57:08+01:00</updated>
     <author>
       <name>James Ó Nuanáin</name>
     </author>
@@ -315,7 +315,7 @@ A short note on typography for the <cite>SubRip text file format</cite> for prov
 
 <p>The only two widely-supported styling options for the text are the bold (<code>&lt;b&gt;</code>) and italic (<code>&lt;i&gt;</code>) mark-up elements. Computers tend to embolden fonts by drawing over them with bigger, thicker pen rendering ugly results so I only use italics.</p>
 
-<p>Use italic to emphasis an individual word in speech where it is emphasized in the dialogue, “she said <em>what</em>?” and also to indicate the dialogue is being spoken by someone off camera, out of focus, or in the background whilst another character is in the foreground and in focus.</p>
+<p>Use italic to emphasis an individual word in speech where it is emphasized in the dialogue, “she said <em>what</em>?”; to indicate the dialogue is being spoken by someone off camera, out of focus, or in the background whilst another character is in the foreground and in focus; and for intertitles.</p>
 
 <p>An em dash (—) indicates the beginning of a line of dialogue. If two characters’ or people’s dialogue is on the screen at the same time, each characters line is introduced with an em dash:</p>
 
