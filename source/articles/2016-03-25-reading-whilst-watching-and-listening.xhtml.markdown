@@ -21,7 +21,7 @@ You always want to use [utf-8](https://www.ietf.org/rfc/rfc3629.txt). Other than
 
 The only two widely-supported styling options for the text are the bold (`<b>`) and italic (`<i>`) mark-up elements. Computers tend to embolden fonts by drawing over them with bigger, thicker pen rendering ugly results so I only use italics.
 
-Use italic to emphasis an individual word in speech where it is emphasized in the dialogue, “she said *what*?” and also to indicate the dialogue is being spoken by someone off camera, out of focus, or in the background whilst another character is in the foreground and in focus.
+Use italic to emphasis an individual word in speech where it is emphasized in the dialogue, “she said *what*?”; to indicate the dialogue is being spoken by someone off camera, out of focus, or in the background whilst another character is in the foreground and in focus; and for intertitles.
 
 An em dash (—) indicates the beginning of a line of dialogue. If two characters’ or people’s dialogue is on the screen at the same time, each characters line is introduced with an em dash:
 
