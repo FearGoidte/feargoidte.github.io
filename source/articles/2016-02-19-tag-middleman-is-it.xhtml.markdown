@@ -136,12 +136,12 @@ This code is for the generated individual tag archives (`source\tag.xhtml.erb`):
 
 ``` eruby
 <% if data['tags'][tagname.to_sym] %>
-<h1 property="dc:title">Articles tagged <em><%= data['tags'][tagname.to_sym][:name] %></em></h1>
+<h1 property="dcterms:title">Articles tagged <em><%= data['tags'][tagname.to_sym][:name] %></em></h1>
 <p>
 <%= data['tags'][tagname.to_sym][:description] %>
 </p>
 <% else %>
-<h1 property="dc:title">Articles tagged <em><%= tagname %></em></h1>
+<h1 property="dcterms:title">Articles tagged <em><%= tagname %></em></h1>
 <% end %>
 ```
 

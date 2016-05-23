@@ -1,10 +1,10 @@
 <% wrap_layout :layout do %>
 <main id="nav_main" typeof="DCMIType:text schema:Article" resource="<%= data.settings.site.base_url %><%= current_article.url %>">
 	<header>
-		<p class="published-date icon"><time property="dc:created schema:dateCreated schema:datePublished" datetime="<%= current_article.date.strftime("%F") %>"><%= current_article.date.strftime("%A ") + ordinal(current_article.date.strftime("%e")) + current_article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
+		<p class="published-date icon"><time property="dcterms:created schema:dateCreated schema:datePublished" datetime="<%= current_article.date.strftime("%F") %>"><%= current_article.date.strftime("%A ") + ordinal(current_article.date.strftime("%e")) + current_article.date.strftime("&#160;%B,&#160;%Y") %></time></p>
 		<% if File.mtime(current_page.source_file).strftime("%F") > current_article.date.strftime("%F") %>
 		<% end %>
-		<h1 property="dc:title schema:Headline"><%= current_article.title %></h1>
+		<h1 property="dcterms:title schema:Headline"><%= current_article.title %></h1>
 		<% if current_article.data.subtitle %>
 		<p class="subtitle"><%= current_article.data.subtitle %></p>
 		<% end %>
@@ -26,7 +26,7 @@
 	</header>
 	<%= table_of_contents(current_page) %>
 	<% if current_article.data.description %>
-	<p property="dc:description schema:description"><%= current_article.data.description %></p>
+	<p property="dcterms:description schema:description"><%= current_article.data.description %></p>
 	<% end %>
 	<%= yield %>
 	<%= partial 'layouts/partials/footer' %>

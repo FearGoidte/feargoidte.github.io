@@ -33,13 +33,13 @@
 		<div role="banner">
 			<dl>
 		<% if current_page.path == 'index.xhtml' %>
-				<dt property="dc:title" lang="ga"><%= data.settings.site.name %></dt>
+				<dt property="dcterms:title" lang="ga"><%= data.settings.site.name %></dt>
 		<% else %>
 				<dt lang="ga-ie"><a href="<%= data.settings.site.base_url %>"><%= data.settings.site.name %></a></dt>
 		<% end %>
 				<dd
 			<% if current_page.path == 'index.xhtml' %>
-				 property="dc:description"
+				 property="dcterms:description"
 			<% end %>
 				><%= data.settings.site.description %></dd>
 			</dl>
@@ -55,7 +55,7 @@
 			</div><!--End of ‘navigation’ role-->
 		</div><!-- end of ‘banner’ role -->
 		<main id="nav_main">
-			<h1 property="dc:title"><%= current_page.data.title %></h1>
+			<h1 property="dcterms:title"><%= current_page.data.title %></h1>
       <%= yield %>
 			<%= partial 'layouts/partials/footer' %>
 	      </main>

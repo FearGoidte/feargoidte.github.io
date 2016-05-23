@@ -11,7 +11,7 @@ def table_of_contents(page)
     file = file.gsub(' & ', ' &amp; ')
     # Switch to ordered lists
     toc = renderer.render(file)
-    toc = toc.sub('<ul>', '<ol property="dc:tableofContents">')
+    toc = toc.sub('<ul>', '<ol property="dcterms:tableofContents">')
     toc = toc.gsub('<ul>', '<ol>')
     toc = toc.gsub('</ul>', '</ol>')
     tocpre + toc + tocpost unless toc.empty?
