@@ -417,7 +417,7 @@ How to setup a custom <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec1
     <link rel="alternate" href="https://isfeargoidte.me.uk/2016/02/19/tag-middleman-is-it"/>
     <id>https://isfeargoidte.me.uk/2016/02/19/tag-middleman-is-it</id>
     <published>2016-02-19T10:30:00+00:00</published>
-    <updated>2016-04-12T11:46:06+01:00</updated>
+    <updated>2016-05-23T10:46:34+01:00</updated>
     <author>
       <name>James Ó Nuanáin</name>
     </author>
@@ -541,12 +541,12 @@ A vocabulary and associated <abbr title="application programming interface" clas
 
 <p>This code is for the generated individual tag archives (<code>source\tag.xhtml.erb</code>):</p>
 <pre class="code-quote erb"><code><span class="cp">&lt;%</span> <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">'tags'</span><span class="p">][</span><span class="n">tagname</span><span class="p">.</span><span class="nf">to_sym</span><span class="p">]</span> <span class="cp">%&gt;</span>
-<span class="nt">&lt;h1</span> <span class="na">property=</span><span class="s">"dc:title"</span><span class="nt">&gt;</span>Articles tagged <span class="nt">&lt;em&gt;</span><span class="cp">&lt;%=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'tags'</span><span class="p">][</span><span class="n">tagname</span><span class="p">.</span><span class="nf">to_sym</span><span class="p">][</span><span class="ss">:name</span><span class="p">]</span> <span class="cp">%&gt;</span><span class="nt">&lt;/em&gt;&lt;/h1&gt;</span>
+<span class="nt">&lt;h1</span> <span class="na">property=</span><span class="s">"dcterms:title"</span><span class="nt">&gt;</span>Articles tagged <span class="nt">&lt;em&gt;</span><span class="cp">&lt;%=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'tags'</span><span class="p">][</span><span class="n">tagname</span><span class="p">.</span><span class="nf">to_sym</span><span class="p">][</span><span class="ss">:name</span><span class="p">]</span> <span class="cp">%&gt;</span><span class="nt">&lt;/em&gt;&lt;/h1&gt;</span>
 <span class="nt">&lt;p&gt;</span>
 <span class="cp">&lt;%=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'tags'</span><span class="p">][</span><span class="n">tagname</span><span class="p">.</span><span class="nf">to_sym</span><span class="p">][</span><span class="ss">:description</span><span class="p">]</span> <span class="cp">%&gt;</span>
 <span class="nt">&lt;/p&gt;</span>
 <span class="cp">&lt;%</span> <span class="k">else</span> <span class="cp">%&gt;</span>
-<span class="nt">&lt;h1</span> <span class="na">property=</span><span class="s">"dc:title"</span><span class="nt">&gt;</span>Articles tagged <span class="nt">&lt;em&gt;</span><span class="cp">&lt;%=</span> <span class="n">tagname</span> <span class="cp">%&gt;</span><span class="nt">&lt;/em&gt;&lt;/h1&gt;</span>
+<span class="nt">&lt;h1</span> <span class="na">property=</span><span class="s">"dcterms:title"</span><span class="nt">&gt;</span>Articles tagged <span class="nt">&lt;em&gt;</span><span class="cp">&lt;%=</span> <span class="n">tagname</span> <span class="cp">%&gt;</span><span class="nt">&lt;/em&gt;&lt;/h1&gt;</span>
 <span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
 </code></pre>
 
