@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/middleman/middleman-blog
-  revision: c1205be58323d1e9161716ec103fb85eaa6b9ea3
+  revision: 2cf1d6b4e9c189416b9d03ae7fd4358e6d2cb931
   specs:
     middleman-blog (4.0.1)
       addressable (~> 2.3)
@@ -26,7 +26,7 @@ GIT
 
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: 5de9e86a5529da888907472d7200264596a3cd9b
+  revision: 38a90255602082522a73d649e47f0f789f302d3b
   specs:
     middleman (4.1.8)
       coffee-script (~> 2.2)
