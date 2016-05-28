@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/middleman/middleman-blog
-  revision: 2cf1d6b4e9c189416b9d03ae7fd4358e6d2cb931
+  revision: 1f154d8846e22bfa846db0b13ada1f8c90f6d213
   specs:
     middleman-blog (4.0.1)
       addressable (~> 2.3)
@@ -26,7 +26,7 @@ GIT
 
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: 38a90255602082522a73d649e47f0f789f302d3b
+  revision: 51ccfe11430416d5903f554c1f48ce6dd43c1044
   specs:
     middleman (4.1.8)
       coffee-script (~> 2.2)
@@ -44,6 +44,7 @@ GIT
       backports (~> 3.6)
       bundler (~> 1.1)
       contracts (~> 0.13.0)
+      dotenv
       erubis
       execjs (~> 2.0)
       fast_blank
@@ -81,6 +82,7 @@ GEM
       sass (>= 3.2, < 3.5)
     concurrent-ruby (1.0.2)
     contracts (0.13.0)
+    dotenv (2.1.1)
     erubis (2.7.0)
     execjs (2.7.0)
     fast_blank (1.0.0)
