@@ -31,7 +31,7 @@ activate :blog do |blog|
   blog.day_link = '{year}/{month}/{day}.xhtml'
   blog.tag_template = 'tag.xhtml'
   blog.calendar_template = 'calendar.xhtml'
-  blog.new_article_template = File.expand_path('../blank-article.erb', __FILE__)
+  blog.new_article_template = File.expand_path('../blank_article.erb', __FILE__)
 end
 
 # Activate directory indices and remove file extensions from urls
