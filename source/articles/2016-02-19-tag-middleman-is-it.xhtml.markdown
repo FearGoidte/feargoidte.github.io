@@ -3,6 +3,7 @@
 title: “Tag!”, Middleman is it
 subtitle: Adding descriptions to tags
 date: 2016-02-19 10:30 GMT
+image: /images/2016-02-19-tag-middleman-is-it.svg
 tags: Middleman, eRuby, YAML, XHTML, blogging, rel
 description: >
   Doing more with the <a href="https://middlemanapp.com/basics/blogging/">middleman-blog</a> extension’s tags. Adding descriptions, names with inline mark-up, and the tag <code>rel</code> attribute. This is assuming that you have setup a blank blog as per <dfn><a href="/2016/02/02/would-have-worn-gloves#nav_main">If I’d known there’d be so much typing, I would have worn gloves</a></dfn>.

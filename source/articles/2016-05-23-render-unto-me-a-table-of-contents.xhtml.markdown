@@ -3,6 +3,7 @@
 title: Render unto me, a table of contents
 subtitle: Generating a table of contents in Middleman using embedded Ruby
 date: 2016-05-23 15:02 BST
+image: /images/2016-05-23-render-unto-me-a-table-of-contents.svg
 tags: Middleman, Markdown, eRuby, Redcarpet, XHTML
 description: >
   To have an automatically generated table of contents whilst using the <a href="https://middlemanapp.com">Middleman</a> static site generator with Embedded Ruby for templates/layouts and markdown for simple formatting, I have made some modifications to a vanilla install of Middleman.
