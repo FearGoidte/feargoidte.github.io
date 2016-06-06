@@ -5,7 +5,6 @@ subtitle: Test replacement in <abbr title="Mac Operating System Ten" class="init
 date: 2016-06-06 16:12 BST
 image: /images/2016-06-06-the-laziness-of-type.svg
 tags: OSX, text replacement, curly quotes, ligatures
-published: false
 description: Using text replacement to create your own ‘house style’ and to add a little diversity to your graphemes.
 
 ---
