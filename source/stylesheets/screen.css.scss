@@ -69,6 +69,11 @@ header > dl > dd::before {
 	color : inherit
 }
 
+object {
+	margin : 1.4em auto;
+	max-width : 15em
+}
+
 /*
 Site-wide navigation
 */
@@ -244,6 +249,7 @@ Intra-post navigation
 	.next::after {
 		position : relative
 	}
+
 }
 
 @media (min-width : 60em) {

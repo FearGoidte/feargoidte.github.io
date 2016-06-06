@@ -11,6 +11,9 @@
 	<% if article.data.description %>
 	<p property="dcterms:description schema:description"><%= article.data.description %></p>
 	<% end %>
+	<% if article.data.image %>
+	<object data="<%= url_for article.data.image %>"></object>
+	<% end %>
 	<p>Continue reading <a href="<%= article.url %>#nav_main"><cite><%= article.title %></cite></a> (could take <%= reading_time(article.body) %>).</p>
 	<% if article.tags %>
 	<footer>

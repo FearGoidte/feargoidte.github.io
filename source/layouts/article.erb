@@ -25,6 +25,9 @@
 		<link property="rdfa:copy" href="#ccpattern" />
 	</header>
 	<%= table_of_contents(current_page) %>
+	<% if current_article.data.image %>
+	<object data="<%= url_for current_article.data.image %>"></object>
+	<% end %>
 	<% if current_article.data.description %>
 	<p property="dcterms:description schema:description"><%= current_article.data.description %></p>
 	<% end %>
