@@ -3,12 +3,13 @@
 title: A&#160;little something eXtra for the&#160;Middleman
 date: 2016-02-03 10:00 GMT
 tags: Middleman, application/xhtml+xml, Markdown, Redcarpet, XHTML, Ruby
+image: /images/2016-02-03-a-little-something-extra-for-the-middleman.svg
 description: >
   A short inexhaustive guide to adapting <a href="https://middlemanapp.com">Middleman 4.0.0</a> to output <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr> rather than <abbr title="Hypertext Mark-up Language" class="initialism">H.T.M.L.</abbr>
 
 ---
 
-![](../images/2016-02-03-a-little-something-extra-for-the-middleman.svg)
+*Whilst the following article might still have some use for converting an existing site, I have put together an [<abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr> Middleman template](https://github.com/FearGoidte/middleman-templates-blog-xhtml) which, in one fell swoop, sets up up everything*.
 
 I’m not going to prattle on about which mark-up version is better. Suffice to say, I made the switch a long time ago and prefer to use <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr>
 
