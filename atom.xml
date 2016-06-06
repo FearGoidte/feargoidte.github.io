@@ -6,10 +6,48 @@
   <id>https://isfeargoidte.me.uk/</id>
   <link href="https://isfeargoidte.me.uk/"/>
   <link href="https://isfeargoidte.me.uk/atom.xml" rel="self"/>
-  <updated>2016-06-06T00:46:00+01:00</updated>
+  <updated>2016-06-06T16:12:00+01:00</updated>
   <author>
     <name>James Ó Nuanáin</name>
   </author>
+  <entry>
+    <title type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+The laziness of type      </div>
+    </title>
+    <link rel="alternate" href="https://isfeargoidte.me.uk/2016/06/06/the-laziness-of-type"/>
+    <id>https://isfeargoidte.me.uk/2016/06/06/the-laziness-of-type</id>
+    <published>2016-06-06T16:12:00+01:00</published>
+    <updated>2016-06-06T16:37:30+01:00</updated>
+    <author>
+      <name>James Ó Nuanáin</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+Using text replacement to create your own ‘house style’ and to add a little diversity to your graphemes.      </div>
+    </summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+Using text replacement to create your own ‘house style’ and to add a little diversity to your graphemes.<p>Gutenberg’s acceleration of the production of the written word also facilitated a mass cull of the graphemes used to transmit it. The typewriter followed suit with its limitations of keyboard and the breadth of the hands spanning it.</p>
+
+<p>We use less variety of punctuation; shed accents and flourishes on imported words; have abandoned ligatures such as <em>æ</em> and <em>œ</em>, and even abandoned entire letters such as English’s <em>Þ</em>. These expunctions have not been driven by organic changes in usage or passing literary fashion, such as the ebb and flow of semi-colon use or the demise of the long-s (<em>ſ</em>). These changes are due to technical limitations.</p>
+
+<p>Computers could have facilitated a resurrection of diversity but instead merely reaffirmed the status quo ante. With the aid of <abbr title="Mac Operating System Ten" class="initialism">O.S.X.</abbr> and <abbr title="Apple’s touchscreen operating system" class="initialism">i.O.S.</abbr>’s (or operating systems of equal distinction) built-in text replacement, you can restore some diversity to the screen blinking in front of you; to do it elsewhere, you’ll have to leave the house.</p>
+
+<p>The use of a greater heterogeneity of punctuation (especially curly quotes, prime symbols, and hyphens and spaces of divers width) provide additional nudges to speed a readers comprehension.</p>
+
+<p>The ligatures, accents, traditional spellings (-<em>ize</em>), and the letter variants provide hints at etymology and passing novelty for the reader.</p>
+
+<p>The attached file for importation includes the ebullient use of ligatures (some of which like <em>Ægypt</em> might be jarring); and many but by no means all replacements for words whose etymology inclines them to an -<em>ize</em> rather than an -<em>ise</em> spelling. There are also closing single quotes for contractions as well as accents for some Japanese and Arabic words transliterated into English. It is a very opinionated list so prepare to prune:</p>
+
+<p><a href="/downloads/Text Substitutions.plist.7z" download="Text Substitutions.plist.7z">Download <em>Text substitutions</em></a>.</p>
+
+<p>To import the <code>.plist</code> file into <abbr title="Mac Operating System Ten" class="initialism">O.S.X.</abbr> (El Capitan): extract it from the archive, open <code>System Preferences/Keyboard/Text</code> and drag the plist onto the window showing the existing text shortcuts.</p>
+
+<p>If you have other computers using <abbr title="Apple’s touchscreen operating system" class="initialism">i.O.S.</abbr> or <abbr title="Mac Operating System Ten" class="initialism">O.S.X.</abbr> syncing to the same computer or iCloud account, the replacements should be synced to, and replicated on, them.</p>
+      </div>
+    </content>
+  </entry>
   <entry>
     <title type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
@@ -515,153 +553,6 @@ How to setup a custom <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec1
 <p>Avoid being too adamant that it’s the user’s fault or being too passive aggressive—surprisingly, those are quite common for the content of 404 pages.</p>
 
 <p>My own is inexcusably terse: <a href="https://isfeargoidte.me.uk/404.html">Fear Goidte’s 404</a> but I have an archive link on my site-wide navigation menu and not enough content to warrant an ability to search the site from within the site.</p>
-      </div>
-    </content>
-  </entry>
-  <entry>
-    <title type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-“Tag!”, Middleman is it      </div>
-    </title>
-    <link rel="alternate" href="https://isfeargoidte.me.uk/2016/02/19/tag-middleman-is-it"/>
-    <id>https://isfeargoidte.me.uk/2016/02/19/tag-middleman-is-it</id>
-    <published>2016-02-19T10:30:00+00:00</published>
-    <updated>2016-06-06T16:09:15+01:00</updated>
-    <author>
-      <name>James Ó Nuanáin</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-Doing more with the <a href="https://middlemanapp.com/basics/blogging/">middleman-blog</a> extension’s tags. Adding descriptions, names with inline mark-up, and the tag <code>rel</code> attribute. This is assuming that you have setup a blank blog as per <dfn><a href="/2016/02/02/would-have-worn-gloves#nav_main">If I’d known there’d be so much typing, I would have worn gloves</a></dfn>.
-      </div>
-    </summary>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-Doing more with the <a href="https://middlemanapp.com/basics/blogging/">middleman-blog</a> extension’s tags. Adding descriptions, names with inline mark-up, and the tag <code>rel</code> attribute. This is assuming that you have setup a blank blog as per <dfn><a href="/2016/02/02/would-have-worn-gloves#nav_main">If I’d known there’d be so much typing, I would have worn gloves</a></dfn>.
-<h2 id="displaying-tags-alphabetically">Displaying tags alphabetically</h2>
-
-<p>Especially with a long list of tags, and extra-especially when accessing them through voice or touch; it would be nice to have an idea of where you are in the list. Alphabetically ordering the tags gives someone and idea of where they are and the direction to go in to find a particular tag (up/back forward/behind).</p>
-
-<p>The current ruby code displays tags in articles (<code>current_article.tags</code>) in the order in which they are entered in the front matter of that post, and for archives (<code>blog.tags</code>) <em>I think</em> they are displayed in the order in which they first appear in an article:</p>
-<pre class="code-quote erb"><code><span class="cp">&lt;%</span> <span class="n">blog</span><span class="p">.</span><span class="nf">tags</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">tag</span><span class="p">,</span> <span class="n">articles</span><span class="o">|</span> <span class="cp">%&gt;</span>
-</code></pre>
-
-<p>To re-order them alphabetically:</p>
-<pre class="code-quote erb"><code><span class="cp">&lt;%</span> <span class="n">blog</span><span class="p">.</span><span class="nf">tags</span><span class="p">.</span><span class="nf">sort</span><span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">|</span> <span class="n">a</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">downcase</span> <span class="o">&lt;=&gt;</span> <span class="n">b</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">downcase</span> <span class="p">}.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">tag</span><span class="p">,</span> <span class="n">articles</span><span class="o">|</span> <span class="cp">%&gt;</span>
-</code></pre>
-
-<p>The <code>to_s.downcase</code> changes the tags to lowercase for sorting purposes, otherwise they are ordered by uppercase, and then by lowercase as two separate but adjacent logical lists.</p>
-
-<h2 id="descriptions-and-names-with-inline-mark-up">Descriptions and names with inline mark-up</h2>
-
-<p>These are instructions to optionally create descriptions for tags as well as names with inline mark-up that can be used for link text and as titles on tag archives.</p>
-
-<h3 id="yaml-data"><abbr title="YAML Ain’t Markup Language" class="initialism">YAML</abbr> data</h3>
-
-<p>Create a new <code>.yaml</code> file to hold the data: <code>/data/tags.yaml</code>.</p>
-
-<p>Add entries to the file in the following format:</p>
-<pre class="code-quote yaml"><code><span class="s">XHTML</span><span class="pi">:</span>
-  <span class="s">name</span><span class="pi">:</span> <span class="s">&lt;abbr title="eXtensible Hypertext Mark-up Language" class="initialism"&gt;X.H.T.M.L.&lt;/abbr&gt;</span>
-  <span class="s">description</span><span class="pi">:</span> <span class="pi">&gt;</span>
-    <span class="no">Extensible Hypertext Markup Language is part of the family of &lt;abbr title="eXtensible Markup Language" class="initialism"&gt;X.M.L.&lt;/abbr&gt; markup languages. It mirrors or extends versions of Hypertext Markup Language (&lt;dfn class="initialism"&gt;H.T.M.L.&lt;/dfn&gt;).</span>
-<span class="s">application/xhtml+xml</span><span class="pi">:</span>
-  <span class="s">name</span><span class="pi">:</span> <span class="s">&lt;code&gt;application/xhtml+xml&lt;/code&gt;</span>
-  <span class="s">description</span><span class="pi">:</span> <span class="pi">&gt;</span>
-    <span class="no">The &lt;dfn&gt;application/xhtml+xml&lt;/dfn&gt; media type (&lt;a href="http://www.rfc-editor.org/rfc/rfc3236.txt"&gt;RFC3236&lt;/a&gt;) is the primary media type for &lt;abbr title="eXtensible Hypertext Mark-up Language" class="initialism"&gt;X.H.T.M.L.&lt;/abbr&gt; Family documents.</span>
-</code></pre>
-
-<p>Where the first line “<code>XHTML:</code>” matches the tag as referenced in your article’s front matter and “<code>name: &lt;abbr title=&quot;eXtensible Hypertext Mark-up Language&quot; class=&quot;initialism&quot;&gt;X.H.T.M.L.&lt;/abbr&gt;</code>” matches the name of the tag as you would like it displayed within the body of your documents (links and titles).</p>
-
-<h3 id="article-headers">Article headers</h3>
-
-<p>Code for listing the tags in the article header:</p>
-<pre class="code-quote erb"><code><span class="cp">&lt;%</span> <span class="k">if</span> <span class="n">current_article</span><span class="p">.</span><span class="nf">tags</span> <span class="cp">%&gt;</span>
-<span class="nt">&lt;dl&gt;</span>
-    <span class="nt">&lt;dt&gt;</span>Tagged with<span class="nt">&lt;/dt&gt;</span>
-    <span class="cp">&lt;%</span> <span class="n">current_article</span><span class="p">.</span><span class="nf">tags</span><span class="p">.</span><span class="nf">sort</span><span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">|</span> <span class="n">a</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">downcase</span> <span class="o">&lt;=&gt;</span> <span class="n">b</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">downcase</span> <span class="p">}.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">tag</span><span class="p">,</span> <span class="n">articles</span><span class="o">|</span> <span class="cp">%&gt;</span>
-        <span class="cp">&lt;%</span> <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">'tags'</span><span class="p">][</span><span class="n">tag</span><span class="p">.</span><span class="nf">to_sym</span><span class="p">]</span> <span class="cp">%&gt;</span>
-    <span class="nt">&lt;dd&gt;&lt;a</span> <span class="na">href=</span><span class="s">"</span><span class="cp">&lt;%=</span> <span class="n">url_for</span> <span class="n">tag_path</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span> <span class="cp">%&gt;</span><span class="s">"</span> <span class="na">rel=</span><span class="s">"tag"</span><span class="nt">&gt;</span><span class="cp">&lt;%=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'tags'</span><span class="p">][</span><span class="n">tag</span><span class="p">.</span><span class="nf">to_sym</span><span class="p">][</span><span class="ss">:name</span><span class="p">]</span> <span class="cp">%&gt;</span><span class="nt">&lt;/a&gt;&lt;/dd&gt;</span>
-        <span class="cp">&lt;%</span> <span class="k">else</span> <span class="cp">%&gt;</span>
-    <span class="nt">&lt;dd&gt;</span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="n">tag</span><span class="p">,</span> <span class="n">tag_path</span><span class="p">(</span><span class="n">tag</span><span class="p">),</span> <span class="ss">rel: </span><span class="s1">'tag'</span> <span class="cp">%&gt;</span><span class="nt">&lt;/dd&gt;</span>
-        <span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
-    <span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
-<span class="nt">&lt;/dl&gt;</span>
-<span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
-</code></pre>
-
-<p>For the article headers, the tag links have <code>rel=&quot;tag&quot;</code> attributes. Read more about this attribute at <a href="https://www.w3.org/TR/html5/links.html#link-type-tag">4.8.4.12 Link type “tag”—<cite><abbr title="Hypertext Mark-up Language" class="initialism">H.T.M.L.</abbr>5
-A vocabulary and associated <abbr title="application programming interface" class="initialism">A.P.I.</abbr>s for <abbr title="Hypertext Mark-up Language" class="initialism">H.T.M.L.</abbr> and <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr></cite></a>.</p>
-
-<h3 id="article-summaries">Article summaries</h3>
-
-<p>Code for listing the tags in article summaries:</p>
-<pre class="code-quote erb"><code><span class="cp">&lt;%</span> <span class="k">if</span> <span class="n">article</span><span class="p">.</span><span class="nf">tags</span> <span class="cp">%&gt;</span>
-<span class="nt">&lt;footer&gt;</span>
-<span class="nt">&lt;dl&gt;</span>
-    <span class="nt">&lt;dt&gt;</span>Tagged with<span class="nt">&lt;/dt&gt;</span>
-    <span class="cp">&lt;%</span> <span class="n">article</span><span class="p">.</span><span class="nf">tags</span><span class="p">.</span><span class="nf">sort</span><span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">|</span> <span class="n">a</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">downcase</span> <span class="o">&lt;=&gt;</span> <span class="n">b</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">downcase</span> <span class="p">}.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">tag</span><span class="p">,</span> <span class="n">articles</span><span class="o">|</span> <span class="cp">%&gt;</span>
-        <span class="cp">&lt;%</span> <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">'tags'</span><span class="p">][</span><span class="n">tag</span><span class="p">.</span><span class="nf">to_sym</span><span class="p">]</span> <span class="cp">%&gt;</span>
-            <span class="cp">&lt;%</span> <span class="k">if</span> <span class="n">current_page</span><span class="p">.</span><span class="nf">url</span> <span class="o">==</span> <span class="n">tag_path</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span> <span class="cp">%&gt;</span>
-    <span class="nt">&lt;dd&gt;</span><span class="cp">&lt;%=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'tags'</span><span class="p">][</span><span class="n">tag</span><span class="p">.</span><span class="nf">to_sym</span><span class="p">][</span><span class="ss">:name</span><span class="p">]</span> <span class="cp">%&gt;</span><span class="nt">&lt;/dd&gt;</span>
-           <span class="cp">&lt;%</span> <span class="k">else</span> <span class="cp">%&gt;</span>
-    <span class="nt">&lt;dd&gt;&lt;a</span> <span class="na">href=</span><span class="s">"</span><span class="cp">&lt;%=</span> <span class="n">url_for</span> <span class="n">tag_path</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span> <span class="cp">%&gt;</span><span class="s">"</span><span class="nt">&gt;</span><span class="cp">&lt;%=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'tags'</span><span class="p">][</span><span class="n">tag</span><span class="p">.</span><span class="nf">to_sym</span><span class="p">][</span><span class="ss">:name</span><span class="p">]</span> <span class="cp">%&gt;</span><span class="nt">&lt;/a&gt;&lt;/dd&gt;</span>
-            <span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
-        <span class="cp">&lt;%</span> <span class="k">else</span> <span class="cp">%&gt;</span>
-            <span class="cp">&lt;%</span> <span class="k">if</span> <span class="n">current_page</span><span class="p">.</span><span class="nf">url</span> <span class="o">==</span> <span class="n">tag_path</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span> <span class="cp">%&gt;</span>
-    <span class="nt">&lt;dd&gt;</span><span class="cp">&lt;%=</span> <span class="n">tag</span> <span class="cp">%&gt;</span><span class="nt">&lt;/dd&gt;</span>
-           <span class="cp">&lt;%</span> <span class="k">else</span> <span class="cp">%&gt;</span>
-    <span class="nt">&lt;dd&gt;</span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="n">tag</span><span class="p">,</span> <span class="n">tag_path</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span> <span class="cp">%&gt;</span><span class="nt">&lt;/dd&gt;</span>
-            <span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
-        <span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
-<span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
-<span class="nt">&lt;/dl&gt;</span>
-<span class="nt">&lt;/footer&gt;</span>
-<span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
-</code></pre>
-
-<h3 id="main-archive">Main archive</h3>
-
-<p>Code for listing links to the tag archives on a main archive page:</p>
-<pre class="code-quote erb"><code><span class="nt">&lt;ol&gt;</span>
-<span class="cp">&lt;%</span> <span class="n">blog</span><span class="p">.</span><span class="nf">tags</span><span class="p">.</span><span class="nf">sort</span><span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">|</span> <span class="n">a</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">downcase</span>   <span class="o">&lt;=&gt;</span> <span class="n">b</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">downcase</span>   <span class="p">}.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">tag</span><span class="p">,</span> <span class="n">articles</span><span class="o">|</span> <span class="cp">%&gt;</span>
-    <span class="cp">&lt;%</span> <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">'tags'</span><span class="p">][</span><span class="n">tag</span><span class="p">.</span><span class="nf">to_sym</span><span class="p">]</span> <span class="cp">%&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"</span><span class="cp">&lt;%=</span> <span class="n">url_for</span> <span class="n">tag_path</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span> <span class="cp">%&gt;</span><span class="s">"</span><span class="nt">&gt;</span><span class="cp">&lt;%=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'tags'</span><span class="p">][</span><span class="n">tag</span><span class="p">.</span><span class="nf">to_sym</span><span class="p">][</span><span class="ss">:name</span><span class="p">]</span> <span class="cp">%&gt;</span><span class="nt">&lt;/a&gt;</span> (<span class="cp">&lt;%=</span> <span class="n">spell_out</span><span class="p">(</span><span class="n">articles</span><span class="p">.</span><span class="nf">size</span><span class="p">)</span> <span class="cp">%&gt;</span>)—<span class="cp">&lt;%=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'tags'</span><span class="p">][</span><span class="n">tag</span><span class="p">.</span><span class="nf">to_sym</span><span class="p">][</span><span class="ss">:description</span><span class="p">]</span> <span class="cp">%&gt;</span><span class="nt">&lt;/li&gt;</span>
-    <span class="cp">&lt;%</span> <span class="k">else</span> <span class="cp">%&gt;</span>
-    <span class="nt">&lt;li&gt;</span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s2">"</span><span class="si">#{</span><span class="n">tag</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">tag_path</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span> <span class="cp">%&gt;</span> (<span class="cp">&lt;%=</span> <span class="n">spell_out</span><span class="p">(</span><span class="n">articles</span><span class="p">.</span><span class="nf">size</span><span class="p">)</span> <span class="cp">%&gt;</span>)<span class="nt">&lt;/li&gt;</span>
-    <span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
-<span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
-<span class="nt">&lt;/ol&gt;</span>
-</code></pre>
-
-<p>The above depends on having a <code>\helpers\spell_out.rb</code> file containing:</p>
-<pre class="code-quote erb"><code>def spell_out(value)
-  value = value.to_i
-  if value &gt;= 0 <span class="err">&amp;&amp;</span> value <span class="nt">&lt; 11</span>
-    <span class="na">return</span> <span class="err">%</span><span class="na">w</span><span class="err">(</span><span class="na">zero</span> <span class="na">one</span> <span class="na">two</span> <span class="na">three</span> <span class="na">four</span> <span class="na">five</span> <span class="na">six</span> <span class="na">seven</span> <span class="na">eight</span> <span class="na">nine</span> <span class="na">ten</span><span class="err">)[</span><span class="na">value</span><span class="err">]</span>
-  <span class="na">else</span>
-    <span class="na">return</span> <span class="na">value</span>
-  <span class="na">end</span>
-<span class="na">end</span>
-
-</code></pre>
-
-<h3 id="tag-archives">Tag archives</h3>
-
-<p>This code is for the generated individual tag archives (<code>source\tag.xhtml.erb</code>):</p>
-<pre class="code-quote erb"><code><span class="cp">&lt;%</span> <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">'tags'</span><span class="p">][</span><span class="n">tagname</span><span class="p">.</span><span class="nf">to_sym</span><span class="p">]</span> <span class="cp">%&gt;</span>
-<span class="nt">&lt;h1</span> <span class="na">property=</span><span class="s">"dcterms:title"</span><span class="nt">&gt;</span>Articles tagged <span class="nt">&lt;em&gt;</span><span class="cp">&lt;%=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'tags'</span><span class="p">][</span><span class="n">tagname</span><span class="p">.</span><span class="nf">to_sym</span><span class="p">][</span><span class="ss">:name</span><span class="p">]</span> <span class="cp">%&gt;</span><span class="nt">&lt;/em&gt;&lt;/h1&gt;</span>
-<span class="nt">&lt;p&gt;</span>
-<span class="cp">&lt;%=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'tags'</span><span class="p">][</span><span class="n">tagname</span><span class="p">.</span><span class="nf">to_sym</span><span class="p">][</span><span class="ss">:description</span><span class="p">]</span> <span class="cp">%&gt;</span>
-<span class="nt">&lt;/p&gt;</span>
-<span class="cp">&lt;%</span> <span class="k">else</span> <span class="cp">%&gt;</span>
-<span class="nt">&lt;h1</span> <span class="na">property=</span><span class="s">"dcterms:title"</span><span class="nt">&gt;</span>Articles tagged <span class="nt">&lt;em&gt;</span><span class="cp">&lt;%=</span> <span class="n">tagname</span> <span class="cp">%&gt;</span><span class="nt">&lt;/em&gt;&lt;/h1&gt;</span>
-<span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
-</code></pre>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>A little short on exposition but contains all the necessary code.</p>
       </div>
     </content>
   </entry>
