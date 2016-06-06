@@ -71,7 +71,11 @@ header > dl > dd::before {
 
 object {
 	margin : 1.4em auto;
-	max-width : 15em
+	max-width : 25em
+}
+
+nav + object {
+	max-width : 15em/* Leave room for the table of contents and summary image to nestle side-by-side */
 }
 
 /*
