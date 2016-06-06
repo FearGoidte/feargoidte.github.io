@@ -119,7 +119,7 @@ page '/articles/*.xhtml', layout: 'article'
 
 This behaviour is set to change again soon so that the default layout will be applied to `.htm` and `.xhtml` files as well as `.html`. This will make the above two lines redundant. Middleman’s new behaviour makes the other page settings redundant as well as the line:
 
-```ruby
+``` ruby
 page "/feed.xml", layout: false
 ```
 
