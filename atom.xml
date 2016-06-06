@@ -56,7 +56,7 @@ BBEdit package for Middleman      </div>
     <link rel="alternate" href="https://isfeargoidte.me.uk/2016/06/06/bbedit-package-for-middleman"/>
     <id>https://isfeargoidte.me.uk/2016/06/06/bbedit-package-for-middleman</id>
     <published>2016-06-06T00:46:00+01:00</published>
-    <updated>2016-06-06T15:23:41+01:00</updated>
+    <updated>2016-06-06T21:54:11+01:00</updated>
     <author>
       <name>James Ó Nuanáin</name>
     </author>
@@ -72,7 +72,7 @@ An assortment of clippings, scripts, and stationary for developing <a href="http
 
 <p>I’ve put this package on GitHub (<a href="https://github.com/FearGoidte/Middleman.bbpackage">FearGoidte/Middleman.bbpackage</a>) in the hope that it might prove of use to someone or even more than one. If you do find this useful, and you expand upon it, please create a fork and create a pull request if you want me to incorporate your improvements into my version.</p>
 
-<p>This package is a work in progress, it includes a few useful <a href="http://www.barebones.com/support/bbedit/clippings_library.html">clippings</a> (more to come); scripts to launch the preview server and open the site in the default browser, build the site, and using <a href="https://github.com/middleman-contrib/middleman-deploy">middleman-deploy</a> deploy it to a server.</p>
+<p>This package is a work in progress, it includes a few useful <a href="http://www.barebones.com/support/bbedit/clippings_library.html">clippings</a> (more to come); scripts to launch the preview server and open the site in the default browser, build the site, and using <a href="https://github.com/middleman-contrib/middleman-deploy">middleman-deploy</a> to deploy it to a server.</p>
       </div>
     </content>
   </entry>
@@ -433,7 +433,7 @@ The visual formatting of the <a href="https://www.w3.org/TR/html5/grouping-conte
   <entry>
     <title type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-Reading whilst watching (and listening)      </div>
+Reading whilst watching (and listening)—Fear Goidte      </div>
     </title>
     <link rel="alternate" href="https://isfeargoidte.me.uk/2016/03/25/reading-whilst-watching-and-listening"/>
     <id>https://isfeargoidte.me.uk/2016/03/25/reading-whilst-watching-and-listening</id>
