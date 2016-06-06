@@ -33,6 +33,7 @@
 		<meta name="theme-color" content="#ffffff"/>
 		<meta name="author" content="<%= data.settings.author.name %>" />
 		<% if current_article %>
+		<%= partial('layouts/partials/article_pseudo_meta') %>
 		<meta name="description" content="<%= current_article.data.description.gsub( %r{</?[^>]+?>}, '' ) %>" />
 		  <% else %>
 		<meta name="description" content="<%= data.settings.site.description.gsub( %r{</?[^>]+?>}, '' ) %>" />
