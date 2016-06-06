@@ -8,6 +8,8 @@ description: >
 
 ---
 
+![](../images/2016-02-03-a-little-something-extra-for-the-middleman.svg)
+
 I’m not going to prattle on about which mark-up version is better. Suffice to say, I made the switch a long time ago and prefer to use <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr>
 
 This is based on a vanilla setup of Middleman <em>4.0.0</em> and middleman-blog with the [blog template used to initiate the Middleman skeleton project](https://middlemanapp.com/basics/blogging/). `my_test_website` is used to refer to the directory which contains the Middleman skeleton project files.
