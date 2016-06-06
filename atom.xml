@@ -18,7 +18,7 @@ BBEdit package for Middleman      </div>
     <link rel="alternate" href="https://isfeargoidte.me.uk/2016/06/06/bbedit-package-for-middleman"/>
     <id>https://isfeargoidte.me.uk/2016/06/06/bbedit-package-for-middleman</id>
     <published>2016-06-06T00:46:00+01:00</published>
-    <updated>2016-06-06T01:03:04+01:00</updated>
+    <updated>2016-06-06T15:23:41+01:00</updated>
     <author>
       <name>James Ó Nuanáin</name>
     </author>
@@ -30,8 +30,6 @@ An assortment of clippings, scripts, and stationary for developing <a href="http
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
 An assortment of clippings, scripts, and stationary for developing <a href="https://middlemanapp.com">Middleman</a> static websites using the <a href="http://www.barebones.com/products/bbedit/">BBEdit</a> text editor.
-<p><img src="../../../../images/2016-06-06-bbedit-package-for-middleman-688f6432.svg" alt="2016 06 06 bbedit package for middleman" /></p>
-
 <p>I’m always guilty of underusing BBEdit and since it’s my text editor of choice and Middleman is my website development tool of choice I’ve made a modest effort to improve the way I use the two together.</p>
 
 <p>I’ve put this package on GitHub (<a href="https://github.com/FearGoidte/Middleman.bbpackage">FearGoidte/Middleman.bbpackage</a>) in the hope that it might prove of use to someone or even more than one. If you do find this useful, and you expand upon it, please create a fork and create a pull request if you want me to incorporate your improvements into my version.</p>
@@ -48,7 +46,7 @@ Render unto me, a table of contents      </div>
     <link rel="alternate" href="https://isfeargoidte.me.uk/2016/05/23/render-unto-me-a-table-of-contents"/>
     <id>https://isfeargoidte.me.uk/2016/05/23/render-unto-me-a-table-of-contents</id>
     <published>2016-05-23T15:02:00+01:00</published>
-    <updated>2016-05-23T15:05:52+01:00</updated>
+    <updated>2016-06-06T16:09:52+01:00</updated>
     <author>
       <name>James Ó Nuanáin</name>
     </author>
@@ -528,7 +526,7 @@ How to setup a custom <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec1
     <link rel="alternate" href="https://isfeargoidte.me.uk/2016/02/19/tag-middleman-is-it"/>
     <id>https://isfeargoidte.me.uk/2016/02/19/tag-middleman-is-it</id>
     <published>2016-02-19T10:30:00+00:00</published>
-    <updated>2016-05-23T12:49:32+01:00</updated>
+    <updated>2016-06-06T16:09:15+01:00</updated>
     <author>
       <name>James Ó Nuanáin</name>
     </author>
