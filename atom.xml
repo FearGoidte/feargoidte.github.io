@@ -6,10 +6,40 @@
   <id>https://isfeargoidte.me.uk/</id>
   <link href="https://isfeargoidte.me.uk/"/>
   <link href="https://isfeargoidte.me.uk/atom.xml" rel="self"/>
-  <updated>2016-05-23T15:02:00+01:00</updated>
+  <updated>2016-06-06T00:46:00+01:00</updated>
   <author>
     <name>James Ó Nuanáin</name>
   </author>
+  <entry>
+    <title type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+BBEdit package for Middleman      </div>
+    </title>
+    <link rel="alternate" href="https://isfeargoidte.me.uk/2016/06/06/bbedit-package-for-middleman"/>
+    <id>https://isfeargoidte.me.uk/2016/06/06/bbedit-package-for-middleman</id>
+    <published>2016-06-06T00:46:00+01:00</published>
+    <updated>2016-06-06T01:03:04+01:00</updated>
+    <author>
+      <name>James Ó Nuanáin</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+An assortment of clippings, scripts, and stationary for developing <a href="https://middlemanapp.com">Middleman</a> static websites using the <a href="http://www.barebones.com/products/bbedit/">BBEdit</a> text editor.
+      </div>
+    </summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+An assortment of clippings, scripts, and stationary for developing <a href="https://middlemanapp.com">Middleman</a> static websites using the <a href="http://www.barebones.com/products/bbedit/">BBEdit</a> text editor.
+<p><img src="../../../../images/2016-06-06-bbedit-package-for-middleman-688f6432.svg" alt="2016 06 06 bbedit package for middleman" /></p>
+
+<p>I’m always guilty of underusing BBEdit and since it’s my text editor of choice and Middleman is my website development tool of choice I’ve made a modest effort to improve the way I use the two together.</p>
+
+<p>I’ve put this package on GitHub (<a href="https://github.com/FearGoidte/Middleman.bbpackage">FearGoidte/Middleman.bbpackage</a>) in the hope that it might prove of use to someone or even more than one. If you do find this useful, and you expand upon it, please create a fork and create a pull request if you want me to incorporate your improvements into my version.</p>
+
+<p>This package is a work in progress, it includes a few useful <a href="http://www.barebones.com/support/bbedit/clippings_library.html">clippings</a> (more to come); scripts to launch the preview server and open the site in the default browser, build the site, and using <a href="https://github.com/middleman-contrib/middleman-deploy">middleman-deploy</a> deploy it to a server.</p>
+      </div>
+    </content>
+  </entry>
   <entry>
     <title type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
@@ -634,171 +664,6 @@ A vocabulary and associated <abbr title="application programming interface" clas
 <h2 id="conclusion">Conclusion</h2>
 
 <p>A little short on exposition but contains all the necessary code.</p>
-      </div>
-    </content>
-  </entry>
-  <entry>
-    <title type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-Weigh anchor      </div>
-    </title>
-    <link rel="alternate" href="https://isfeargoidte.me.uk/2016/02/19/weigh-anchor"/>
-    <id>https://isfeargoidte.me.uk/2016/02/19/weigh-anchor</id>
-    <published>2016-02-19T09:00:00+00:00</published>
-    <updated>2016-05-23T12:49:32+01:00</updated>
-    <author>
-      <name>James Ó Nuanáin</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-The web, and Wikipedia is a prime example, is a multitude of documents linked together. It does lots of other things, but mostly it’s links and documents. This is an abrupt note on stylesheet selectors for links and pseudo-conventions for styling them.
-      </div>
-    </summary>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-The web, and Wikipedia is a prime example, is a multitude of documents linked together. It does lots of other things, but mostly it’s links and documents. This is an abrupt note on stylesheet selectors for links and pseudo-conventions for styling them.
-<p>The selectors below, make use of attribute selectors with wildcards. Descriptions of these can be found at <a href="https://www.w3.org/TR/css3-selectors/#attribute-selectors">6.3. Attribute selectors—<abbr title="World Wide Web Consortium" class="initialism">W.3.C.</abbr>’s Selectors Level 3</a>.</p>
-
-<h2 id="identifying-links">Identifying links</h2>
-
-<h3 id="types">Types</h3>
-
-<p>Links could be divided into the following broad types (and currently are being, by me):</p>
-
-<ul>
-<li><dfn>internal</dfn> to the page,</li>
-<li><dfn>local</dfn> to another part of the website,</li>
-<li><dfn>e-mail</dfn> addresses,</li>
-<li><dfn>downloadable resources</dfn> (internal or external), and</li>
-<li><dfn>external</dfn> to another location on the Internet.</li>
-</ul>
-
-<h4 id="ascertaining-the-broad-link-type">Ascertaining the broad link type</h4>
-
-<h5 id="internal-to-the-page">Internal to the page</h5>
-
-<p>Search for any link element (<code>a</code>) with an <code>href</code> attribute that begins with “#”:</p>
-<pre class="code-quote css"><code><span class="nt">a</span><span class="o">[</span><span class="nt">href</span><span class="o">^=</span><span class="err">'#'</span><span class="o">]</span>
-</code></pre>
-
-<h5 id="external-and-local">External and local</h5>
-
-<p>The way to distinguishing between external and local links depends on how your website is configured: whether you are using absolute links, relative links, or a mixture of both.</p>
-
-<h6 id="absolute-links">Absolute links</h6>
-
-<p>For absolute links, (assuming your server is “example.com”) the following selector will identify your local links:</p>
-<pre class="code-quote css"><code><span class="o">[</span><span class="nt">href</span><span class="o">*=</span><span class="err">'</span><span class="nt">example</span><span class="nc">.com</span><span class="err">'</span><span class="o">]</span>
-</code></pre>
-
-<p>I have omitted the <code>http</code> since a page might be accessed over <code>http</code> or <code>https</code>. The <code>*</code> wildcard signifies that you are looking for an attribute that contains the quoted value (<code>&#39;example.com&#39;</code>).</p>
-
-<h6 id="relative-links">Relative links</h6>
-
-<p>For relative links, the following will select external links:</p>
-<pre class="code-quote css"><code><span class="nt">a</span><span class="o">[</span><span class="nt">href</span><span class="o">^=</span><span class="err">'</span><span class="nt">http</span><span class="err">'</span><span class="o">]</span>
-</code></pre>
-
-<h6 id="mixed-absolute-and-relative-links">Mixed absolute and relative links</h6>
-
-<p>For a mixture of absolute and relative links (which is the most likely scenario) and again assuming that your server is “example.com”, the following selector will select all external links:</p>
-<pre class="code-quote css"><code><span class="nt">a</span><span class="o">[</span><span class="nt">href</span><span class="o">^=</span><span class="err">'</span><span class="nt">http</span><span class="err">'</span><span class="o">]</span><span class="nd">:not</span><span class="o">([</span><span class="nt">href</span><span class="o">*=</span><span class="err">'</span><span class="nt">example</span><span class="nc">.com</span><span class="err">'</span><span class="o">])</span>
-</code></pre>
-
-<p>This is also the most fool-resistant approach. It searches for all links with <code>href</code> attributes that begin with “http” but don’t contain “example.com”.</p>
-
-<p>Please note however that these approaches are not idiot-proof. For instance, you could still link to an internal document fragment using an absolute reference and the selector your mark-up matches will be the local one rather than the internal one.</p>
-
-<h5 id="e-mail-links">E-mail links</h5>
-
-<p>Unless you’re playing silly-buggers with contact forms or some esoteric obfuscation, e-mail inks can be easily selected using:</p>
-<pre class="code-quote css"><code><span class="nt">a</span><span class="o">[</span><span class="nt">href</span><span class="o">^=</span><span class="err">'</span><span class="nt">mailto</span><span class="o">:</span><span class="err">'</span><span class="o">]</span>
-</code></pre>
-
-<h5 id="downloadable-resources">Downloadable resources</h5>
-
-<p>For downloadable resources you need to target the file extension such as for <em>Portable Document Format</em> files:</p>
-<pre class="code-quote css"><code><span class="nt">a</span><span class="o">[</span><span class="nt">href</span><span class="err">$</span><span class="o">=</span><span class="err">'</span><span class="nc">.pdf</span><span class="err">'</span><span class="o">]</span>
-</code></pre>
-
-<h3 id="the-rel-attribute">The <code>rel</code> attribute</h3>
-
-<p><abbr title="Hypertext Mark-up Language" class="initialism">H.T.M.L.</abbr>5 allows other types to be defined using the <code>rel</code> attribute(<a href="https://www.w3.org/TR/html5/links.html#linkTypes">4.8.4 Link types—<abbr title="Hypertext Mark-up Language" class="initialism">H.T.M.L.</abbr>5</a>).</p>
-
-<p>Some of these are not for action by the website user such as <code>rel=&quot;stylesheet&quot;</code> but the following are often worth highlighting visually:</p>
-
-<ul>
-<li><a href="https://www.w3.org/TR/html5/links.html#link-type-author"><code>author</code></a>,</li>
-<li><a href="https://www.w3.org/TR/html5/links.html#link-type-help"><code>help</code></a>,</li>
-<li><a href="https://www.w3.org/TR/html5/links.html#link-type-next"><code>next</code></a>,</li>
-<li><a href="https://www.w3.org/TR/html5/links.html#link-type-prev"><code>prev</code></a>, and</li>
-<li><a href="https://www.w3.org/TR/html5/links.html#link-type-tag"><code>tag</code></a>.</li>
-</ul>
-
-<p>To select these links:</p>
-<pre class="code-quote css"><code><span class="nt">a</span><span class="o">:[</span><span class="nt">rel</span><span class="o">~=</span><span class="nt">value</span><span class="o">]</span>
-</code></pre>
-
-<p>Where “value” is one of the possible <code>rel</code> values above. The tilde above (~) allows <code>rel</code> to have multiple space separated values where one of them matches your value.</p>
-
-<h3 id="states">States</h3>
-
-<p>Links can be in the following states (ordered by <abbr title="Cascading Style Sheets" class="initialism">C.S.S.</abbr> specificity:</p>
-
-<ul>
-<li><em>Unvisited</em>, a link your user-agent doesn’t know or remember that you’ve visited;</li>
-<li><em>Visited</em>, a link your user-agent knows or doesn’t remember you’ve visited;</li>
-<li><em>Hover</em>—on mouse interfaces—, a link the pointer is hovering over; and</li>
-<li><em>Active</em>, a link that is in the process of being followed.</li>
-</ul>
-
-<p>If you’re styling all the above states, the selectors should be in the same order:</p>
-<pre class="code-quote css"><code><span class="nt">a</span><span class="nd">:link</span>
-<span class="err">…</span>
-<span class="nt">a</span><span class="nd">:visited</span>
-<span class="err">…</span>
-<span class="nt">a</span><span class="nd">:hover</span>
-<span class="err">…</span>
-<span class="nt">a</span><span class="nd">:active</span>
-</code></pre>
-
-<p>For a brief, yet more informative discussion of the order of link state selectors, see: <a href="http://meyerweb.com/eric/css/link-specificity.html">Link Specificity on Eric Meyer’s homepage</a>.</p>
-
-<h2 id="visual-styling">Visual styling</h2>
-
-<h3 id="link-types">Link types</h3>
-
-<h4 id="internal">Internal</h4>
-
-<p>Immediately followed by the <a href="https://en.wikipedia.org/wiki/Section_sign">section sign</a>. There is no convention for an internal page link, but if there was one (and there should be) it should be the <em>section sign</em>. A convention that no one else abides by is no convention, unless … you screw your eyes real tight and wish it so.</p>
-
-<h4 id="local">Local</h4>
-
-<p>A plain link, no adornment.</p>
-
-<h4 id="e-mail">E-mail</h4>
-
-<p>Immediately followed by an envelope icon which is in no way anachronistic to someone like me who insists on “<em>e-mail</em>”.</p>
-
-<h4 id="downloadable-resources">Downloadable resources</h4>
-
-<p>If you use routinely included particular kinds of downloadable files it is a good idea to indicate them with an icon immediately following the link. Regardless you should at least include the file extension as this will be transparent to all users.</p>
-
-<h4 id="external">External</h4>
-
-<p>Immediately followed by the usual external link <a href="https://commons.m.wikimedia.org/wiki/File:Icon_External_Link.svg">arrow out of box icon</a>.</p>
-
-<h3 id="general-styling-notes">General styling notes</h3>
-
-<h4 id="colours">Colours</h4>
-
-<p>The convention is that links are <em>underlined</em> and that unvisited links are of a blueish hue and that visited links are of a purplish hue. Those have been the default colours since the web began and are familiar to users of <a href="https://duckduckgo.com">DuckDuckGo</a>, <a href="https://www.google.co.uk">Google</a>, and <a href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a> amongst innumerable others. If you want people to learn a new colour scheme, just for your site … interesting.</p>
-
-<h4 id="icons">Icons</h4>
-
-<p>It is best not to use icons to highlight the <a href="#states">states</a> since they can change whilst a user is on the page (<code>:hover</code>) and the document will need to reflow to accommodate them.</p>
-
-<p>If you use icons for link types, try to make them small and unobtrusive. If you’re using unicode glyphs or <code>&amp;font-face</code> with <a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome</a>, <a href="https://icomoon.io/">IcoMoon</a> <abbr lang="la" title="et cetera">&amp;c.</abbr> or similar try to ensure that the colour of the icon matches the link state—just to emphasize that the icon refers to that link rather than other adjacent text.</p>
       </div>
     </content>
   </entry>
