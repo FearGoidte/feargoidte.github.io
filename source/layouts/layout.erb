@@ -46,7 +46,7 @@
 		<% if current_page.path == 'index.xhtml' %>
 				<dt property="dcterms:title" xml:lang="ga"><%= data.settings.site.name %></dt>
 		<% else %>
-				<dt xml:lang="ga-ie"><a href="<%= url_for '/index.xhtml' %>"><%= data.settings.site.name %></a></dt>
+				<dt xml:lang="ga-ie"><%= link_to data.settings.site.name, '/index.xhtml' %></dt>
 		<% end %>
 				<dd
 			<% if current_page.path == 'index.xhtml' %>
@@ -59,20 +59,20 @@
 				<% if current_page.path == 'index.xhtml' %>
 					<li>Home</li>
 				<% else %>
-					<li><a href="<%= url_for '/index.xhtml' %>" accesskey="1">Home</a></li>
+					<li><%= link_to 'Home', '/index.xhtml', accesskey: '1' %></li>
 				<% end %><!--End of home link-->
 				<% if current_page.path == 'archives.xhtml' %>
 					<li>Archives</li>
 				<% else %>
-					<li><a href="<%= url_for '/archives.xhtml' %>">Archives</a></li>
+					<li><%= link_to 'Archives', '/archives.xhtml' %></li>
 				<% end %><!--End of archive link-->
-					<li><a href="#nav_copyright" accesskey="6">Copyright</a></li>
-					<li><a href="#nav_accesskeys" accesskey="k">Access keys</a></li>
-					<li><a href="<%= blog.options.prefix.to_s %>/atom.xml" rel="alternate" accesskey="f">Web feed</a></li>
+					<li><%= link_to 'Copyright', '#nav_copyright', accesskey: '6' %></li>
+					<li><%= link_to 'Access keys', '#nav_accesskeys', accesskey: 'k' %></li>
+					<li><%= link_to 'Web feed', '/atom.xml', accesskey: 'f', rel: 'alternate' %></li>
 					<% if current_page.path == "colophon.xhtml" %>
 					<li>Colophon</li>
 				<% else %>
-					<li><a href="<%= url_for "/colophon.xhtml" %>">Colophon</a></li>
+					<li><%= link_to 'Colophon', '/colophon.xhtml' %></li>
 				<% end %><!--End of archive link-->
 				</ol>
 			</div><!--End of ‘navigation’ role-->

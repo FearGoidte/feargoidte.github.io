@@ -1,5 +1,5 @@
 <ol reversed="reversed">
   <% page_articles.each_with_index do |article, i| %>
-    <li><%= partial('layouts/partials/article_summaries', :locals => { :article => article} ) %></li>
+    <li><%= partial('layouts/partials/article_summaries', locals: { article: article} ) %></li>
   <% end %>
 </ol>

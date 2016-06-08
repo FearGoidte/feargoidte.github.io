@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="<%= data.settings.site.language %>">
 	<head>
-		<link type="text/css" rel="stylesheet" href="<%= data.settings.site.base_url %><%= url_for "/stylesheets/visual.css",:relative => false %>" media="print, screen">
-		<link type="text/css" rel="stylesheet" href="<%= data.settings.site.base_url %><%= url_for "/stylesheets/print.css",:relative => false %>" media="print">
-		<link type="text/css" rel="stylesheet" href="<%= data.settings.site.base_url %><%= url_for "/stylesheets/screen.css",:relative => false %>" media="screen">
+		<link type="text/css" rel="stylesheet" href="<%= data.settings.site.base_url %><%= url_for "/stylesheets/visual.css", relative: false %>" media="print, screen">
+		<link type="text/css" rel="stylesheet" href="<%= data.settings.site.base_url %><%= url_for "/stylesheets/print.css", relative: false %>" media="print">
+		<link type="text/css" rel="stylesheet" href="<%= data.settings.site.base_url %><%= url_for "/stylesheets/screen.css", relative: false %>" media="screen">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title><%= doc_title %></title>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/atom.xml", title: "Atom Feed" %>
