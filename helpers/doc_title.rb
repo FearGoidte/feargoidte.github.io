@@ -7,7 +7,7 @@ def doc_title
     page_title = current_resource.data.title
   end
   if page_title
-    page_title << seperator << site_name
+    page_title + seperator + site_name
   else
     return site_name
   end
