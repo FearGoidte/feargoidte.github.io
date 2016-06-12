@@ -165,7 +165,7 @@ Enumerate the ways      </div>
     <link rel="alternate" href="https://isfeargoidte.me.uk/2016/04/02/enumerate-the-ways"/>
     <id>https://isfeargoidte.me.uk/2016/04/02/enumerate-the-ways</id>
     <published>2016-04-02T22:25:00+01:00</published>
-    <updated>2016-06-07T00:35:56+01:00</updated>
+    <updated>2016-06-12T20:48:18+01:00</updated>
     <author>
       <name>James Ó Nuanáin</name>
     </author>
@@ -200,7 +200,7 @@ The visual formatting of the <a href="https://www.w3.org/TR/html5/grouping-conte
 
 <h5 id="reversed-quot-reversed-quot"><code>reversed=&quot;reversed&quot;</code></h5>
 
-<p>Regrettably, at the moment, the only way I know of visually expressing the meaning of the <a href="https://www.w3.org/TR/html5/grouping-content.html#attr-ol-reversed"><code>reversed=&quot;reversed&quot;</code></a> attribute for ordered lists depends on knowing the total number of list items and using a style to ‘count down’ from that number. I have omitted that styling since it requires that the styling be changed every time that the number of list items changes and is therefore of limited use.</p>
+<p>Regrettably, at the moment, the only way I know of visually expressing the meaning of the <a href="https://www.w3.org/TR/html5/grouping-content.html#attr-ol-reversed"><code>reversed=&quot;reversed&quot;</code></a> attribute for ordered lists depends on knowing the total number of list items and using a style to ‘count down’ from that number. I have omitted that styling since it is <em>not</em> adaptive and therefore of limited use.</p>
 
 <h4 id="unordered-lists">Unordered lists</h4>
 
