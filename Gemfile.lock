@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/middleman/middleman-blog
-  revision: 1f154d8846e22bfa846db0b13ada1f8c90f6d213
+  revision: 8d093f2f8265b5bc44dfc8b54f0037ff331e8c39
   specs:
     middleman-blog (4.0.1)
       addressable (~> 2.3)
