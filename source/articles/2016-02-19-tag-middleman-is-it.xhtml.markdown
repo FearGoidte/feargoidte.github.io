@@ -58,9 +58,9 @@ Code for listing the tags in the article header:
 <% if current_article.tags %>
 <dl>
 	<dt>Tagged with</dt>
-	<% current_article.tags.sort{ |a,b| a.to_s.downcase <=> b.to_s.downcase }.each do |tag, articles| %>
-		<% if data['tags'][tag.to_sym] %>
-	<dd><a href="<%= url_for tag_path(tag) %>" rel="tag"><%= data['tags'][tag.to_sym][:name] %></a></dd>
+	<% current_article.tags.sort{ |a,b| a.to_s.downcase <=> b.to_s.downcase }.each do |tag| %>
+		<% if data.tags[tag] %>
+	<dd><a href="<%= url_for tag_path(tag) %>" rel="tag"><%= data.tags[tag].name %></a></dd>
 		<% else %>
 	<dd><%= link_to tag, tag_path(tag), rel: 'tag' %></dd>
 		<% end %>
@@ -81,12 +81,12 @@ Code for listing the tags in article summaries:
 <footer>
 <dl>
 	<dt>Tagged with</dt>
-	<% article.tags.sort{ |a,b| a.to_s.downcase <=> b.to_s.downcase }.each do |tag, articles| %>
-		<% if data['tags'][tag.to_sym] %>
+	<% article.tags.sort{ |a,b| a.to_s.downcase <=> b.to_s.downcase }.each do |tag| %>
+		<% if data.tags[tag] %>
 			<% if current_page.url == tag_path(tag) %>
-	<dd><%= data['tags'][tag.to_sym][:name] %></dd>
+	<dd><%= data.tags[tag].name %></dd>
 		   <% else %>
-	<dd><a href="<%= url_for tag_path(tag) %>"><%= data['tags'][tag.to_sym][:name] %></a></dd>
+	<dd><a href="<%= url_for tag_path(tag) %>"><%= data.tags[tag].name %></a></dd>
 			<% end %>
 		<% else %>
 			<% if current_page.url == tag_path(tag) %>
@@ -107,8 +107,8 @@ Code for listing links to the tag archives on a main archive page:
 ``` eruby
 <ol>
 <% blog.tags.sort{ |a,b| a.to_s.downcase   <=> b.to_s.downcase   }.each do |tag, articles| %>
-	<% if data['tags'][tag.to_sym] %>
-	<li><a href="<%= url_for tag_path(tag) %>"><%= data['tags'][tag.to_sym][:name] %></a> (<%= spell_out(articles.size) %>)—<%= data['tags'][tag.to_sym][:description] %></li>
+	<% if data.tags[tag] %>
+	<li><a href="<%= url_for tag_path(tag) %>"><%= data.tags[tag].name %></a> (<%= spell_out(articles.size) %>)—<%= data.tags[tag].description %></li>
 	<% else %>
 	<li><%= link_to "#{tag}", tag_path(tag) %> (<%= spell_out(articles.size) %>)</li>
 	<% end %>
@@ -135,10 +135,10 @@ end
 This code is for the generated individual tag archives (`source\tag.xhtml.erb`):
 
 ``` eruby
-<% if data['tags'][tagname.to_sym] %>
-<h1 property="dcterms:title">Articles tagged <em><%= data['tags'][tagname.to_sym][:name] %></em></h1>
+<% if data.tags[tagname] %>
+<h1 property="dcterms:title">Articles tagged <em><%= data.tags[tagname].name %></em></h1>
 <p>
-<%= data['tags'][tagname.to_sym][:description] %>
+<%= data.tags[tagname].description %>
 </p>
 <% else %>
 <h1 property="dcterms:title">Articles tagged <em><%= tagname %></em></h1>

@@ -8,8 +8,8 @@ layout: page
 <p>All <em>tags</em> used on this site, followed by the number of posts tagged with each of them.</p>
 <ol>
 <% blog.tags.sort{ |a,b| a.to_s.downcase <=> b.to_s.downcase }.each do |tag, articles| %>
-	<% if data['tags'][tag.to_sym] %>
-	<li><a href="<%= url_for tag_path(tag) %>"><%= data['tags'][tag.to_sym][:name] %></a> (<%= spell_out(articles.size) %>)—<%= data['tags'][tag.to_sym][:description] %></li>
+	<% if data.tags[tag] %>
+	<li><a href="<%= url_for tag_path(tag) %>"><%= data.tags[tag].name %></a> (<%= spell_out(articles.size) %>)—<%= data.tags[tag].description %></li>
 	<% else %>
 	<li><%= link_to "#{tag}", tag_path(tag) %> (<%= spell_out(articles.size) %>)</li>
 	<% end %>

@@ -3,10 +3,10 @@ layout: page
 ---
 
 <% @title = 'Articles tagged with ‘' + tagname +'’' %>
-<% if data['tags'][tagname.to_sym] %>
-<h1 property="dcterms:title">Articles tagged <em><%= data['tags'][tagname.to_sym][:name] %></em></h1>
+<% if data.tags[tagname] %>
+<h1 property="dcterms:title">Articles tagged <em><%= data.tags[tagname].name %></em></h1>
 <p property="dcterms:description">
-<%= data['tags'][tagname.to_sym][:description] %>
+<%= data.tags[tagname].description %>
 </p>
 <% else %>
 <h1 property="dcterms:title">Articles tagged <em><%= tagname %></em></h1>

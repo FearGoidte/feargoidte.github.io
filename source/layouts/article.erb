@@ -11,9 +11,9 @@
 		<% if current_article.tags %>
 		<dl>
 			<dt>Tagged with</dt>
-			<% current_article.tags.sort{ |a,b| a.to_s.downcase <=> b.to_s.downcase }.each do |tag, articles| %>
-				<% if data['tags'][tag.to_sym] %>
-			<dd><a href="<%= url_for tag_path(tag) %>" rel="tag"><%= data['tags'][tag.to_sym][:name] %></a></dd>
+			<% current_article.tags.sort{ |a,b| a.to_s.downcase <=> b.to_s.downcase }.each do |tag| %>
+				<% if data.tags[tag] %>
+			<dd><a href="<%= url_for tag_path(tag) %>" rel="tag"><%= data.tags[tag].name %></a></dd>
 				<% else %>
 			<dd><%= link_to tag, tag_path(tag), rel: 'tag' %></dd>
 				<% end %>
