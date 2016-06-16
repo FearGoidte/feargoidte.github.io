@@ -32,21 +32,21 @@
 	<%= yield %>
 	<%= partial 'layouts/partials/footer' %>
 </main>
-<% if current_article.previous_article || current_article.next_article %>
-<div role="navigation">
-	<ol class="post-navigation">
-	<% end %>
+	<% if current_article.previous_article || current_article.next_article # if any links %>
+	<div role="navigation" class="post-navigation">
+		<ol>
+	<% end # if any links %>
 		<% prev_article = current_article.previous_article %>
-		  <% if prev_article %>
-		<li class="icon prev">Previous: <a href="<%= prev_article.url %>" rel="prev" accesskey="p" title="Previous article: <%= prev_article.title %>"><%= prev_article.title %></a></li>
-		  <% end %>
-		<li><a href="<%= url_for "/archives.xhtml" %>">All articles</a></li>
-		<% next_article = current_article.next_article %>
-		  <% if next_article %>
-				<li class="icon next">Next: <a href="<%= next_article.url %>" rel="next" accesskey="n" title="Next article: <%= next_article.title %>"><%= next_article.title %></a></li>
-		  <% end %>
-	<% if current_article.previous_article || current_article.next_article %>
-	</ol>
-</div><!--End post navigation-->
-	<% end %>
+			<% if prev_article %>
+			<li class="icon prev">Previous: <%= link_to prev_article.title, prev_article.url, title: "Previous article: #{prev_article.title}", rel: 'prev', accesskey: 'p' %></li>
+			<% end # if prev article %>
+			<li><a href="<%= url_for "/archives.xhtml" %>">All articles</a></li>
+			<% next_article = current_article.next_article %>
+			<% if next_article %>
+			<li class="icon next">Next: <%= link_to next_article.title, next_article.url, title: "Next article: #{next_article.title}", rel: 'next', accesskey: 'n' %></li>
+			<% end # if next article %>
+	<% if current_article.previous_article || current_article.next_article # if any links %>
+		</ol>
+	</div><!--End post navigation-->
+	<% end # if any links %>
 <% end %>
