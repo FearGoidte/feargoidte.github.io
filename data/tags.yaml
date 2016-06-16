@@ -21,7 +21,7 @@ Markdown:
 Middleman:
   name: Middleman
   description: >
-    <a href="https://middlemanapp.com/">Middleman</a> is a program from generating websites written in Ruby.
+    <a href="https://middlemanapp.com/">Middleman</a> is a program for generating websites written in Ruby.
 rbenv:
   name: rbenv
   description: >
