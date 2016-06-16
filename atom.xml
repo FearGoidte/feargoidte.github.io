@@ -6,10 +6,150 @@
   <id>https://isfeargoidte.me.uk/</id>
   <link href="https://isfeargoidte.me.uk/"/>
   <link href="https://isfeargoidte.me.uk/atom.xml" rel="self"/>
-  <updated>2016-06-06T16:12:00+01:00</updated>
+  <updated>2016-06-16T08:18:00+01:00</updated>
   <author>
     <name>James Ó Nuanáin</name>
   </author>
+  <entry>
+    <title type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+Previously known as ‘coming up next!’      </div>
+    </title>
+    <link rel="alternate" href="https://isfeargoidte.me.uk/2016/06/16/previously-known-as-coming-up-next"/>
+    <id>https://isfeargoidte.me.uk/2016/06/16/previously-known-as-coming-up-next</id>
+    <published>2016-06-16T08:18:00+01:00</published>
+    <updated>2016-06-16T19:35:59+01:00</updated>
+    <author>
+      <name>James Ó Nuanáin</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+Sequentially linking web documents, a simple mark-up and styling example with some wooly logical thinking.      </div>
+    </summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+Sequentially linking web documents, a simple mark-up and styling example with some wooly logical thinking.<blockquote>
+<footer>The opening line of <cite>One Way or Another</cite> by Nigel Harrison and Debbie Harry</footer>
+One way or another, I’m gonna find ya’
+</blockquote>
+
+<h2 id="background">Background</h2>
+
+<p>The <a href="http://www.w3.org/TR/html5/links.html#sequential-link-types"><code>next</code> and <code>prev</code> <code>rel</code> link attributes</a> are most useful for documents that fall into a nice narrative sequence such as the chapters in a book. However, they also make a popular linear navigation aid for chronologically ordered articles such as blogs—which is the example that I am using here.</p>
+
+<h2 id="which-where-when-what">Which where? When what?</h2>
+
+<p>In determining the order of <em>next</em> and <em>previous</em> there is little to recommend either choice, but I am following the convention that <dfn>next</dfn> is newer and <dfn>previous</dfn> is older. Also that <em>previous</em> comes first in the document and displays left, as in going back through a book or back along a line of text and that <em>next</em> comes after and displays right as in moving forward through a book or along a line of text.</p>
+
+<h2 id="mark-up">Mark-up</h2>
+
+<p>Next and previous links are marked-up in an un-ordered list and use the <code>rel</code> and <code>accesskey</code> attributes. An additional link to a list of all the documents in the sequence is given in between the <code>next</code> and <code>prev</code> links:</p>
+<pre class="code-quote xml"><code><span class="nt">&lt;div</span> <span class="na">role=</span><span class="s">"navigation"</span> <span class="na">class=</span><span class="s">"page-navigation"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;ul&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"older-document.xhtml"</span> <span class="na">rel=</span><span class="s">"prev"</span> <span class="na">accesskey=</span><span class="s">"p"</span> <span class="na">title=</span><span class="s">"Previous article: Title of older document"</span><span class="nt">&gt;</span>Title of older document<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"archives.xhtml"</span><span class="nt">&gt;</span>All documents<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"newer-document.xhtml"</span> <span class="na">title=</span><span class="s">"Next article: Title of newer document"</span> <span class="na">rel=</span><span class="s">"next"</span> <span class="na">accesskey=</span><span class="s">"n"</span><span class="nt">&gt;</span>Title of newer document<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- End role=navigation --&gt;</span>
+</code></pre>
+
+<p>The access key attribute values follow the convention <a href="http://www.standardaccesskeys.com/SAK2014/">SAK2014: Standard Access Keys 2014</a></p>
+
+<p>The title attribute is set and explicitly states whether the link is <em>next</em> or <em>previous</em>. This is for non-visual browsers but also if you were to hide the text of the link and use only a symbol instead, it could describe the link via a tooltip.</p>
+
+<p>In both the first and last documents of a sequence, there will only be one link (either <em>previous</em> <strong>or</strong> <em>next</em>—depending on your logic).</p>
+
+<p>It could be considered that a list element is overkill. Whilst I do not subscribe to the radical <em>no item</em> list agendum (<a href="http://www.w3.org/TR/html5/grouping-content.html%23the-ul-element%22">The <code>ul</code> element on <abbr title="World Wide Web Consortium">W.3.C.</abbr>’s <abbr title="HyperText Markup Language">H.T.M.L.</abbr>5 Recommendation</a>), I am existentially comfortable with the notion that a list of one item is nevertheless a list. It may have dwindled down from a mighty tally; be an unlimited catalogue in initial, singular, or embryonic form; or it might just be a list of things that encompasses but one thing.</p>
+
+<h3 id="generating-in-a-middleman-static-blog">Generating in a Middleman static blog</h3>
+
+<p>I use the following code to generate the above mark-up in a middleman static website (I’m presupposing that you have the <a href="https://github.com/middleman/middleman-blog"><code>middleman-blog</code></a> extension):</p>
+<pre class="code-quote erb"><code><span class="cp">&lt;%</span> <span class="k">if</span> <span class="n">current_article</span><span class="p">.</span><span class="nf">previous_article</span> <span class="o">||</span> <span class="n">current_article</span><span class="p">.</span><span class="nf">next_article</span> <span class="c1"># if any links </span><span class="cp">%&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">role=</span><span class="s">"navigation"</span> <span class="na">class=</span><span class="s">"post-navigation&gt;
+    &lt;ol"</span><span class="nt">&gt;</span>
+<span class="cp">&lt;%</span> <span class="k">end</span> <span class="c1"># if any links </span><span class="cp">%&gt;</span>
+    <span class="cp">&lt;%</span> <span class="n">prev_article</span> <span class="o">=</span> <span class="n">current_article</span><span class="p">.</span><span class="nf">previous_article</span> <span class="cp">%&gt;</span>
+        <span class="cp">&lt;%</span> <span class="k">if</span> <span class="n">prev_article</span> <span class="cp">%&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="n">prev_article</span><span class="p">.</span><span class="nf">title</span><span class="p">,</span> <span class="n">prev_article</span><span class="p">.</span><span class="nf">url</span><span class="p">,</span> <span class="ss">title: </span><span class="s2">"Previous article: </span><span class="si">#{</span><span class="n">prev_article</span><span class="p">.</span><span class="nf">title</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="ss">rel: </span><span class="s1">'prev'</span><span class="p">,</span> <span class="ss">accesskey: </span><span class="s1">'p'</span> <span class="cp">%&gt;</span><span class="nt">&lt;/li&gt;</span>
+        <span class="cp">&lt;%</span> <span class="k">end</span> <span class="c1"># if prev article </span><span class="cp">%&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"</span><span class="cp">&lt;%=</span> <span class="n">url_for</span> <span class="s2">"/archives.xhtml"</span> <span class="cp">%&gt;</span><span class="s">"</span><span class="nt">&gt;</span>All articles<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="cp">&lt;%</span> <span class="n">next_article</span> <span class="o">=</span> <span class="n">current_article</span><span class="p">.</span><span class="nf">next_article</span> <span class="cp">%&gt;</span>
+        <span class="cp">&lt;%</span> <span class="k">if</span> <span class="n">next_article</span> <span class="cp">%&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="n">next_article</span><span class="p">.</span><span class="nf">title</span><span class="p">,</span> <span class="n">next_article</span><span class="p">.</span><span class="nf">url</span><span class="p">,</span> <span class="ss">title: </span><span class="s2">"Next article: </span><span class="si">#{</span><span class="n">next_article</span><span class="p">.</span><span class="nf">title</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="ss">rel: </span><span class="s1">'next'</span><span class="p">,</span> <span class="ss">accesskey: </span><span class="s1">'n'</span> <span class="cp">%&gt;</span><span class="nt">&lt;/li&gt;</span>
+        <span class="cp">&lt;%</span> <span class="k">end</span> <span class="c1"># if next article </span><span class="cp">%&gt;</span>
+<span class="cp">&lt;%</span> <span class="k">if</span> <span class="n">current_article</span><span class="p">.</span><span class="nf">previous_article</span> <span class="o">||</span> <span class="n">current_article</span><span class="p">.</span><span class="nf">next_article</span> <span class="c1"># if any links </span><span class="cp">%&gt;</span>
+    <span class="nt">&lt;/ol&gt;</span>
+<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!--End post navigation--&gt;</span>
+<span class="cp">&lt;%</span> <span class="k">end</span> <span class="c1"># if any links </span><span class="cp">%&gt;</span>
+</code></pre>
+
+<h2 id="visual-and-print-styling">Visual and print styling</h2>
+
+<h3 id="visual">Visual</h3>
+<pre class="code-quote css"><code><span class="k">@charset</span> <span class="n">utf-8</span><span class="p">;</span>
+
+<span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">line-height</span> <span class="p">:</span> <span class="m">1.4</span><span class="p">;</span>
+    <span class="nl">padding</span> <span class="p">:</span> <span class="m">0</span> <span class="m">1.4em</span>
+<span class="p">}</span>
+
+<span class="nc">.page-navigation</span> <span class="p">{</span>
+    <span class="nl">position</span> <span class="p">:</span> <span class="nb">relative</span>
+<span class="p">}</span>
+
+<span class="nc">.page-navigation</span> <span class="nt">a</span> <span class="p">{</span>
+    <span class="nl">width</span> <span class="p">:</span> <span class="m">33%</span>
+<span class="p">}</span>
+
+<span class="nc">.page-navigation</span> <span class="nt">a</span><span class="o">,</span>
+<span class="nc">.page-navigation</span> <span class="nt">a</span><span class="o">[</span><span class="nt">rel</span><span class="o">=</span><span class="nt">next</span><span class="o">]</span><span class="nd">::after</span><span class="o">,</span>
+<span class="nc">.page-navigation</span> <span class="nt">a</span><span class="o">[</span><span class="nt">rel</span><span class="o">=</span><span class="nt">prev</span><span class="o">]</span><span class="nd">::before</span> <span class="p">{</span>
+    <span class="nl">position</span> <span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+    <span class="nl">top</span> <span class="p">:</span> <span class="m">0</span>
+<span class="p">}</span>
+
+<span class="nc">.page-navigation</span> <span class="nt">li</span><span class="o">,</span>
+<span class="nc">.page-navigation</span> <span class="nt">ul</span> <span class="p">{</span>
+    <span class="nl">display</span> <span class="p">:</span> <span class="nb">inline</span>
+<span class="p">}</span>
+
+<span class="nc">.page-navigation</span> <span class="nt">a</span><span class="o">[</span><span class="nt">rel</span><span class="o">=</span><span class="nt">next</span><span class="o">]</span> <span class="p">{</span>
+    <span class="nl">right</span> <span class="p">:</span> <span class="m">0%</span><span class="p">;</span>
+    <span class="nl">text-align</span> <span class="p">:</span> <span class="nb">right</span>
+<span class="p">}</span>
+
+<span class="nc">.page-navigation</span> <span class="nt">a</span><span class="o">[</span><span class="nt">rel</span><span class="o">=</span><span class="nt">prev</span><span class="o">]</span> <span class="p">{</span>
+    <span class="nl">left</span> <span class="p">:</span> <span class="m">0</span>
+<span class="p">}</span>
+
+<span class="nc">.page-navigation</span> <span class="nt">a</span><span class="nd">:not</span><span class="o">([</span><span class="nt">rel</span><span class="o">=</span><span class="nt">next</span><span class="o">],[</span><span class="nt">rel</span><span class="o">=</span><span class="nt">prev</span><span class="o">])</span> <span class="p">{</span>
+    <span class="nl">left</span> <span class="p">:</span> <span class="m">33%</span><span class="p">;</span>
+    <span class="nl">text-align</span> <span class="p">:</span> <span class="nb">center</span>
+<span class="p">}</span>
+
+<span class="nc">.page-navigation</span> <span class="nt">a</span><span class="o">[</span><span class="nt">rel</span><span class="o">=</span><span class="nt">next</span><span class="o">]</span><span class="nd">::after</span> <span class="p">{</span>
+    <span class="nl">content</span> <span class="p">:</span> <span class="s1">" ☞"</span><span class="p">;</span>
+    <span class="nl">right</span> <span class="p">:</span> <span class="m">-1.4em</span>
+<span class="p">}</span>
+
+<span class="nc">.page-navigation</span> <span class="nt">a</span><span class="o">[</span><span class="nt">rel</span><span class="o">=</span><span class="nt">prev</span><span class="o">]</span><span class="nd">::before</span> <span class="p">{</span>
+    <span class="nl">content</span> <span class="p">:</span> <span class="s1">"☜ "</span><span class="p">;</span>
+    <span class="nl">left</span> <span class="p">:</span> <span class="m">-1.4em</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>View an <a href="http://codepen.io/FearGoidte/details/eprEpO/">example of the screen styling and mark-up on Codepen</a></p>
+
+<h3 id="print">Print</h3>
+
+<p>Navigation serves no purpose in a printed version of the document so for the print stylesheet add:</p>
+<pre class="code-quote css"><code><span class="nc">.page-navigation</span> <span class="p">{</span>
+    <span class="nl">display</span> <span class="p">:</span> <span class="nb">none</span>
+<span class="p">}</span>
+</code></pre>
+      </div>
+    </content>
+  </entry>
   <entry>
     <title type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
@@ -495,64 +635,6 @@ A short note on typography for the <cite>SubRip text file format</cite> for prov
 <h2 id="fin"><span xml:lang="fr">Fin</span></h2>
 
 <p><cite>SubRip text file format</cite> is a convention rather than a standard, hence the brevity of this note. Additional information about using the whole gamut of graphemes available in English are plentiful elsewhere and probably lurking elsewhere on this site. Happy captioning.</p>
-      </div>
-    </content>
-  </entry>
-  <entry>
-    <title type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-404 ‘file not found’ error page for GitHub pages and Middleman      </div>
-    </title>
-    <link rel="alternate" href="https://isfeargoidte.me.uk/2016/03/22/404-error-github-pages-middleman"/>
-    <id>https://isfeargoidte.me.uk/2016/03/22/404-error-github-pages-middleman</id>
-    <published>2016-03-22T16:00:00+00:00</published>
-    <updated>2016-06-06T19:41:29+01:00</updated>
-    <author>
-      <name>James Ó Nuanáin</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-How to setup a custom <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">404 page</a> for a site generated by <a href="https://middlemanapp.com">Middleman</a> and hosted on <a href="https://pages.github.com">GitHub pages</a>.
-      </div>
-    </summary>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-How to setup a custom <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">404 page</a> for a site generated by <a href="https://middlemanapp.com">Middleman</a> and hosted on <a href="https://pages.github.com">GitHub pages</a>.
-<p>The 404 ‘file not found’ error is generated when a user-agent attempts to access a document that does not exist. It is helpful to redirect these errors to a document that can explain to someone that there is no document at the address they were accessing. It’s an added bonus if you can provide them with a way to find the document for which they were looking.</p>
-
-<p>GitHub pages doesn’t support server redirects. <a href="https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/">GitHub does support a custom ’file not found‘ error page but it <em>must</em> be named <code>404.html</code> <em>or</em> <code>404.md</code></a>.</p>
-
-<h2 id="directory-indices">Directory indices</h2>
-
-<p>Since the file must be named <code>404.html</code> or <code>404.md</code>; if you’re using directory indices, they need to be turned off for the <code>404.html</code> file (<code>https://example.com/404/</code> and <code>https://example.com/404</code> will just redirect users to GutHub’s own 404 page. So assuming that you’re using <code>404.html</code>, add the following to your <code>config.rb</code> file:</p>
-<pre class="code-quote ruby"><code><span class="n">page</span> <span class="s1">'/404.html'</span><span class="p">,</span> <span class="ss">directory_index: </span><span class="kp">false</span>
-</code></pre>
-
-<p>If you’re using the <a href="https://github.com/middleman/middleman-blog"><cite>middleman-blog</cite></a> extension, the directory indices settings—including the above—need to follow (rather than precede) the blog settings for them to work with pages generated by the blogging extension.</p>
-
-<h2 id="application-xhtml-xml"><code>application/xhtml+xml</code></h2>
-
-<p>Due to my utopian, and contrarian, nature I am still banging a tiny drum for <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr> served with the proper mime-type.</p>
-
-<p>GitHub does not support using a file called <code>404.xhtml</code> (though they are looking at it) and bases its mime-types on the extension of files so the error page needs to be a document with the extension <code>.html</code> document. For this I use a separate <code>404_layout.rb</code> file with the mark-up tweaked for style-sheets via a link element and declaring the encoding using a meta tag.</p>
-
-<h2 id="relative-links">Relative links</h2>
-
-<p>Because <cite>GitHub pages</cite> is not using a server redirect for your custom page, you can’t use relative links as they will only work when you access the page directly: <code>example.com/404.html</code>.</p>
-
-<p>Instead, the template and the layout file must use absolute links to assets (images, style-sheets <abbr lang="la" title="et cetera">&amp;c.</abbr>) as well as to other pages on your site.</p>
-
-<h2 id="wrap-up">Wrap-up</h2>
-
-<p>I haven’t bothered with the content of the 404 document itself, since that is dependent on the existing navigational elements of your site.</p>
-
-<p>I think you should include both a reference to “file not found” and “404” in the title, since those terms should be familiar to many users.</p>
-
-<p>An ability to search the site and possibly a replication of any archive page are also good ideas for content.</p>
-
-<p>Avoid being too adamant that it’s the user’s fault or being too passive aggressive—surprisingly, those are quite common for the content of 404 pages.</p>
-
-<p>My own is inexcusably terse: <a href="https://isfeargoidte.me.uk/404.html">Fear Goidte’s 404</a> but I have an archive link on my site-wide navigation menu and not enough content to warrant an ability to search the site from within the site.</p>
       </div>
     </content>
   </entry>
