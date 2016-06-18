@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Fear Goidte</title>
+  <logo>images/atom/logo-3a48577d.svg</logo>
+  <icon>images/atom/icon-ec49dc8c.svg</icon>
   <subtitle>Pronounced like “Far Gotcha”. The splendid online isolation of me, James Ó Nuanáin, wherein I gather together any loose cleverness that I manage to accumulate. This site is, primarily an exegesis on how it was made. For the moment, it is mostly beak and bone with very little feather and fur.
 </subtitle>
   <id>https://isfeargoidte.me.uk/</id>
@@ -155,6 +157,10 @@ One way or another, I’m gonna find ya’
       <div xmlns="http://www.w3.org/1999/xhtml">
 The laziness of type      </div>
     </title>
+    <subtitle type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+Test replacement in <abbr title="Mac Operating System Ten" class="initialism">O.S.X.</abbr>      </div>
+    </subtitle>
     <link rel="alternate" href="https://isfeargoidte.me.uk/2016/06/06/the-laziness-of-type"/>
     <id>https://isfeargoidte.me.uk/2016/06/06/the-laziness-of-type</id>
     <published>2016-06-06T16:12:00+01:00</published>
@@ -193,6 +199,10 @@ Using text replacement to create your own ‘house style’ and to add a little 
       <div xmlns="http://www.w3.org/1999/xhtml">
 BBEdit package for Middleman      </div>
     </title>
+    <subtitle type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+A text editor and a static website generator collide      </div>
+    </subtitle>
     <link rel="alternate" href="https://isfeargoidte.me.uk/2016/06/06/bbedit-package-for-middleman"/>
     <id>https://isfeargoidte.me.uk/2016/06/06/bbedit-package-for-middleman</id>
     <published>2016-06-06T00:46:00+01:00</published>
@@ -221,6 +231,10 @@ An assortment of clippings, scripts, and stationary for developing <a href="http
       <div xmlns="http://www.w3.org/1999/xhtml">
 Render unto me, a table of contents      </div>
     </title>
+    <subtitle type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+Generating a table of contents in Middleman using embedded Ruby      </div>
+    </subtitle>
     <link rel="alternate" href="https://isfeargoidte.me.uk/2016/05/23/render-unto-me-a-table-of-contents"/>
     <id>https://isfeargoidte.me.uk/2016/05/23/render-unto-me-a-table-of-contents</id>
     <published>2016-05-23T15:02:00+01:00</published>
@@ -302,6 +316,10 @@ To have an automatically generated table of contents whilst using the <a href="h
       <div xmlns="http://www.w3.org/1999/xhtml">
 Enumerate the ways      </div>
     </title>
+    <subtitle type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+Nested ordered and unordered lists with hanging markers      </div>
+    </subtitle>
     <link rel="alternate" href="https://isfeargoidte.me.uk/2016/04/02/enumerate-the-ways"/>
     <id>https://isfeargoidte.me.uk/2016/04/02/enumerate-the-ways</id>
     <published>2016-04-02T22:25:00+01:00</published>
@@ -575,6 +593,10 @@ The visual formatting of the <a href="https://www.w3.org/TR/html5/grouping-conte
       <div xmlns="http://www.w3.org/1999/xhtml">
 Reading whilst watching (and listening)      </div>
     </title>
+    <subtitle type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+More comprehensible subtitles      </div>
+    </subtitle>
     <link rel="alternate" href="https://isfeargoidte.me.uk/2016/03/25/reading-whilst-watching-and-listening"/>
     <id>https://isfeargoidte.me.uk/2016/03/25/reading-whilst-watching-and-listening</id>
     <published>2016-03-25T21:15:00+00:00</published>
