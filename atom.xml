@@ -8,10 +8,119 @@
   <id>https://isfeargoidte.me.uk/</id>
   <link href="https://isfeargoidte.me.uk/"/>
   <link href="https://isfeargoidte.me.uk/atom.xml" rel="self"/>
-  <updated>2016-06-16T08:18:00+01:00</updated>
+  <updated>2016-06-18T09:06:00+01:00</updated>
   <author>
     <name>James Ó Nuanáin</name>
   </author>
+  <entry>
+    <title type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+In brief … abbreviations      </div>
+    </title>
+    <link rel="alternate" href="https://isfeargoidte.me.uk/2016/06/18/in-brief-abbreviations"/>
+    <id>https://isfeargoidte.me.uk/2016/06/18/in-brief-abbreviations</id>
+    <published>2016-06-18T09:06:00+01:00</published>
+    <updated>2016-06-18T14:08:45+01:00</updated>
+    <author>
+      <name>James Ó Nuanáin</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+How to use and abuse these linguist amputees.      </div>
+    </summary>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+How to use and abuse these linguist amputees.<p>Abbreviations are shortcuts that have arisen as writers try to spend more time thinking about the words to come and less time writing down the words that they already have in mind. This is a usage and styling guide for abbreviations, acronyms, contractions, clippings, and initialisms in web documents and includes some code examples.</p>
+
+<p>Where possible, abbreviations should be avoided due to their propensity towards jargon and their limited shelf life. For example, unless specificity is necessary, use “mark-up” instead of “<abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr>”.</p>
+
+<p>As a general rule, words should be written as they would be pronounced. Mark-up can’t be used inside the <code>title</code> element or inside attributes, so the formatting you use in those circumstances should be unambiguous.</p>
+
+<p>Since my adoption of the Gregorian Calendar, I’ve blogged on this subject twice before. Nine years ago I referenced the following quote:</p>
+
+<blockquote>
+<footer>‘Roger’ commenting on <cite><a href="http://web.archive.org/web/20060326005449/http://www.huddledmasses.org/2004/10/27/sick-of-semantics/">Sick of Semantics</a></cite> on Huddledmasses.org (<a href="https://archive.org">archive.org</a> link)</footer>
+Semantic markup is silly. I see the same terms commonly defined and that by logical extension is foolish. If you don’t know what <abbr title="Really Simply Syndiation" class="initialism">R.S.S.</abbr> means, for instance, having it explained to you as Really Simply Syndiation means <em>nothing</em>. If you already have an <abbr title="Really Simply Syndiation" class="initialism">R.S.S.</abbr> reader, meaning you actually care about <abbr title="Really Simply Syndiation" class="initialism">R.S.S.</abbr>, then you don’t need it explained.
+</blockquote>
+
+<p>This raises a number of a issues:</p>
+
+<ul>
+<li>visual browsers are not the only devices for which mark-up is designed, it is also used by speech and braille readers as well as web crawlers for search engines. <code>abbr</code> is not just a hook to attach an explanative <code>title</code> attribute, but also to make it clear that what it contains is not a pronounceable word;</li>
+<li>recognition; the abbreviation may be common currency at the moment but obscure at a later date. It may be familiar in the United Kingdom but unusual in Australia. Abbreviations are not the exclusive preserve of technical terms;</li>
+<li>the same collection of capital letters could stand for one thing in one context and something else in another: <dfn>A.A.</dfn> for <em>Alcoholics Anonymous</em>, or for <em>The Automobile Association</em>;</li>
+<li>whilst you might make your abbreviations clear at the beginning of a document or a series of documents, that data could be reused through syndication excerpts, or just cut and pasting, and the abbreviations stripped of their context, meaning, and intended pronunciation;</li>
+<li>the title attribute of <code>abbr</code> is also potentially useful for search engines and other robotic user agents where the individual words that comprise an initialism or acronym might be of interest on their own to collect references; and</li>
+<li>translation, the title attribute provides something to translate that is not dependent on formatting.</li>
+</ul>
+
+<h2 id="clippings-and-contractions">Clippings and contractions</h2>
+
+<p>Contractions are made by omitting the middle letters of a word, such as Dr for Doctor.</p>
+
+<p>British English follows formal French usage where a full stop only follows clippings, where some of the letters are ‘clipped’ off from a word towards the end as in the abbreviation for abbreviation: “<abbr title="abbreviation">abbr.</abbr>”.</p>
+
+<p>Both of these should be marked-up using <code>abbr</code> tags including the relevant title in every instance.</p>
+
+<h2 id="initialisms-amp-acronyms">Initialisms &amp; acronyms</h2>
+
+<p>Initialisms are a group of, <em>usually</em>, initial letters used as an abbreviation for a name or expression. In initialisms, each letter is pronounced separately, in acronyms the initial letters form a pronounceable word.</p>
+
+<p><cite><abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr>5</cite> has abandoned the distinction between initialisms (<code>abbr</code>) and acronyms (<code>acronym</code>), so there is no purpose to formatting them differently. At least this clears up the confusion of abbreviations such as <abbr title="Frequently Asked Questions" class="initialism">F.A.Q.</abbr> which some people treat as an acronym and others as an initialism.</p>
+
+<p>It used to be the convention that since each letter of an initialism or acronym represented an abbreviated word, each letter would be followed by a full stop to indicate the clipped letters.</p>
+
+<p>This convention has fallen into abeyance (elsewhere) on the dubious grounds that the result looks fussy and that the fact that the letters are in uppercase should be sufficient to indicate that they form an initialism or acronym.</p>
+
+<p>Loathe as I am to use uppercase for formatting, I do not want to totally rule it out. Properly peppering initialism and acronyms with full stops makes it clear and unambiguous what they are to all user agents without them having to have prior knowledge of them.</p>
+
+<p>The first instance of an acronym or initialism should be followed by it being written out in full: Irish Republican Army (<dfn>I.R.A.</dfn>). Any instance with an adjacent definition should be contained within a <code>dfn</code> element but should not be wrapped in an <code>abbr</code>; all other instances should be contained <em>within</em> the <code>abbr</code> element with the appropriate <code>title</code> attribute.</p>
+
+<h3 id="latinate">Latinate</h3>
+
+<p>Although obvious when visually represented to an English speaker they become more obscure to translation software and speech readers especially when accounting for the options when formatting them (<abbr lang="la" title="exempli gratia" class="initialism">e.g.</abbr> “ie”, “i.e.”, “i. e.”).</p>
+
+<p>To my mind, the most sensible approach is to mark them up as <code>abbr</code> with the <code>title</code> containing the English translation, so: <code>&lt;abbr title=&quot;that is&quot;&gt;i.e.&lt;/abbr&gt;</code>. This also alleviates the confusion people have between the differing uses of <abbr xml:lang="la" title="exempli gratia">e.g.</abbr> and <abbr xml:lang="la" title="id est">i.e.</abbr>.</p>
+
+<p>However, due to my personal misfortune in having gone to one of <em>those</em> schools, I prefer to use Latin in the <em>title</em> and mark-up the element as being in Latin (<code>xml:lang=&quot;la&quot;</code>).</p>
+
+<p>The three most commonly used latinate initialisms are:</p>
+
+<ul>
+<li><abbr lang="la" title="exempli gratia" class="initialism">e.g.</abbr> (<code>&lt;abbr lang=&quot;la&quot; title=&quot;exempli gratia&quot; class=&quot;initialism&quot;&gt;e.g.&lt;/abbr&gt;</code>)</li>
+<li><abbr lang="la" title="et cetera">&amp;c.</abbr> (<code>&lt;abbr lang=&quot;la&quot; title=&quot;et cetera&quot;&gt;&amp;c.&lt;/abbr&gt;</code>)</li>
+<li><abbr lang="la" title="id est" class="initialism">i.e.</abbr> (<code>&lt;abbr lang=&quot;la&quot; title=&quot;id est&quot; class=&quot;initialism&quot;&gt;i.e.&lt;/abbr&gt;</code>)</li>
+</ul>
+
+<p>Style guides often recommend that these these initialisms should be followed by a comma, personally I think that a fullstop abutting a comma is visually confusing. It also creates issues of comprehension when the initialism is followed by a list, the comma can imply that the initialism is part of the list. Therefore though they should be preceded by punctuation (bracket, semi colon, comma, <abbr lang="la" title="et cetera">&amp;c.</abbr>) they should not be immediately followed by any.</p>
+
+<h3 id="names">Names</h3>
+
+<p>Wikipedia has a list of <a href="https://en.wikipedia.org/wiki/List_of_literary_initials">literary personæ</a> known, primarily, by the initials of their first and middle name(s) with their surname in full. In formal or polite documents people are also often referred to in this manner as well as in lists of names such as registers.</p>
+
+<p>Individual initials must be separated by fullstops otherwise it is ambiguous as to whether they constitute a word in capital letters or letters to be spelt out. It is important to use a non-breaking space between the last initial and the surname to minimise the chance of them being struck asunder by an inopportune line-break. I use a Narrow No-Break Space <code>&amp;#8239;</code> to reduce the gap between the initials and the surname and thereby emphasis their indivisibility: J.P.&#8239;Donleavy.</p>
+
+<p><strong>Note:</strong> I find it advisable to use character entity references for non-standard spaces in mark-up since it is easier to identify them in the source code than if they had been simply entered directly in a document.</p>
+
+<h2 id="styling">Styling</h2>
+
+<p>I like to maintain the convention that links and only links, should be underlined. I also try to avoid abbreviations appearing in a line on their own at the end of a run of text, hence <code>break-before : avoid</code>:</p>
+<pre class="code-quote css"><code><span class="nt">abbr</span> <span class="p">{</span>
+    <span class="nl">border-bottom</span> <span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nl">break-before</span> <span class="p">:</span> <span class="nb">avoid</span><span class="p">;</span>
+    <span class="nl">text-decoration</span> <span class="p">:</span> <span class="nb">none</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Some fonts are excessively generous with the white-space they afford to punctuation so I <em>very</em> slightly reduce letter spacing for initialisms by assigning them a <code>class</code>. I find long runs of uppercase ‘shouty’ so, in mitigation, I reduce their font-size:</p>
+<pre class="code-quote css"><code><span class="nt">abbr</span><span class="nc">.initialism</span> <span class="p">{</span>
+    <span class="nl">font-size</span> <span class="p">:</span> <span class="m">.9em</span><span class="p">;</span>
+    <span class="nl">letter-spacing</span> <span class="p">:</span> <span class="m">-.05em</span>
+<span class="p">}</span>
+</code></pre>
+      </div>
+    </content>
+  </entry>
   <entry>
     <title type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
@@ -569,74 +678,6 @@ The visual formatting of the <a href="https://www.w3.org/TR/html5/grouping-conte
     <span class="nl">counter-reset</span> <span class="p">:</span> <span class="nb">none</span>
 <span class="p">}</span>
 </code></pre>
-      </div>
-    </content>
-  </entry>
-  <entry>
-    <title type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-Reading whilst watching (and listening)      </div>
-    </title>
-    <link rel="alternate" href="https://isfeargoidte.me.uk/2016/03/25/reading-whilst-watching-and-listening"/>
-    <id>https://isfeargoidte.me.uk/2016/03/25/reading-whilst-watching-and-listening</id>
-    <published>2016-03-25T21:15:00+00:00</published>
-    <updated>2016-06-06T17:32:35+01:00</updated>
-    <author>
-      <name>James Ó Nuanáin</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-A short note on typography for the <cite>SubRip text file format</cite> for providing subtitles for films.
-      </div>
-    </summary>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-A short note on typography for the <cite>SubRip text file format</cite> for providing subtitles for films.
-<p>Subtitles are generally read whilst you’re trying to simultaneously watch a film <em>and</em> listen to the voices to gauge the emotion and intention of the character or person speaking. That is a lot to ask of a partially-shaved monkey; and anything that can speed comprehension is a boon. Poor spelling, straight quotation marks, and lazy punctuation are an unnecessary burden.</p>
-
-<p>I have a tendency to frequently rewatch films—though with varying degrees of attention—so for me, the fifteen minutes or half an hour it takes for me to edit the subtitles has some quality of investment. By uploading the edited subtitles to a site such as <a href="https://subscene.com/u/998178">Subscene</a>, others can benefit from, or be subjected to, your pernicketiness.</p>
-
-<h2 id="specifying-encoding">Specifying encoding</h2>
-
-<p>You always want to use <a href="https://www.ietf.org/rfc/rfc3629.txt">utf-8</a>. Other than accented letters; it enables you to use curly quotes, horizontal ellipses, and varying widths of dash. The mechanism for declaring the encoding of a <code>.srt</code> file is to use the <a href="https://www.w3.org/International/questions/qa-byte-order-mark.en.php#answer">byte-order mark</a>.</p>
-
-<h2 id="conventions-particular-to-subtitles">Conventions particular to subtitles</h2>
-
-<p>The only two widely-supported styling options for the text are the bold (<code>&lt;b&gt;</code>) and italic (<code>&lt;i&gt;</code>) mark-up elements. Computers tend to embolden fonts by drawing over them with bigger, thicker pen rendering ugly results so I only use italics.</p>
-
-<p>Use italic to emphasis an individual word in speech where it is emphasized in the dialogue, “she said <em>what</em>?”; to indicate the dialogue is being spoken by someone off camera, out of focus, or in the background whilst another character is in the foreground and in focus; and for intertitles.</p>
-
-<p>An em dash (—) indicates the beginning of a line of dialogue. If two characters’ or people’s dialogue is on the screen at the same time, each characters line is introduced with an em dash:</p>
-
-<pre>—Are you going to sit down?<br />
-—Give me a second to take off my coat.</pre>
-
-<aside>I usually format initialisms using intervening full-stops. This habit is hardly a popular stylist choice but for subtitles it definitely does make them easier to digest.</aside>
-
-<h2 id="naming-subtitles-files">Naming subtitles files</h2>
-
-<p>My own video players of preference, <a href="https://plex.tv">Plex</a> and <a href="https://www.videolan.org/vlc/">V.L.C.</a>, favour a naming convention of a film title followed by the year of release in brackets (“<cite xml:lang="es">Relatos salvajes</cite> (2014)”) for a folder containing the film and subitle file similarly name with an <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">I.S.O. code</a> signifying the language (<a href="https://support.plex.tv/hc/en-us/articles/200471133-Adding-Local-Subtitles-to-Your-Media">Adding Local Subtitles to Your Media</a>):</p>
-
-<pre><samp>
-/Films<br />
-   /Relatos salvajes (2014)<br />
-      Relatos salvajes (2014).m4v<br />
-      Relatos salvajes (2014).<em>en</em>.srt<br />
-</samp></pre>
-
-<h2 id="common-corrections">Common corrections</h2>
-
-<h3 id="i-impersonating-l">“I” impersonating “l”</h3>
-
-<p>Many subtitles contain the capital letter <em>I</em> masquerading as a lowercase <em>L</em>. On some sans-serif fonts the characters are indistinguishable (as is the number <em>1</em>) but using a serif font, they are quite dissimilar. Since this bamboozles my spellchecker, I use the following <a href="https://en.wikipedia.org/wiki/Grep">grep</a> pattern (in <a href="http://www.barebones.com/products/bbedit/">BBEdit</a> my text editor of choice) to identify them.</p>
-
-<p>An uppercase <em>I</em> immediately preceded by a lowercase letter:</p>
-<pre class="code-quote plaintext"><code>[a-z]I
-</code></pre>
-
-<h2 id="fin"><span xml:lang="fr">Fin</span></h2>
-
-<p><cite>SubRip text file format</cite> is a convention rather than a standard, hence the brevity of this note. Additional information about using the whole gamut of graphemes available in English are plentiful elsewhere and probably lurking elsewhere on this site. Happy captioning.</p>
       </div>
     </content>
   </entry>
