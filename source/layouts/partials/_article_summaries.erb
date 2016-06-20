@@ -1,6 +1,6 @@
 <article typeof="DCMIType:text schema:Article" resource="<%= data.settings.site.base_url %><%= article.url %>">
 	<header>
-		<p class="published-date icon"><time datetime="<%= article.date.strftime("%F") %>" property="dcterms:created schema:dateCreated schema:datePublished" ><%= prettify_date(article.date) %></time></p>
+		<p class="published-date icon"><time datetime="<%= article.date.strftime("%F") %>" property="dcterms:created schema:dateCreated schema:datePublished" ><%= prettify_date_copyright(article.date) %></time></p>
 		<h2 property="dcterms:title schema:headline"><%= article.title %></h2>
 		<% if article.data.subtitle %>
 		<p class="subtitle"><%= article.data.subtitle %></p>

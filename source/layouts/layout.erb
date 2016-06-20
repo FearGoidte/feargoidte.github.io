@@ -3,13 +3,13 @@
 <?xml-stylesheet href="<%= url_for "/stylesheets/print.css" %>" media="print"?>
 <?xml-stylesheet href="<%= url_for "/stylesheets/screen.css" %>" media="screen"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<%= data.settings.site.language %>">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<%= data.settings.site.language %>" typeof="schema:WebSite">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title><%= doc_title %></title>
-		<link rel="canonical" href="<%= data.settings.site.base_url %><%= current_page.url %>" />
+		<link property="schema:url" rel="canonical" href="<%= data.settings.site.base_url %><%= current_page.url %>" />
 		<link property="rdfa:copy" href="#ccpattern" />
-    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/atom.xml", title: "Atom Feed" %>
+    	<%= feed_tag :atom, "#{blog.options.prefix.to_s}/atom.xml", title: "Atom Feed" %>
 		<link rel="apple-touch-icon" sizes="57x57" href="/images/icons/favicons/apple-touch-icon-57x57.png"/>
 		<link rel="apple-touch-icon" sizes="60x60" href="/images/icons/favicons/apple-touch-icon-60x60.png"/>
 		<link rel="apple-touch-icon" sizes="72x72" href="/images/icons/favicons/apple-touch-icon-72x72.png"/>
@@ -34,9 +34,9 @@
 		<meta name="author" content="<%= data.settings.author.name %>" />
 		<% if current_article %>
 		<%= partial('layouts/partials/article_pseudo_meta') %>
-		<meta name="description" content="<%= current_article.data.description.gsub( %r{</?[^>]+?>}, '' ) %>" />
+		<meta name="description" property="schema:description" content="<%= current_article.data.description.gsub( %r{</?[^>]+?>}, '' ) %>" />
 		  <% else %>
-		<meta name="description" content="<%= data.settings.site.description.gsub( %r{</?[^>]+?>}, '' ) %>" />
+		<meta name="description" property="schema:description" content="<%= data.settings.site.description.gsub( %r{</?[^>]+?>}, '' ) %>" />
 		<% end %>
 	</head>
 	<body>

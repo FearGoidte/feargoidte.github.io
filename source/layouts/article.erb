@@ -1,7 +1,7 @@
 <% wrap_layout :layout do %>
 <main id="nav_main" typeof="DCMIType:text schema:Article" resource="<%= data.settings.site.base_url %><%= current_article.url %>">
 	<header>
-		<p class="published-date icon"><time property="dcterms:created schema:dateCreated schema:datePublished" datetime="<%= current_article.date.strftime("%F") %>"><%= prettify_date(current_article.date) %></time></p>
+		<p class="published-date icon"><time property="dcterms:created schema:dateCreated schema:datePublished" datetime="<%= current_article.date.strftime("%F") %>"><%= prettify_date_copyright(current_article.date) %></time></p>
 		<h1 property="dcterms:title schema:headline"><%= current_article.title %></h1>
 		<% if current_article.data.subtitle %>
 		<p class="subtitle"><%= current_article.data.subtitle %></p>
