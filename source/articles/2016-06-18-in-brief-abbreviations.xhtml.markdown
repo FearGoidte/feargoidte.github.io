@@ -5,7 +5,6 @@ subtitle: The long way to saying something quickly
 date: 2016-06-18 09:06 BST
 image: /images/2016-06-18-in-brief-abbreviations.svg
 tags: abbr, acronym, contraction, clipping, initialism
-published: false
 description: How to use and abuse these linguist amputees.
 
 ---
