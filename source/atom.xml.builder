@@ -2,6 +2,8 @@ xml.instruct! :xml, version: '1.0', encoding: config.encoding
 xml.feed 'xmlns' => 'http://www.w3.org/2005/Atom' do
   site_url = data.settings.site.base_url + '/'
   xml.title data.settings.site.name
+  xml.logo url_for '/images/atom/logo.svg'
+  xml.icon url_for '/images/atom/icon.svg'
   xml.subtitle data.settings.site.description
   xml.id URI.join(site_url, blog.options.prefix.to_s)
   xml.link 'href' => URI.join(site_url, blog.options.prefix.to_s)
