@@ -4,6 +4,9 @@ title: In brief … abbreviations
 subtitle: The long way to saying something quickly
 date: 2016-06-18 09:06 BST
 image: /images/2016-06-18-in-brief-abbreviations.svg
+meta_image: /images/2016-06-18-in-brief-abbreviations.png
+width: 640
+height: 555
 tags: abbr, acronym, contraction, clipping, initialism
 description: How to use and abuse these linguist amputees.
 

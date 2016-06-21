@@ -3,6 +3,9 @@
 title: If I’d known there’d be so much typing, I would have worn gloves
 date: 2016-02-02 13:30 GMT
 image: /images/2016-02-02-would-have-worn-gloves.svg
+meta_image: /images/2016-02-02-would-have-worn-gloves.png
+height: 640
+width: 565
 tags: Middleman, Ruby, rbenv, GitHub Pages, OSX
 description: >
   Generating a website on <abbr title="Mac Operating System Ten" class="initialism">O.S.X.</abbr> 11 with <a href="https://middlemanapp.com">Middleman 4.0.0</a> and hosting it with GitHub. This is an idiots guide, the idiot being me. I had a frustrating time setting up this site and wanted to ease future installations with an aide-mémoire. Hopefully someone else might find this useful.

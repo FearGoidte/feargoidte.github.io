@@ -5,13 +5,13 @@
 		<% if article.data.subtitle %>
 		<p class="subtitle"><%= article.data.subtitle %></p>
 		<% end %>
-		<p class="author icon"><%= data.settings.author.name %></p>
-		<link property="rdfa:copy" href="#ccpattern" />
+		<p property="schema:author schema:creator schema:publisher" typeof="schema:person schema:organization" class="author icon"><span property="schema:name"><%= data.settings.author.name %></span></p>
 	</header>
 	<% if article.data.description %>
 	<p property="dcterms:description schema:description"><%= article.data.description %></p>
 	<% end %>
 	<% if article.data.image %>
+	<link property="schema:image" href="<%= url_for article.data.image %>" />
 	<object data="<%= url_for article.data.image %>"></object>
 	<% end %>
 	<p>Continue reading <a href="<%= article.url %>#nav_main"><cite><%= article.title %></cite></a> (could take <%= reading_time(article.body) %>).</p>
