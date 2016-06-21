@@ -129,7 +129,7 @@ Previously known as ‘coming up next!’      </div>
     <link rel="alternate" href="https://isfeargoidte.me.uk/2016/06/16/previously-known-as-coming-up-next/"/>
     <id>https://isfeargoidte.me.uk/2016/06/16/previously-known-as-coming-up-next/</id>
     <published>2016-06-16T08:18:00+01:00</published>
-    <updated>2016-06-21T11:51:51+01:00</updated>
+    <updated>2016-06-21T12:32:54+01:00</updated>
     <author>
       <name>James Ó Nuanáin</name>
     </author>
@@ -164,7 +164,7 @@ One way or another, I’m gonna find ya’
 <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- End role=navigation --&gt;</span>
 </code></pre>
 
-<p>The access key attribute values follow the convention <a href="http://www.standardaccesskeys.com/SAK2014/">SAK2014: Standard Access Keys 2014</a></p>
+<p>The access key attribute values follow the convention <a href="https://www.standardaccesskeys.com/SAK2014/">SAK2014: Standard Access Keys 2014</a></p>
 
 <p>The title attribute is set and explicitly states whether the link is <em>next</em> or <em>previous</em>. This is for non-visual browsers but also if you were to hide the text of the link and use only a symbol instead, it could describe the link via a tooltip.</p>
 
