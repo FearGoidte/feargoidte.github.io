@@ -39,7 +39,7 @@ Next and previous links are marked-up in an un-ordered list and use the `rel` an
 </div><!-- End role=navigation -->
 ```
 
-The access key attribute values follow the convention [SAK2014: Standard Access Keys 2014](http://www.standardaccesskeys.com/SAK2014/)
+The access key attribute values follow the convention [SAK2014: Standard Access Keys 2014](https://www.standardaccesskeys.com/SAK2014/)
 
 The title attribute is set and explicitly states whether the link is *next* or *previous*. This is for non-visual browsers but also if you were to hide the text of the link and use only a symbol instead, it could describe the link via a tooltip.
 
