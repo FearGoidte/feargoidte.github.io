@@ -4,7 +4,10 @@ site:
   name: Fear Goidte
   description: >
     Pronounced like “Far Gotcha”. The splendid online isolation of me, James Ó Nuanáin, wherein I gather together any loose cleverness that I manage to accumulate. This site is, primarily an exegesis on how it was made. For the moment, it is mostly beak and bone with very little feather and fur.
-  logo: /images/icons/favicons/apple-touch-icon-180x180.png
+  logo:
+    url: /images/logo.png
+    height: 315
+    width: 600
   licence:
     copyright: 1994
     name: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licence
