@@ -13,9 +13,17 @@
 	<% if current_article && current_resource.data.thumbnail.url # image check %>
 		<meta property="og:image" content="<%= absolute_url(current_resource.data.thumbnail.url) %>" />
 		<meta property="og:image:secure_url" content="<%= absolute_url(current_resource.data.thumbnail.url) %>" />
+		<% if current_resource.data.thumbnail.height && current_resource.data.thumbnail.width # has dimensions %>
+		<meta property="og:image:width" content="<%= current_resource.data.thumbnail.width %>" />
+		<meta property="og:image:height" content="<%= current_resource.data.thumbnail.height %>" />
+		<% end # has dimensions %>
 	<% elsif data.settings.site.logo.url # site logo %>
 		<meta property="og:image" content="<%= absolute_url(data.settings.site.logo.url) %>" />
 		<meta property="og:image:secure_url" content="<%= absolute_url(data.settings.site.logo.url) %>" />
+		<% if data.settings.site.logo.height && data.settings.site.logo.width # has dimensions %>
+		<meta property="og:image:width" content="<%= data.settings.site.logo.width %>" />
+		<meta property="og:image:height" content="<%= data.settings.site.logo.height %>" />
+		<% end # has dimensions %>
 	<% end # image %>
 	<% if current_article # article loop %>
 		<meta property="og:type" content="article" />
