@@ -1,21 +1,20 @@
-<article typeof="DCMIType:text schema:Article" resource="<%= data.settings.site.base_url %><%= article.url %>">
+<article typeof="DCMIType:text" resource="<%= absolute_url(article) %>">
 	<header>
-		<p class="published-date icon"><time datetime="<%= article.date.strftime("%F") %>" property="dcterms:created schema:dateCreated schema:datePublished" ><%= prettify_date_copyright(article.date) %></time></p>
-		<h2 property="dcterms:title schema:headline"><%= article.title %></h2>
+		<p class="published-date icon"><time datetime="<%= article.date.strftime("%F") %>" property="dcterms:created" ><%= prettify_date(article.date) %></time></p>
+		<h2 property="dcterms:title"><%= article.title %></h2>
 		<% if article.data.subtitle %>
 		<p class="subtitle"><%= article.data.subtitle %></p>
 		<% end %>
-		<p property="schema:author schema:creator schema:publisher" typeof="schema:person schema:organization" class="author icon"><span property="schema:name"><%= data.settings.author.name %></span></p>
+		<p class="author icon"><%= data.settings.author.name %></p>
 	</header>
 	<% if article.data.description %>
-	<p property="dcterms:description schema:description"><%= article.data.description %></p>
+	<p property="dcterms:description"><%= article.data.description %></p>
 	<% end %>
 	<% if article.data.image %>
-	<link property="schema:image" href="<%= url_for article.data.image %>" />
 	<object data="<%= url_for article.data.image %>"></object>
 	<% end %>
 	<p>Continue reading <a href="<%= article.url %>#nav_main"><cite><%= article.title %></cite></a> (could take <%= reading_time(article.body) %>).</p>
-	<% if article.tags %>
+	<% unless article.tags.empty? %>
 	<footer>
 	<dl>
 		<dt>Tagged with</dt>

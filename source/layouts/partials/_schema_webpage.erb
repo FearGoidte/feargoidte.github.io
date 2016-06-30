@@ -1,0 +1,24 @@
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "WebPage",
+	"name": "<%= meta_title %>",
+	"description": "<%= meta_description %>",
+	"license": "<%= data.settings.site.licence.url %>",
+	"copyrightYear": "<%= data.settings.site.licence.copyright %>",
+	"publisher": {
+		"type": "Organization",
+		"name": "<%= data.settings.site.name %>",
+		"logo":  {
+			"@context": "http://schema.org",
+			"@type": "ImageObject",
+			"url": "<%= absolute_url(data.settings.site.logo) %>"
+  		}
+	},
+	"copyrightHolder": "<%= data.settings.author.name %>",
+	"mainEntityOfPage": {
+		"type": "WebPage",
+		"id": "<%= absolute_url(current_page) %>"
+	}
+}
+</script>

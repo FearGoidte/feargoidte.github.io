@@ -1,14 +1,14 @@
 <% wrap_layout :layout do %>
-<main id="nav_main" typeof="DCMIType:text schema:Article" resource="<%= data.settings.site.base_url %><%= current_article.url %>">
+<main id="nav_main" typeof="DCMIType:text" resource="<%= absolute_url(current_article) %>">
 	<header>
-		<p class="published-date icon"><time property="dcterms:created schema:dateCreated schema:datePublished" datetime="<%= current_article.date.strftime("%F") %>"><%= prettify_date_copyright(current_article.date) %></time></p>
-		<h1 property="dcterms:title schema:headline"><%= current_article.title %></h1>
+		<p class="published-date icon"><time property="dcterms:created" datetime="<%= current_article.date.strftime("%F") %>"><%= prettify_date(current_article.date) %></time></p>
+		<h1 property="dcterms:title"><%= current_article.title %></h1>
 		<% if current_article.data.subtitle %>
 		<p class="subtitle"><%= current_article.data.subtitle %></p>
 		<% end %>
 		<p class="author icon"><%= data.settings.author.name %></p>
 		<p class="reading-time icon">Estimated reading time: <%= reading_time(current_article.body) %></p>
-		<% if current_article.tags %>
+		<% unless current_article.tags.empty? %>
 		<dl>
 			<dt>Tagged with</dt>
 			<% current_article.tags.sort{ |a,b| a.to_s.downcase <=> b.to_s.downcase }.each do |tag| %>
@@ -27,7 +27,7 @@
 	<object data="<%= url_for current_article.data.image %>"></object>
 	<% end %>
 	<% if current_article.data.description %>
-	<p property="dcterms:description schema:description"><%= current_article.data.description %></p>
+	<p property="dcterms:description"><%= current_article.data.description %></p>
 	<% end %>
 	<%= yield %>
 	<%= partial 'layouts/partials/footer' %>

@@ -1,8 +1,8 @@
 <footer>
-	<p>This document was last modified on <time property="dcterms:modified  schema:dateModified" datetime="<%= File.mtime(current_page.source_file).iso8601 %>"><%= prettify_date_time_copyright(File.mtime(current_page.source_file)) %></time>.</p>
-	<p id="nav_copyright" resource="#ccpattern" typeof="rdfa:Pattern">Copyright © <time property="dcterms:dateCopyrighted"><%= data.settings.site.licence.copyright %></time><% if File.mtime(current_page.source_file).strftime('%Y') > data.settings.site.licence.copyright.to_s %>–<time><%= File.mtime(current_page.source_file).strftime('%Y') %></time><% end %> <span property="cc:attributionName dcterms:creator schema:creator schema:publisher" resource="#me"><a href="<%= data.settings.site.base_url %>" property="cc:attributionURL" rel="author"><%= data.settings.author.name %></a></span>. Except where otherwise indicated, this document (and all of its contents) is licensed under a <a accesskey="5" href="<%= data.settings.site.licence.url %>" property="cc:license dcterms:license schema:license" rel="license"><%= data.settings.site.licence.name %></a>.</p>
-	<address resource="#me" typeof="foaf:Person schema:Person">
-		<span property="foaf:name schema:name">James Ó Nuanáin</span> has this website (<a property="foaf:weblog schema:url" href="https://isfeargoidte.me.uk/"><span xml:lang="ga-ie">Fear Goidte</span></a>).
+	<p>This document was last modified on <time property="dcterms:modified" datetime="<%= File.mtime(current_page.source_file).iso8601 %>"><%= prettify_date_time(File.mtime(current_page.source_file)) %></time>.</p>
+	<p id="nav_copyright" resource="#ccpattern" typeof="rdfa:Pattern">Copyright © <time property="dcterms:dateCopyrighted"><%= data.settings.site.licence.copyright %></time><% if File.mtime(current_page.source_file).strftime('%Y') > data.settings.site.licence.copyright.to_s %>–<time><%= File.mtime(current_page.source_file).strftime('%Y') %></time><% end %> <span property="cc:attributionName dcterms:creator" resource="#me"><a href="<%= data.settings.site.base_url %>" property="cc:attributionURL" rel="author"><%= data.settings.author.name %></a></span>. Except where otherwise indicated, this document (and all of its contents) is licensed under a <a accesskey="5" href="<%= data.settings.site.licence.url %>" property="cc:license dcterms:license" rel="license"><%= data.settings.site.licence.name %></a>.</p>
+	<address resource="#me" typeof="foaf:Person">
+		<span property="foaf:name">James Ó Nuanáin</span> has this website (<a property="foaf:weblog" href="https://isfeargoidte.me.uk/"><span xml:lang="ga-ie">Fear Goidte</span></a>).
 	  His inane witterings are also available on
 		<span property="foaf:holdsAccount" typeof="foaf:OnlineAccount">
 			<a href="https://twitter.com/" property="foaf:accountServiceHomepage">Twitter</a>
@@ -63,5 +63,5 @@
 		<% end %>
 		</tbody>
 	</table>
-	<p id="nav_validation">This page is authored in, <em>hopefully</em>, <a accesskey="v" href="https://validator.nu/?doc=<%= CGI.escape(data.settings.site.base_url + current_page.url) %>&amp;showsource=yes&amp;showoutline=yes" rel="nofollow">well-formed <abbr title="eXtensible Hypertext Mark-up Langauge" class="initialism">X.H.T.M.L.</abbr></a> (the validator link is so that I can occasionally check on the mark-up).</p>
+	<p id="nav_validation">This page is authored in, <em>hopefully</em>, <a accesskey="v" href="https://validator.nu/?doc=<%= CGI.escape(absolute_url(current_page)) %>&amp;showsource=yes&amp;showoutline=yes" rel="nofollow">well-formed <abbr title="eXtensible Hypertext Mark-up Langauge" class="initialism">X.H.T.M.L.</abbr></a> (the validator link is so that I can occasionally check on the mark-up).</p>
 </footer>

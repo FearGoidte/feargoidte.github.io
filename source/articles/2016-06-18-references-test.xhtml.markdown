@@ -7,6 +7,25 @@ image:
 tags:
 published: false
 description:
+references:
+  test1:
+    title:
+    creator:
+    publisher:
+    date:
+  test2:
+
+
+
+  test3:
+
+
+
+  test4:
+
+
+
+  test5:
 
 ---
 

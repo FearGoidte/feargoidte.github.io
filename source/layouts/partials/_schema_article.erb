@@ -1,0 +1,47 @@
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "Article",
+	"headline": "<%= strip_tags(current_resource.data.title) %>",
+	"description": "<%= strip_tags(current_resource.data.description) %>",
+	"keywords": "<%= strip_tags(current_article.tags.join(', ')) %>",
+	"wordCount": "<%= current_article.body.split.size + current_article.data.description.to_s.split.size %>",
+	"url": "<%= absolute_url(current_page) %>",
+	"datePublished": "<%= current_resource.date.strftime("%F") %>",
+	"dateCreated": "<%= current_resource.date.strftime("%F") %>",
+	"dateModified": "<%= File.mtime(current_page.source_file).iso8601 %>",
+	"license": "<%= data.settings.site.licence.url %>",
+	"copyrightYear": "<%= current_resource.date.strftime("%Y") %>",
+	<% if current_article && current_resource.data.meta_image # image check %>
+	"image": {
+		"@context": "http://schema.org",
+		"@type": "ImageObject",
+		"url": "<%= absolute_url(current_resource.data.meta_image) %>"
+	},
+	<% elsif data.settings.site.logo # site logo %>
+	"ImageObject": {
+		"@context": "http://schema.org",
+		"@type": "ImageObject",
+		"url": "<%= absolute_url(data.settings.site.logo) %>"
+	},
+	<% end # image %>
+	<% if current_resource.data.author # author conditionals %>
+	"author": "<%= current_resource.data.author %>"
+	<% else %>
+	"author": "<%= data.settings.author.name %>",
+	<% end # author conditionals %>
+	"publisher": {
+		"type": "Organization",
+		"name": "<%= data.settings.site.name %>",
+		"logo":  {
+			"@context": "http://schema.org",
+			"@type": "ImageObject",
+			"url": "<%= absolute_url(data.settings.site.logo) %>"
+  		}
+	},
+	"mainEntityOfPage": {
+		"type": "WebPage",
+		"id": "<%= absolute_url(current_page) %>"
+	}
+ }
+</script>

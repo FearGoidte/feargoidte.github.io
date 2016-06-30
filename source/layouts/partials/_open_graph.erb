@@ -1,0 +1,29 @@
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta property="og:locale" content="<%= data.settings.open_graph.language_TERRITORY %>" />
+	<% if data.settings.open_graph.app_id # check for fb:app_id %>
+		<meta property="fb:app_id" content="<%= data.settings.open_graph.app_id %>" />
+	<% end # check for fb:app_id %>
+	<% if data.settings.author.twitter # check for twitter %>
+		<meta name="twitter:site" content="@<%= data.settings.author.twitter %>" />
+	<% end # check for twitter %>
+		<meta property="og:site_name" content="<%= strip_tags(data.settings.site.name) %>" />
+		<meta property="og:title" content="<%= meta_title %>" />
+		<meta property="og:description" content="<%= meta_description %>" />
+	<% if current_article && current_resource.data.meta_image # image check %>
+		<meta property="og:image" content="<%= absolute_url(current_resource.data.meta_image) %>" />
+		<meta property="og:image:secure_url" content="<%= absolute_url(current_resource.data.meta_image) %>" />
+	<% elsif data.settings.site.logo # site logo %>
+		<meta property="og:image" content="<%= absolute_url(data.settings.site.logo) %>" />
+		<meta property="og:image:secure_url" content="<%= absolute_url(data.settings.site.logo) %>" />
+	<% end # image %>
+	<% if current_article # article loop %>
+		<meta property="og:type" content="article" />
+		<% unless current_resource.tags.empty? # check for tags %>
+		<meta property="article:tag" content="<%= strip_tags(current_article.tags.join(', ')) %>" />
+		<% end # check for tags %>
+		<meta property="article:published_time" content="<%= current_resource.date.strftime("%F") %>" />
+		<meta property="article:modified_time" content="<%= File.mtime(current_page.source_file).iso8601 %>" />
+	<%= partial('layouts/partials/schema_article', locals: { current_article: current_article } ) %>
+		<% else %>
+	<%= partial('layouts/partials/schema_webpage', locals: { current_article: current_article } ) %>
+	<% end # article loop %>
