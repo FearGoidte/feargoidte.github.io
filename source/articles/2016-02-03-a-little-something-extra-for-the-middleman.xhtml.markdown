@@ -4,9 +4,10 @@ title: A&#160;little something eXtra for the&#160;Middleman
 date: 2016-02-03 10:00 GMT
 tags: Middleman, application/xhtml+xml, Markdown, Redcarpet, XHTML, Ruby
 image: /images/2016-02-03-a-little-something-extra-for-the-middleman.svg
-meta_image: /images/2016-02-03-a-little-something-extra-for-the-middleman.png
-width: 640
-height: 542
+thumbnail:
+  url: /images/2016-02-03-a-little-something-extra-for-the-middleman.png
+  height: 542
+  width: 640
 description: >
   A short inexhaustive guide to adapting <a href="https://middlemanapp.com">Middleman 4.0.0</a> to output <abbr title="eXtensible Hypertext Mark-up Language" class="initialism">X.H.T.M.L.</abbr> rather than <abbr title="Hypertext Mark-up Language" class="initialism">H.T.M.L.</abbr>
 

@@ -4,9 +4,10 @@ title: The laziness of type
 subtitle: Test replacement in <abbr title="Mac Operating System Ten" class="initialism">O.S.X.</abbr>
 date: 2016-06-06 16:12 BST
 image: /images/2016-06-06-the-laziness-of-type.svg
-meta_image: /images/2016-06-06-the-laziness-of-type.png
-width: 640
-height: 452
+thumbnail:
+  url: /images/2016-06-06-the-laziness-of-type.png
+  height: 452
+  width: 640
 tags: OSX, text replacement, curly quotes, ligatures
 description: Using text replacement to create your own ‘house style’ and to add a little diversity to your graphemes.
 

@@ -9,12 +9,12 @@
 		<meta property="og:site_name" content="<%= strip_tags(data.settings.site.name) %>" />
 		<meta property="og:title" content="<%= meta_title %>" />
 		<meta property="og:description" content="<%= meta_description %>" />
-	<% if current_article && current_resource.data.meta_image # image check %>
-		<meta property="og:image" content="<%= absolute_url(current_resource.data.meta_image) %>" />
-		<meta property="og:image:secure_url" content="<%= absolute_url(current_resource.data.meta_image) %>" />
-	<% elsif data.settings.site.logo # site logo %>
-		<meta property="og:image" content="<%= absolute_url(data.settings.site.logo) %>" />
-		<meta property="og:image:secure_url" content="<%= absolute_url(data.settings.site.logo) %>" />
+	<% if current_article && current_resource.data.thumbnail.url # image check %>
+		<meta property="og:image" content="<%= absolute_url(current_resource.data.thumbnail.url) %>" />
+		<meta property="og:image:secure_url" content="<%= absolute_url(current_resource.data.thumbnail.url) %>" />
+	<% elsif data.settings.site.logo.url # site logo %>
+		<meta property="og:image" content="<%= absolute_url(data.settings.site.logo.url) %>" />
+		<meta property="og:image:secure_url" content="<%= absolute_url(data.settings.site.logo.url) %>" />
 	<% end # image %>
 	<% if current_article # article loop %>
 		<meta property="og:type" content="article" />

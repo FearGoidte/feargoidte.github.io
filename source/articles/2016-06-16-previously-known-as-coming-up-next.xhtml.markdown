@@ -4,9 +4,10 @@ title: Previously known as ‘coming up next!’
 subtitle:
 date: 2016-06-16 08:18 BST
 image: /images/2016-06-16-previously-known-as-coming-up-next.svg
-meta_image: /images/2016-06-16-previously-known-as-coming-up-next.png
-width: 640
-height: 480
+thumbnail:
+  url: /images/2016-06-16-previously-known-as-coming-up-next.png
+  height: 480
+  width: 640
 tags: prev, next, Middleman
 description: Sequentially linking web documents, a simple mark-up and styling example with some wooly logical thinking.
 

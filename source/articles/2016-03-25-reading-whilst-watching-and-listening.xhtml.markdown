@@ -4,9 +4,10 @@ title: Reading whilst watching (and listening)
 subtitle: More comprehensible subtitles
 date: 2016-03-25 21:15 GMT
 image: /images/2016-03-25-reading-whilst-watching-and-listening.svg
-meta_image: /images/2016-03-25-reading-whilst-watching-and-listening.png
-width: 640
-height: 361
+thumbnail:
+  url: /images/2016-03-25-reading-whilst-watching-and-listening.png
+  height: 361
+  width: 640
 tags: utf-8, .srt, subtitles, SubRip
 description: >
   A short note on typography for the <cite>SubRip text file format</cite> for providing subtitles for films.

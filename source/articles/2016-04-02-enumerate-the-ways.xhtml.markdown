@@ -4,9 +4,10 @@ title: Enumerate the ways
 subtitle: Nested ordered and unordered lists with hanging markers
 date: 2016-04-02 22:25 BST
 image: /images/2016-04-02-enumerate-the-ways.svg
-meta_image: /images/2016-04-02-enumerate-the-ways.png
-width: 640
-height: 762
+thumbnail:
+  url: /images/2016-04-02-enumerate-the-ways.png
+  height: 762
+  width: 640
 tags: generated content, lists, markers, ol, ul, ::before
 description: >
   The visual formatting of the <a href="https://www.w3.org/TR/html5/grouping-content.html#the-ol-element"><code>ol</code></a> and <a href="https://www.w3.org/TR/html5/grouping-content.html#the-ul-element"><code>ul</code></a> list elements and in particular; using generated content for the markers, setting them outside the list text, and having them ‘hang’ in the margin of the parent element.
