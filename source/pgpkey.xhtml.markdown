@@ -1,0 +1,64 @@
+---
+
+layout: page
+title: James Ó Nuanáin’s Public Key
+description: My public for sending encrypted e-mails to me.
+
+---
+
+If you wish to send me an e-mail using [<abbr title="Pretty Good Privacy" class="initialism">P.G.P.</abbr> encryption](href="https://www.gnupg.org), please use the following *public key* and e-mail me using `james.onuanain` at `me.com`.
+
+``` text
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Comment: GPGTools - https://gpgtools.org
+
+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
+mqwqAaWLWyEuOPwRhdL8NNZGjA==
+=slgQ
+-----END PGP PUBLIC KEY BLOCK-----
+```
