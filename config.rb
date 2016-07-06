@@ -23,7 +23,7 @@ ignore 'stylesheets/partials/readme'
 # Blog
 activate :blog do |blog|
   blog.permalink = '{year}/{month}/{day}/{title}.xhtml'
-  blog.sources = 'articles/{year}-{month}-{day}-{title}.xhtml'
+  blog.sources = 'articles/{title}.xhtml'
   blog.taglink = 'tags/{tag}.xhtml'
   blog.layout = 'article'
   blog.year_link = '{year}.xhtml'
