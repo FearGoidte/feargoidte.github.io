@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/middleman/middleman-blog
-  revision: 0c44ce0516cc19d3eacb33bd502825dd0d936492
+  revision: 7b7eaa8213c07648cc8b16ac47c89c8ee2c37052
   specs:
     middleman-blog (4.0.1)
       addressable (~> 2.3)
@@ -26,7 +26,7 @@ GIT
 
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: ea39d16d811ecff46556d419d86d3732ee3db6f2
+  revision: 389e3f5a8cff6d1e060af53cb8e43b5adfb8b08b
   specs:
     middleman (4.1.9)
       coffee-script (~> 2.2)
@@ -88,7 +88,7 @@ GEM
     fast_blank (1.0.0)
     fastimage (2.0.0)
       addressable (~> 2)
-    ffi (1.9.10)
+    ffi (1.9.13)
     haml (4.0.7)
       tilt
     hamster (3.0.0)
