@@ -170,7 +170,7 @@ One way or another, I’m gonna find ya’
 
 <p>In both the first and last documents of a sequence, there will only be one link (either <em>previous</em> <strong>or</strong> <em>next</em>—depending on your logic).</p>
 
-<p>It could be considered that a list element is overkill. Whilst I do not subscribe to the radical <em>no item</em> list agendum (<a href="http://www.w3.org/TR/html5/grouping-content.html%23the-ul-element%22">The <code>ul</code> element on <abbr title="World Wide Web Consortium">W.3.C.</abbr>’s <abbr title="HyperText Markup Language">H.T.M.L.</abbr>5 Recommendation</a>), I am existentially comfortable with the notion that a list of one item is nevertheless a list. It may have dwindled down from a mighty tally; be an unlimited catalogue in initial, singular, or embryonic form; or it might just be a list of things that encompasses but one thing.</p>
+<p>It could be considered that a list element is overkill. Whilst I do not subscribe to the radical <em>no item</em> list agendum (<a href="http://www.w3.org/TR/html5/grouping-content.html#the-ul-element&quot;">The <code>ul</code> element on <abbr title="World Wide Web Consortium">W.3.C.</abbr>’s <abbr title="HyperText Markup Language">H.T.M.L.</abbr>5 Recommendation</a>), I am existentially comfortable with the notion that a list of one item is nevertheless a list. It may have dwindled down from a mighty tally; be an unlimited catalogue in initial, singular, or embryonic form; or it might just be a list of things that encompasses but one thing.</p>
 
 <h3 id="generating-in-a-middleman-static-blog">Generating in a Middleman static blog</h3>
 
