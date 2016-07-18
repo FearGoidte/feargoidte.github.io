@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/feargoidte
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://isfeargoidte.me.uk
+  * I am feargoidte (https://keybase.io/feargoidte) on keybase.
+  * I have a public key with fingerprint CD82 EB35 489C 0388 0C3B  BFC1 0736 1675 8F60 51F5
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101c906f340ec8c4b05c58f0d5c0e2371bd2c55ff08e703543fe68a721ab233de870a",
+            "fingerprint": "cd82eb35489c03880c3bbfc1073616758f6051f5",
+            "host": "keybase.io",
+            "key_id": "073616758f6051f5",
+            "kid": "0101c906f340ec8c4b05c58f0d5c0e2371bd2c55ff08e703543fe68a721ab233de870a",
+            "uid": "8182d83aaa32ec991ff4240427067a19",
+            "username": "feargoidte"
+        },
+        "service": {
+            "hostname": "isfeargoidte.me.uk",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1468880709,
+    "expire_in": 157680000,
+    "prev": "018edfb5cdd8ff179ec7e0b98cf60ae998f60f63d1769c614936c5747d73da88",
+    "seqno": 5,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.53
+Comment: https://keybase.io/crypto
+
+yMIoAnicrVJdSBRRGF1LLZXIiIIKyiakosXund87+5KUET1kRQ8mmtvMnXt3h9WZ
+3Z3ZrWVTMDCXQCqwokKkNiKCDJL+Q/ulKLKHFmRJKoqIxIoC7aEfumNGD712Xy73
+u+ec73yH796s6b7SAv3tmQfdJwdowePbvQlfXVfd+jSn20aKC6S5CJm8SLNBHDcY
+MQ0uwAEIIFaBTAUREIywqAMJS4gCQ8KA8IICdYPHkkQpQEQBgiQKlMhIU3io6bwg
+GAQpQOP8HDWtEIlH46blMllsIJ7oDI1UDASEABZ0nWIIFEGGssIayECCVGLEsO14
+DGZO1xxSZdqsxh7B3/b+xf9n34lJOQQRbyBB0zSBJ1hVIaUiLwKRV4CsaFD1gA6J
+W1oLYWhKtHjINg2XcK1+jtWTJiZetN4sUxjT+YuqaiFViQjTiMZt18Z2M/sPu27U
+CXh8NxX1CLuIHpySCuqmZbA8GSNJ4o5pW1wAMiR2TU8bijJikSpA9XNkd9SMk6Dp
+ISRFRoAdrw9JToaEiEF1CRsGohQqKsEKAbqKMItTI6rqxUplwYCKrGIZiqogY0kR
+FUMRDA0hzhsuZtlcQGI2tRCTdMyQpbmJOJv8zq3GQl9Bqa+4aJq3Z77SkvI/2+c3
+Z/xc5aYPd+V3Du4fqn3Z++1rvvtqdNGK9S0bL3MzosPVqRfrGq+dLd87MtL//dLc
+th2B95us03e1+Us/VfYOjq1efuR11nrYM3tlZ83F5LHXcrbjRo+6bGDj8a3zck/C
+sUdl9NK727G++h9rB5fMPP8lu/BDRfHo9RcLa0/Vhor6br7KHKy/0NREYEns6Oey
+4/r77vFOtOVAY0dRvvB0V73YcKPp1PDE/YoNwT35NccG2lI7+/YNDeWejfEndm99
+/Objtlm7wtbiTPoQX1m9ZJPw9MH9K88rl472ODX9uYmGBdn2a20m3vzqzsi51olM
+5uTihmKnmQ5H5oTa15rjuVDHou2Z1l9D4kf8
+=mEYT
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/feargoidte
+
+==================================================================
