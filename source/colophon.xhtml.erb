@@ -1,0 +1,108 @@
+---
+title: Colophon
+layout: page
+---
+
+<nav>
+	<h2>Table of contents</h2>
+	<ol property="dcterms:tableofContents">
+		<li>
+			<a href="#author">Author</a>
+		<ol>
+				<li>
+					<a href="#bio"><%= data.settings.author.name %>’s abridged and unauthorized autobiography</a>
+				</li>
+				<li>
+					<a href="#contact">Contact information</a>
+					<ol>
+						<li>
+							<a href="#email">E-mail</a>
+						</li>
+						<li>
+							<a href="#accounts">Online accounts</a>
+						</li>
+					</ol>
+				</li>
+		</ol>
+		</li>
+		<li>
+			<a href="#nuts-amp-bolts">Nuts &amp; bolts</a>
+		</li>
+		<li>
+			<a href="#copyright-amp-permissions">Copyright &amp; permissions</a>
+			<ol>
+				<li>
+					<a href="#code">Code</a>
+				</li>
+				<li>
+					<a href="#content">Content</a>
+					<ol>
+						<li>
+							<a href="#s-v-g-icons"><abbr title="Scalable Vector Graphics" class="initialism">S.V.G.</abbr> icons</a>
+						</li>
+					</ol>
+				</li>
+			</ol>
+		</li>
+		<li>
+			<a href="#your-privacy">Your privacy</a>
+		</li>
+	</ol>
+</nav>
+
+<h2>Author</h2>
+
+<div id="me" prefix="wot: http://xmlns.com/wot/0.1/" property="foaf:primaryTopic foaf:maker" resource="#me" typeof="foaf:Person vcard:Individual">
+<object style="max-width:12em;height:auto;float:left;margin-right:.5em" property="foaf:depiction" typeof="foaf:Image" data="<%= url_for('/images/me.jpeg') %>" resource="<%= absolute_url('/images/me.jpeg') %>"/>
+<div property="bio:olb">
+<h3 id="bio"><span property="foaf:name vcard:fn"><%= data.settings.author.name %>’s</span> abridged and unauthorized autobiography</h3>
+<p>Allegedly, I was born in 1977 during my mother’s notorious blue period and like so many of my kind I was forced to leave school after passing exams. I have worked in the warm arts, cold outdoor labour, and tepid indoor typing.</p>
+<p>For reasons of authenticity I have been free-range and corn-fed Hackney raised, matured in Barnet before being polished off in pubs and cheap bars, lightly smoked, and thoroughly salted with dry roasted peanuts and margarita glasses.</p>
+<p>I still don’t know what I want to be when I grow up and can’t decide whether or not this is my coffee, it doesn’t have honey in—I definitely asked for honey.</p>
+</div>
+<p>I live in <span prefix="geo: http://www.w3.org/2003/01/geo/wgs84_pos#" property="geo.placename">London</span> in the <abbr title="United Kingdom of Great Britain and Northern Ireland">U.K.</abbr> which, for the time being, is a north western province of the European Union.</p>
+<p>My website <a property="foaf:weblog vcard:hasURL" href="https://isfeargoidte.me.uk/"><span xml:lang="ga-ie">Fear Goidte</span></a> is primarily about itself though,  occasionally, I cover other topics. As Socrates said to Tantek Çelik at a hackathon in Antwerp: “An unexamined website is not worth the renewal of the domain name”.</p>
+<p>I have published three small collections of poetry available at <a href="https://isfeargoidte.me.uk/FairtheoirThuaidh/" property="foaf:publications"><span xml:lang="ga-ie">Fairtheoir Thuaidh</span></a> and all undiscriminating online ebook retailers.</p>
+<h3 id="contact">Contact information</h3>
+<h4 id="email">E-mail</h4>
+<p>I can be contacted at <a href="mailto:homepage.feargoidte@mailhero.io" property="foaf:mbox vcard:hasEmail ">homepage.feargoidte@mailhero.io</a>.</p>
+<p>If you wish to send me encrypted e-mail, my <a property="wot:pubkeyAddress" href="http://www.ivan-herman.net/pgpkey.html">public key</a> is available on-line.</p>
+<h4 id="accounts">Online accounts</h4>
+<p property="foaf:holdsAccount" typeof="foaf:OnlineAccount" resource="https://twitter.com/feargoidte">My inane witterings are available on <a property="foaf:accountServiceHomepage" href="https://twitter.com/">Twitter</a> where my <a href="https://twitter.com/feargoidte">Twitter user name is ‘<span property="foaf:accountName">feargoidte</span>’</a>.</p>
+<p property="foaf:holdsAccount" typeof="foaf:OnlineAccount" resource="https://github.com/FearGoidte">My feeble attempts at coding are shared on <a property="foaf:accountServiceHomepage" href="https://github.com/">Github</a> where my <a href="https://github.com/FearGoidte">Github user name is similarly ‘<span property="foaf:accountName">FearGoidte</span>’</a>.</p>
+<p property="foaf:holdsAccount" typeof="foaf:OnlineAccount" resource="https://subscene.com/u/998178">I occasionally spend an hour proof-reading film subtitles and I upload them to <a property="foaf:accountServiceHomepage" href="https://subscene.com/">Subscene</a> where my <a href="https://subscene.com/u/998178">Subscene account № is ‘<span property="foaf:accountName">998178</span>’</a>.</p>
+<p property="foaf:holdsAccount" typeof="foaf:OnlineAccount" resource="http://www.last.fm/user/Lo-fi_James">My musical listening habits are exhaustively inventoried on
+<a property="foaf:accountServiceHomepage" href="http://www.last.fm">last.fm</a> where my <a href="http://www.last.fm/user/Lo-fi_James">last.fm account name is ‘<span property="foaf:accountName">Lo-fi&#95;James</span>’</a>. They can be furthered judged using <a href="http://www.mymusichabits.com/visualize/Lo-fi_James">My Music Habits.</a></p>
+</div>
+<h2>Nuts &amp; bolts</h2>
+<p>The website is currently generated by <a href="https://middlemanapp.com">Middleman</a>.</p>
+<p>The <cite>Middleman</cite> files to build this repository are in the source branch of the <a href="https://github.com/FearGoidte/feargoidte.github.io">feargoidte.github.io repository on Github</a>.</p>
+
+<h2>Copyright &amp; permissions</h2>
+
+<p>There are seperate permissions for the code and for the content.</p>
+
+<h3>Code</h3>
+
+<p>Unless otherwise indicated, you are free to use and adapt all code with (or without) attribution. Where derivative code has been used I have attempted to attribute it in the source and this colophon.</p>
+
+<h3>Content</h3>
+
+<p>Excepting where otherwise indicated, all images, sounds, and words are licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. A copy of this licence is also provided as a text file within this website’s root directory: (<a href="../licence.txt">licence.txt</a>).</p>
+
+<h4><abbr title="Scalable Vector Graphics" class="initialism">S.V.G.</abbr> icons</h4>
+
+<p>For the purposes of visual embellishment, I make use of several <abbr title="Scalable Vector Graphics" class="initialism">S.V.G.</abbr> icons from <a href="https://icomoon.io">Icomoon</a>.</p>
+
+<h2>Your privacy</h2>
+
+<p>This site is served from <a href="https://pages.github.com">GitHub Pages</a>, so requests made to this site will terminate and be logged on GitHub’s servers (<a href="https://help.github.com/articles/github-privacy-policy/">GitHub Privacy Policy</a>).</p>
+
+<p>The <a href="https://www.cloudflare.com">CloudFlare <abbr title="content delivery network" class="initialism">C.D.N.</abbr></a> is used to enable <abbr title="Transport Layer Security" class="initialism">T.L.S.</abbr> and improve the site’s response times. Limited analytic data is kept by CloudFlare. CloudFlare also sets a `__cfduid` cookie for overriding <abbr title="Internet Protocol" class="initialism">I.P.</abbr>-based security restrictions.</p>
+
+<p>CloudFlare is also the ultimate <abbr title="Domain Name System" class="initialism">D.N.S.</abbr> resolver for `isfeargoidte.me.uk`. If <abbr title="Domain Name System" class="initialism">D.N.S.</abbr> logs are kept, they will also be subject to CloudFlare policies:</p>
+
+<ul>
+	<li><a href="https://www.cloudflare.com/security-policy/">CloudFlare’s privacy &amp; security policy</a></li>
+	<li><a href="https://support.cloudflare.com/hc/en-us/articles/200170156-What-does-the-CloudFlare-cfduid-cookie-do-">What does the CloudFlare `cfduid` cookie do?</a></li>
+</ul>
