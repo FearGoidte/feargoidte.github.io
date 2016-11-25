@@ -1,5 +1,9 @@
 Time.zone = 'London'
 
+# Fix for Tilt generated error
+# https://forum.middlemanapp.com/t/comparison-of-string-with-current-path-failed/2422
+Tilt::SYMBOL_ARRAY_SORTABLE = false
+
 ###
 # Page options, layouts, aliases and proxies
 ###
