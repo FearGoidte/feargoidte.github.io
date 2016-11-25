@@ -111,14 +111,12 @@ Semantic markup is silly. I see the same terms commonly defined and that by logi
     <span class="nl">text-decoration</span> <span class="p">:</span> <span class="nb">none</span>
 <span class="p">}</span>
 </code></pre>
-
 <p>Some fonts are excessively generous with the white-space they afford to punctuation so I <em>very</em> slightly reduce letter spacing for initialisms by assigning them a <code>class</code>. I find long runs of uppercase ‘shouty’ so, in mitigation, I reduce their font-size:</p>
 <pre class="code-quote css"><code><span class="nt">abbr</span><span class="nc">.initialism</span> <span class="p">{</span>
     <span class="nl">font-size</span> <span class="p">:</span> <span class="m">.9em</span><span class="p">;</span>
     <span class="nl">letter-spacing</span> <span class="p">:</span> <span class="m">-.05em</span>
 <span class="p">}</span>
-</code></pre>
-      </div>
+</code></pre>      </div>
     </content>
   </entry>
   <entry>
@@ -163,7 +161,6 @@ One way or another, I’m gonna find ya’
       <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- End role=navigation --&gt;</span>
 </code></pre>
-
 <p>The access key attribute values follow the convention <a href="https://www.standardaccesskeys.com/SAK2014/">SAK2014: Standard Access Keys 2014</a></p>
 
 <p>The title attribute is set and explicitly states whether the link is <em>next</em> or <em>previous</em>. This is for non-visual browsers but also if you were to hide the text of the link and use only a symbol instead, it could describe the link via a tooltip.</p>
@@ -193,7 +190,6 @@ One way or another, I’m gonna find ya’
 <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!--End post navigation--&gt;</span>
 <span class="cp">&lt;%</span> <span class="k">end</span> <span class="c1"># if any links </span><span class="cp">%&gt;</span>
 </code></pre>
-
 <h2 id="visual-and-print-styling">Visual and print styling</h2>
 
 <h3 id="visual">Visual</h3>
@@ -248,7 +244,6 @@ One way or another, I’m gonna find ya’
     <span class="nl">left</span> <span class="p">:</span> <span class="m">-1.4em</span>
 <span class="p">}</span>
 </code></pre>
-
 <p>View an <a href="http://codepen.io/FearGoidte/details/eprEpO/">example of the screen styling and mark-up on Codepen</a></p>
 
 <h3 id="print">Print</h3>
@@ -257,8 +252,7 @@ One way or another, I’m gonna find ya’
 <pre class="code-quote css"><code><span class="nc">.page-navigation</span> <span class="p">{</span>
     <span class="nl">display</span> <span class="p">:</span> <span class="nb">none</span>
 <span class="p">}</span>
-</code></pre>
-      </div>
+</code></pre>      </div>
     </content>
   </entry>
   <entry>
@@ -358,7 +352,6 @@ To have an automatically generated table of contents whilst using the <a href="h
 <p>Firstly, I am using <a href="https://github.com/vmg/redcarpet">Redcarpet</a> as my markdown renderer. Installation instructions are on their site. Once it is installed, to add Redcarpet to Middleman, insert the following into Middleman’s <code>Gemfile</code>:</p>
 <pre class="code-quote ruby"><code><span class="n">gem</span> <span class="s2">"redcarpet"</span>
 </code></pre>
-
 <h3 id="generate-the-id-attributes-for-the-headings">Generate the <code>id</code> attributes for the headings</h3>
 
 <p>In the <code>config.erb</code> file, I made the following changes.</p>
@@ -368,7 +361,6 @@ To have an automatically generated table of contents whilst using the <a href="h
 <span class="n">set</span> <span class="ss">:markdown</span><span class="p">,</span> <span class="ss">with_toc_data: </span><span class="kp">true</span><span class="p">,</span>
                <span class="ss">xhtml: </span><span class="kp">true</span>
 </code></pre>
-
 <p>Create a helper file:</p>
 <pre class="code-quote ruby"><code><span class="k">def</span> <span class="nf">table_of_contents</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
   <span class="k">if</span> <span class="n">config</span><span class="p">.</span><span class="nf">markdown_engine</span> <span class="o">==</span> <span class="ss">:redcarpet</span> <span class="o">&amp;&amp;</span> <span class="n">config</span><span class="p">.</span><span class="nf">markdown</span><span class="p">[</span><span class="ss">:with_toc_data</span><span class="p">]</span>
@@ -391,7 +383,6 @@ To have an automatically generated table of contents whilst using the <a href="h
 <span class="k">end</span>
 
 </code></pre>
-
 <p>Save the above code in a new file named  and saved in the <code>my_test_website\helpers\table_of_contents.rb</code> where “<code>my_test_website</code>” is the name of your project’s directory.</p>
 
 <h3 id="generate-the-table-of-contents">Generate the table of contents</h3>
@@ -399,7 +390,6 @@ To have an automatically generated table of contents whilst using the <a href="h
 <p>The table of contents can then be added to a file that is processing embedded Ruby by adding the following code:</p>
 <pre class="code-quote ruby"><code>    <span class="o">&lt;</span><span class="sx">%= table_of_contents(current_page) %&gt;
 </span></code></pre>
-
 <p>I tend to add this to my templates but it could also be added to an ‘article’ or ‘page’ file as long as the first of its extensions is <code>.erb</code>.</p>
 
 <h2 id="end-note">End note</h2>
@@ -479,7 +469,6 @@ The visual formatting of the <a href="https://www.w3.org/TR/html5/grouping-conte
     <span class="nl">margin</span> <span class="p">:</span> <span class="m">0</span>
 <span class="p">}</span>
 </code></pre>
-
 <h3 id="outside-markers">Outside markers</h3>
 
 <p>By changing the display of <code>li</code> to table you enable the <code>li::before</code> pseudo element to have the <code>table-cell</code> display property and hang outside the list item text. On paged media it will also prevent list items from breaking across pages. <code>list-style : none</code> disables the usual user-agent display styles.</p>
@@ -492,7 +481,6 @@ The visual formatting of the <a href="https://www.w3.org/TR/html5/grouping-conte
     <span class="nl">display</span> <span class="p">:</span> <span class="nb">table-cell</span>
 <span class="p">}</span>
 </code></pre>
-
 <h3 id="hanging-markers-on-top-level-lists">Hanging markers on top-level lists</h3>
 
 <p>The padding on the <code>body</code> element creates the space for the list markers of top-level lists to hang-in. I use <code>padding</code> rather than <code>margin</code> so that if a background colour is set on <code>body</code> the list marker is within the boundaries of the coloured background. The padding is set to an amount that can just about accommodate an ordered list marker up till “999” as well as a small remainder to leave space between the marker and the list text. The greater the padding the less horizontal space is available which is of particular concern for narrow screens.</p>
@@ -517,7 +505,6 @@ The visual formatting of the <a href="https://www.w3.org/TR/html5/grouping-conte
     <span class="nl">text-align</span> <span class="p">:</span> <span class="nb">right</span>
 <span class="p">}</span>
 </code></pre>
-
 <h3 id="undoing-the-positioning-top-level-positioning-for-nested-list-markers">Undoing the positioning top level positioning for nested list markers</h3>
 
 <p>The below selectors again use <code>&gt;</code> to ensure that they are targeting only list items that are directly descended from other list items.</p>
@@ -533,7 +520,6 @@ The visual formatting of the <a href="https://www.w3.org/TR/html5/grouping-conte
     <span class="nl">width</span> <span class="p">:</span> <span class="nb">auto</span>
 <span class="p">}</span>
 </code></pre>
-
 <h3 id="setting-counters">Setting counters</h3>
 
 <p>In their <a href="https://www.w3.org/TR/CSS21/"><cite>Cascading Style Sheets Level 2 Revision 1 (<abbr title="Cascading Style Sheets" class="initialism">C.S.S.</abbr> 2.1) Specification</cite></a> the <a href="https://www.w3.org/TR/CSS21/generate.html#scope"><abbr title="World Wide Web Consortium" class="initialism">W.3.C.</abbr> recommended resetting counters on the <code>ol</code> element</a>. Unfortunately, they seem to have been as perplexed by their counter rules as everyone else. Reseting counters on the <code>ol</code> element means that <em>an ordered list which is the descendent of a sibling element of a previous ordered list will behave as a continuation of the previous list</em>. Quite a mouthful; suffice to say, reset counters on the <code>first-child</code> of an ordered list.</p>
@@ -555,7 +541,6 @@ The visual formatting of the <a href="https://www.w3.org/TR/html5/grouping-conte
     <span class="nl">content</span> <span class="p">:</span> <span class="n">counters</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="s1">"."</span><span class="p">)</span> <span class="s1">". "</span>
 <span class="p">}</span>
 </code></pre>
-
 <h2 id="unordered-lists">Unordered lists</h2>
 
 <p>Again, I am using <code>&gt;</code> to ensure that lists are at a descendent level in relation to another unordered list:</p>
@@ -579,7 +564,6 @@ The visual formatting of the <a href="https://www.w3.org/TR/html5/grouping-conte
     <span class="nl">content</span> <span class="p">:</span> <span class="s1">"✤"</span>
 <span class="p">}</span>
 </code></pre>
-
 <h3 id="unsetting-styles">Unsetting styles</h3>
 
 <p>To remove the above generated styles for ordered and unordered styles:</p>
@@ -591,7 +575,6 @@ The visual formatting of the <a href="https://www.w3.org/TR/html5/grouping-conte
     <span class="nl">counter-reset</span> <span class="p">:</span> <span class="nb">none</span>
 <span class="p">}</span>
 </code></pre>
-
 <p>The <code>no-markers</code> class is for illustrative purposes.</p>
 
 <h2 id="all-styles">All styles</h2>
@@ -677,8 +660,7 @@ The visual formatting of the <a href="https://www.w3.org/TR/html5/grouping-conte
 <span class="nc">.no-markers</span> <span class="o">&gt;</span> <span class="nt">li</span><span class="nd">:first-child</span> <span class="p">{</span>
     <span class="nl">counter-reset</span> <span class="p">:</span> <span class="nb">none</span>
 <span class="p">}</span>
-</code></pre>
-      </div>
+</code></pre>      </div>
     </content>
   </entry>
 </feed>
